@@ -1,0 +1,6 @@
+Model,Accuracy,Macro F1
+SVM,0.9944,0.9952
+Neural Network (MLP),0.9775,0.979
+Logistic Regression,0.9775,0.9787
+KNN,0.9775,0.9777
+Random Forest,0.9382,0.9386
