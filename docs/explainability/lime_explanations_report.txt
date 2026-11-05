@@ -1,0 +1,41 @@
+MODEL EXPLAINABILITY - LIME
+==================================================
+
+MODEL: Tuned LinearSVC
+DATA: Validation set
+LIME input: softmax of SVM decision scores
+Note: Scores are not calibrated probabilities.
+
+CORRECT PREDICTION
+----------------------------------------
+Actual: Migraine
+Predicted: Migraine
+Text: Along with recurrent headaches and blurred vision, I suffer acid reflux and trouble digesting my food.
+
+vision: 0.0625
+reflux: 0.0247
+headaches: 0.0222
+acid: 0.0208
+suffer: -0.0204
+recurrent: -0.0113
+trouble: -0.0093
+food: -0.0084
+blurred: 0.0056
+Along: 0.0038
+
+INCORRECT PREDICTION
+----------------------------------------
+Actual: Chicken pox
+Predicted: Common Cold
+Text: I'm feeling fatigued and have no energy. I can barely keep my eyes open during the day, and I've been feeling lethargic and unable to motivate myself.
+
+can: 0.0199
+barely: 0.0145
+the: -0.0059
+ve: 0.0059
+have: -0.0057
+lethargic: -0.0056
+unable: 0.0052
+and: 0.0046
+my: 0.0045
+eyes: 0.0030
