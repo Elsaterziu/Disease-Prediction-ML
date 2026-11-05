@@ -1,0 +1,47 @@
+FINAL MODEL EVALUATION
+==================================================
+
+Model: Tuned LinearSVC
+Training: Original data (no augmentation)
+Training samples: 803
+Validation samples: 178
+Testing samples: 172
+
+Accuracy: 0.988372
+Macro Precision: 0.989418
+Macro Recall: 0.983631
+Macro F1: 0.985186
+Correct: 170
+Incorrect: 2
+
+CLASSIFICATION REPORT
+                                 precision    recall  f1-score   support
+
+                           Acne       1.00      1.00      1.00         7
+                      Arthritis       1.00      1.00      1.00         9
+               Bronchial Asthma       1.00      1.00      1.00         9
+           Cervical spondylosis       1.00      1.00      1.00         7
+                    Chicken pox       1.00      1.00      1.00         8
+                    Common Cold       0.89      1.00      0.94         8
+                         Dengue       1.00      1.00      1.00         9
+          Dimorphic Hemorrhoids       1.00      1.00      1.00         8
+               Fungal infection       1.00      1.00      1.00         5
+                   Hypertension       1.00      1.00      1.00         6
+                       Impetigo       1.00      1.00      1.00         7
+                       Jaundice       1.00      1.00      1.00         6
+                        Malaria       1.00      1.00      1.00         8
+                       Migraine       1.00      1.00      1.00        10
+                      Pneumonia       1.00      1.00      1.00         6
+                      Psoriasis       1.00      1.00      1.00         7
+                        Typhoid       1.00      1.00      1.00        10
+                 Varicose Veins       1.00      1.00      1.00         5
+                        allergy       1.00      0.75      0.86         4
+                       diabetes       0.86      1.00      0.92         6
+                  drug reaction       1.00      0.86      0.92         7
+gastroesophageal reflux disease       1.00      1.00      1.00         7
+           peptic ulcer disease       1.00      1.00      1.00         8
+        urinary tract infection       1.00      1.00      1.00         5
+
+                       accuracy                           0.99       172
+                      macro avg       0.99      0.98      0.99       172
+                   weighted avg       0.99      0.99      0.99       172

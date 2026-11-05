@@ -1,0 +1,3 @@
+Actual,Predicted,Interpretation
+allergy,Common Cold,Non-specific symptoms and possible overlap in textual descriptions.
+drug reaction,diabetes,Symptoms lack medication context; possible learned statistical associations.

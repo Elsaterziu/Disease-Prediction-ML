@@ -1,0 +1,28 @@
+,precision,recall,f1-score,support
+Acne,1.0,1.0,1.0,7.0
+Arthritis,1.0,1.0,1.0,9.0
+Bronchial Asthma,1.0,1.0,1.0,9.0
+Cervical spondylosis,1.0,1.0,1.0,7.0
+Chicken pox,1.0,1.0,1.0,8.0
+Common Cold,0.8888888888888888,1.0,0.9411764705882353,8.0
+Dengue,1.0,1.0,1.0,9.0
+Dimorphic Hemorrhoids,1.0,1.0,1.0,8.0
+Fungal infection,1.0,1.0,1.0,5.0
+Hypertension,1.0,1.0,1.0,6.0
+Impetigo,1.0,1.0,1.0,7.0
+Jaundice,1.0,1.0,1.0,6.0
+Malaria,1.0,1.0,1.0,8.0
+Migraine,1.0,1.0,1.0,10.0
+Pneumonia,1.0,1.0,1.0,6.0
+Psoriasis,1.0,1.0,1.0,7.0
+Typhoid,1.0,1.0,1.0,10.0
+Varicose Veins,1.0,1.0,1.0,5.0
+allergy,1.0,0.75,0.8571428571428571,4.0
+diabetes,0.8571428571428571,1.0,0.9230769230769231,6.0
+drug reaction,1.0,0.8571428571428571,0.9230769230769231,7.0
+gastroesophageal reflux disease,1.0,1.0,1.0,7.0
+peptic ulcer disease,1.0,1.0,1.0,8.0
+urinary tract infection,1.0,1.0,1.0,5.0
+accuracy,0.9883720930232558,0.9883720930232558,0.9883720930232558,0.9883720930232558
+macro avg,0.9894179894179894,0.9836309523809524,0.9851863822452058,172.0
+weighted avg,0.9898486526393503,0.9883720930232558,0.9881278092632401,172.0
