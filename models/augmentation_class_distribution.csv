@@ -1,0 +1,25 @@
+label,Original,Augmented,Added Samples
+Acne,34,35,1
+Arthritis,29,35,6
+Bronchial Asthma,33,34,1
+Cervical spondylosis,34,45,11
+Chicken pox,33,35,2
+Common Cold,31,34,3
+Dengue,33,41,8
+Dimorphic Hemorrhoids,26,31,5
+Fungal infection,39,41,2
+Hypertension,37,47,10
+Impetigo,36,38,2
+Jaundice,26,32,6
+Malaria,28,35,7
+Migraine,33,39,6
+Pneumonia,34,36,2
+Psoriasis,38,41,3
+Typhoid,34,41,7
+Varicose Veins,35,37,2
+allergy,37,38,1
+diabetes,39,39,0
+drug reaction,34,36,2
+gastroesophageal reflux disease,31,31,0
+peptic ulcer disease,33,34,1
+urinary tract infection,36,40,4

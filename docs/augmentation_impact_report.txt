@@ -1,0 +1,57 @@
+DATA AUGMENTATION IMPACT ANALYSIS
+==================================================
+
+TRAINING DATA
+Original: 803
+Augmented: 895
+Validation: 178
+
+MODEL RESULTS
+               Model  Training  Accuracy  Precision   Recall  Macro F1
+                 SVM  Original  0.994382   0.996212 0.994792  0.995238
+                 SVM Augmented  0.994382   0.996212 0.994792  0.995238
+ Logistic Regression  Original  0.977528   0.980519 0.980903  0.978650
+ Logistic Regression Augmented  0.983146   0.985480 0.985532  0.984564
+                 KNN  Original  0.977528   0.981481 0.977431  0.977698
+                 KNN Augmented  0.977528   0.981481 0.977431  0.977698
+       Random Forest  Original  0.938202   0.945784 0.941898  0.938575
+       Random Forest Augmented  0.932584   0.943634 0.934722  0.933134
+Neural Network (MLP)  Original  0.977528   0.980271 0.980903  0.979029
+Neural Network (MLP) Augmented  0.977528   0.978851 0.978588  0.977246
+
+COMPARISON
+                      Accuracy_Augmented  Accuracy_Original  Macro F1_Augmented  Macro F1_Original  Accuracy_Change  MacroF1_Change
+Model                                                                                                                              
+Logistic Regression             0.983146           0.977528            0.984564           0.978650         0.005618        0.005914
+KNN                             0.977528           0.977528            0.977698           0.977698         0.000000        0.000000
+SVM                             0.994382           0.994382            0.995238           0.995238         0.000000        0.000000
+Neural Network (MLP)            0.977528           0.977528            0.977246           0.979029         0.000000       -0.001783
+Random Forest                   0.932584           0.938202            0.933134           0.938575        -0.005618       -0.005441
+
+CLASS DISTRIBUTION
+                                 Original  Augmented  Added Samples
+label                                                              
+Acne                                   34         35              1
+Arthritis                              29         35              6
+Bronchial Asthma                       33         34              1
+Cervical spondylosis                   34         45             11
+Chicken pox                            33         35              2
+Common Cold                            31         34              3
+Dengue                                 33         41              8
+Dimorphic Hemorrhoids                  26         31              5
+Fungal infection                       39         41              2
+Hypertension                           37         47             10
+Impetigo                               36         38              2
+Jaundice                               26         32              6
+Malaria                                28         35              7
+Migraine                               33         39              6
+Pneumonia                              34         36              2
+Psoriasis                              38         41              3
+Typhoid                                34         41              7
+Varicose Veins                         35         37              2
+allergy                                37         38              1
+diabetes                               39         39              0
+drug reaction                          34         36              2
+gastroesophageal reflux disease        31         31              0
+peptic ulcer disease                   33         34              1
+urinary tract infection                36         40              4

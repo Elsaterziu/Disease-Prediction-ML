@@ -1,0 +1,65 @@
+BACHELOR THESIS - AUGMENTATION EVALUATION
+==================================================
+Training samples: 803
+Validation samples: 178
+Testing samples: 172
+Augmentation candidates: 92
+
+DATA QUALITY
+Missing values: 0
+Duplicate generated texts: 0
+Unchanged texts: 0
+Invalid labels: 0
+Empty generated texts: 0
+
+EXACT OVERLAP
+Training overlap: 0
+Validation overlap: 0
+Testing overlap: 0
+
+TRANSFORMATION CHECK
+Matching rules: 90
+Unexpected transformations: 2
+
+AUGMENTATION DISTRIBUTION
+                Disease  Generated Samples
+   Cervical spondylosis                 11
+           Hypertension                 10
+                 Dengue                  8
+                Typhoid                  7
+                Malaria                  7
+              Arthritis                  6
+               Migraine                  6
+               Jaundice                  6
+  Dimorphic Hemorrhoids                  5
+urinary tract infection                  4
+              Psoriasis                  3
+            Common Cold                  3
+         Varicose Veins                  2
+            Chicken pox                  2
+               Impetigo                  2
+       Fungal infection                  2
+              Pneumonia                  2
+          drug reaction                  2
+                   Acne                  1
+       Bronchial Asthma                  1
+                allergy                  1
+   peptic ulcer disease                  1
+
+MANUAL REVIEW SAMPLES
+                label                                                                                                                                                                                                                                        original_text                                                                                                                                                                                                                                   text
+            Arthritis                                                                                 Lately i have been experiencing muscle weakness, a stiff neck, swelling joints, and stiffness after I attempt to move around. it is also been very painful to steer.                                                                                     Lately I have muscle weakness, a stiff neck, swelling joints, and stiffness after I attempt to move around. it is also been very painful to steer.
+               Dengue    I am experiencing very high fever and chills every night. It is really concerning me. Moreover, I don’t feel like eating anything and my back, arms, legs pain a lot. There is a strange pain behing my eyes. I can’t do any physical activities. I have very high fever and chills every night. It is really concerning me. Moreover, I don’t feel like eating anything and my back, arms, legs pain a lot. There is a strange pain behing my eyes. I can’t do any physical activities.
+             Migraine                                                                                                                              I have been experiencing acid reflux and difficulty digesting my food, along with regular headaches and impaired vision                                                                                                                                  I have acid reflux and difficulty digesting my food, along with regular headaches and impaired vision
+             Jaundice                                              I have been having severe itching and vomiting. I am also very tired and have lost weight. My fever is high and my skin has turned yellow. My urine is dark and I have been experiencing abdominal pain                                                  I have been having severe itching and vomiting. I am also very tired and have lost weight. My fever is high and my skin has turned yellow. My urine is dark and I have abdominal pain
+            Psoriasis                                                                                                        I have been experiencing a skin rash on my arms, legs, and torso for the past few weeks. It is red, itchy, and covered in dry, scaly patches.                                                                                                            I have a skin rash on my arms, legs, and torso for the past few weeks. It is red, itchy, and covered in dry, scaly patches.
+          Common Cold         I've been coughing a lot and feeling chilly and shivery. My nose has been quite clogged, and I am experiencing facial pressure. I also have a lot of phlegm, and coughing pains my chest. I can't smell anything, and my muscles are aching.      I've been coughing a lot and feeling chilly and shivery. My nose has been quite clogged, and I have facial pressure. I also have a lot of phlegm, and coughing pains my chest. I can't smell anything, and my muscles are aching.
+            Arthritis I've been experiencing muscular weakness and stiffness in my neck recently. My joints have swollen, creating it troublesome on behalf of me to run regarding while not changing into stiff. Walking has additionally been agonizingly uncomfortable.   I have muscular weakness and stiffness in my neck recently. My joints have swollen, creating it troublesome on behalf of me to run regarding while not changing into stiff. Walking has additionally been agonizingly uncomfortable.
+ Cervical spondylosis                                                                                  My muscles lack strength, and I have been experiencing back pain and a dry cough. I've been experiencing neck pain and feeling lightheaded and unstable on my feet.                                                                                      My muscles lack strength, and I have back pain and a dry cough. I've been experiencing neck pain and feeling lightheaded and unstable on my feet.
+              Typhoid                                                                     I am experiencing a lot of nausea and vomiting, and it's been quite difficult for me to eat anything. I've entirely lost my appetite, and as a result, I have become quite weak.                                                                  I have a lot of nausea and vomiting, and it's been quite difficult for me to eat anything. I've entirely lost my appetite, and as a result, I have become quite weak.
+         Hypertension                                                                                                I have been experiencing a headache, chest pain, dizziness, and difficulty maintaining my balance. I also feel like I am having trouble concentrating                                                                                                    I have a headache, chest pain, dizziness, and difficulty maintaining my balance. I also feel like I am having trouble concentrating
+              Malaria                                                              I've been experiencing severe itching, chills, vomiting, and a high fever. In addition, I have a headache and am perspiring a lot. I've also been bothered by nausea and muscular ache.                                                                I have severe itching, chills, vomiting, and a high fever. In addition, I have a headache and am perspiring a lot. I've also been bothered by nausea and muscular ache.
+Dimorphic Hemorrhoids          I've been experiencing a lot of problems with my bowel motions recently. It's difficult to go, and it hurts when I do. My anus is quite painful, and it has been bleeding whenever I go. It's excruciatingly painful, and I'm quite uneasy.            I have a lot of problems with my bowel motions recently. It's difficult to go, and it hurts when I do. My anus is quite painful, and it has been bleeding whenever I go. It's excruciatingly painful, and I'm quite uneasy.
+        drug reaction                                                                                                I am experiencing a decrease in my sex drive and difficulty to fucntion sexually. I feel very light headed and confused and often experince brain fog                                                                                             I have a decrease in my sex drive and difficulty to fucntion sexually. I feel very light headed and confused and often experince brain fog
+ Cervical spondylosis                                                                                    I have been experiencing intense back pain, a dry cough, and a lack of strength in my limbs. My neck hurts and I have been feeling dizzy and unsteady on my feet.                                                                                        I have intense back pain, a dry cough, and a lack of strength in my limbs. My neck hurts and I have been feeling dizzy and unsteady on my feet.
+          Chicken pox                                                                                                                      I've been experiencing intense itching all over my skin, and it's driving me crazy. I also have a rash that's red and inflamed.                                                                                                                        I have intense itching all over my skin, and it's driving me crazy. I also have a rash that's red and inflamed.
