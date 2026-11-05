@@ -1,0 +1,200 @@
+/* ==========================================================================
+   Symptom2Disease design tokens: "Health & Wellness"
+   Eucalyptus teal = action and signal, deep evergreen = grounding surfaces,
+   soft mint tints = "the model's reading", light grays / soft whites = ground.
+   ========================================================================== */
+
+:root {
+  /* Deep evergreen (dark surfaces) */
+  --dark-950: #0c1f1b;
+  --dark-900: #12302a;
+  --dark-800: #1a3f37;
+  --dark-700: #24524a;
+  --dark-600: #3b6a61;
+
+  /* Eucalyptus teal (accent) */
+  --accent-800: #185a4d;
+  --accent-700: #1f6b5c;
+  --accent-600: #2a7f6d;
+  --accent-500: #2e9c83;
+  --accent-400: #6bb8a5;
+  --accent-300: #9fd2c3;
+
+  /* Soft mint tints */
+  --tint-50: #f3f8f6;
+  --tint-100: #e4f1ec;
+  --tint-200: #cfe5dc;
+  --tint-300: #b2d6c8;
+
+  /* Neutrals (light gray / soft white) */
+  --sand-0: #ffffff;
+  --sand-50: #f6f7f6;
+  --sand-100: #eef0ef;
+  --sand-200: #e1e5e3;
+  --sand-300: #c9cfcc;
+
+  --ink: #1d2523;
+  --ink-2: #3d4846;
+  --ink-3: #5f6a67;
+  --ink-inverse: #f1f5f3;
+  --ink-inverse-2: #b4c4bf;
+
+  /* Status */
+  --amber-700: #8a4b06;
+  --amber-100: #fcf1dc;
+  --red-700: #a3222b;
+  --red-100: #fdeeee;
+
+  /* Data splits */
+  --split-validation: #4c4aa8;
+  --split-validation-bg: #eeeefb;
+  --split-test: var(--accent-700);
+  --split-test-bg: var(--tint-100);
+  --split-cv: var(--amber-700);
+  --split-cv-bg: var(--amber-100);
+
+  /* Shape & depth */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(18, 48, 42, 0.06);
+  --shadow-md: 0 1px 2px rgba(18, 48, 42, 0.05), 0 8px 24px -6px rgba(18, 48, 42, 0.1);
+  --shadow-lg: 0 2px 4px rgba(18, 48, 42, 0.04), 0 24px 48px -12px rgba(18, 48, 42, 0.18);
+  --ring: 0 0 0 4px rgba(46, 156, 131, 0.22);
+
+  /* Type */
+  --font-display: "Plus Jakarta Sans Variable", "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter Variable", Inter, "Segoe UI", system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 180ms;
+
+  /* Layout */
+  --content: 1200px;
+  --gutter: clamp(16px, 4vw, 32px);
+  --header-h: 72px;
+  --tabbar-h: 0px;
+
+  color-scheme: light;
+  font: 400 16px/1.6 var(--font-body);
+  font-feature-settings: "cv11", "ss01";
+  color: var(--ink-2);
+  background: var(--sand-50);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--sand-50);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--font-display);
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent-700);
+  text-underline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  padding: 1px 6px;
+  border-radius: var(--r-xs);
+  background: var(--sand-100);
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+::selection {
+  background: var(--tint-200);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-500);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.muted {
+  color: var(--ink-3);
+}
+
+.small {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 760px) {
+  :root {
+    --header-h: 60px;
+    --tabbar-h: 68px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
