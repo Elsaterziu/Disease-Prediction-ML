@@ -1,0 +1,48 @@
+﻿term,replacement,needs_review,note
+dysuria,pain during urination,True,dysuria can also mean burning or difficulty when urinating
+haematuria,blood in urine,False,
+hematuria,blood in urine,False,
+pyrexia,fever,False,
+febrile,fever,False,
+nocturia,urination during the night,False,
+polyuria,urinating a lot,True,"polyuria is a large urine volume, not only frequent urination"
+urinary frequency,frequent urination,False,
+polydipsia,excessive thirst,False,
+polyphagia,excessive hunger,False,
+dyspnea,shortness of breath,False,
+dyspnoea,shortness of breath,False,
+tachypnea,fast breathing,False,
+tachypnoea,fast breathing,False,
+emesis,vomiting,False,
+pruritus,itching,False,
+urticaria,hives,True,hives are raised itchy welts; 'hives' is not in the model vocabulary
+cephalalgia,headache,False,
+cephalgia,headache,False,
+myalgia,muscle pain,False,
+arthralgia,joint pain,False,
+rhinorrhea,runny nose,False,
+rhinorrhoea,runny nose,False,
+epistaxis,bleeding from the nose,False,
+hemoptysis,coughing up blood,False,
+haemoptysis,coughing up blood,False,
+hematochezia,blood in stool,False,
+haematochezia,blood in stool,False,
+melena,black stools,True,"melena means black, tarry stools from bleeding higher in the gut"
+melaena,black stools,True,"melaena means black, tarry stools from bleeding higher in the gut"
+icterus,yellow skin,True,icterus also covers yellowing of the eyes
+dyspepsia,indigestion,False,
+pyrosis,heartburn,False,
+odynophagia,pain when swallowing,False,
+dysphagia,difficulty swallowing,False,
+syncope,fainting,False,
+diaphoresis,heavy sweating,False,
+hyperhidrosis,excessive sweating,False,
+erythema,redness,False,
+edema,swelling,False,
+oedema,swelling,False,
+xerostomia,dry mouth,False,
+paresthesia,tingling,True,paresthesia also includes numbness or pins and needles
+paraesthesia,tingling,True,paraesthesia also includes numbness or pins and needles
+photophobia,light hurts my eyes,True,photophobia is sensitivity or discomfort of the eyes in light
+epigastric,upper stomach,True,the epigastric region is the upper central abdomen
+productive cough,cough with phlegm,False,

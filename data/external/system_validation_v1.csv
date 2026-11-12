@@ -1,0 +1,85 @@
+id,group,language,text,expected,proposed_labels,source,verification_status,version
+V001,valid,en,"For three days I've had a runny nose, a scratchy throat and I keep sneezing.",analyze,Common Cold,synthetic_ai,not_clinically_verified,v1
+V002,valid,en,"My chest feels tight and I wheeze at night, especially after exercise.",analyze,Bronchial Asthma,synthetic_ai,not_clinically_verified,v1
+V003,valid,en,There are itchy circular red patches on my inner thighs that keep spreading.,analyze,Fungal infection,synthetic_ai,not_clinically_verified,v1
+V004,valid,en,"I've been peeing a lot, I'm thirsty all day and I've lost weight.",analyze,diabetes,synthetic_ai,not_clinically_verified,v1
+V005,valid,en,After eating I get a burning feeling behind my breastbone and sour liquid comes up.,analyze,gastroesophageal reflux disease,synthetic_ai,not_clinically_verified,v1
+V006,valid,en,My fingers are swollen and stiff every morning and it hurts to make a fist.,analyze,Arthritis,synthetic_ai,not_clinically_verified,v1
+V007,valid,en,"Throbbing pain on the left side of my head, I feel sick and can't stand bright lights.",analyze,Migraine,synthetic_ai,not_clinically_verified,v1
+V008,valid,en,"I have had a high fever for ten days, a dull headache, belly pain and constipation.",analyze,Typhoid,synthetic_ai,not_clinically_verified,v1
+V009,valid,en,Blood when I wipe after a bowel movement and a painful swelling around my anus.,analyze,Dimorphic Hemorrhoids,synthetic_ai,not_clinically_verified,v1
+V010,valid,en,My skin and the whites of my eyes have gone yellow and my urine is dark brown.,analyze,Jaundice,synthetic_ai,not_clinically_verified,v1
+V011,valid,en,"Fever with shaking chills every second day, followed by drenching sweats.",analyze,Malaria,synthetic_ai,not_clinically_verified,v1
+V012,valid,en,"Itchy blisters filled with clear fluid have appeared on my face, chest and back, and I have a mild fever.",analyze,Chicken pox,synthetic_ai,not_clinically_verified,v1
+V013,valid,en,Since I started a new tablet my skin broke out in itchy red welts.,analyze,drug reaction,synthetic_ai,not_clinically_verified,v1
+V014,valid,en,Sharp burning stomach pain a couple of hours after meals that eases when I eat something.,analyze,peptic ulcer disease,synthetic_ai,not_clinically_verified,v1
+V015,valid,en,The veins behind my knees are bulging and twisted and my legs ache after standing.,analyze,Varicose Veins,synthetic_ai,not_clinically_verified,v1
+V016,valid,en,Silvery flaky plaques on my scalp and elbows that sometimes crack and bleed.,analyze,Psoriasis,synthetic_ai,not_clinically_verified,v1
+V017,valid,en,"Stiff neck that hurts when I turn my head, with numbness spreading down my arm.",analyze,Cervical spondylosis,synthetic_ai,not_clinically_verified,v1
+V018,valid,en,"Coughing up greenish phlegm, fever, chills and pain in my chest when I take a deep breath.",analyze,Pneumonia,synthetic_ai,not_clinically_verified,v1
+V019,valid,en,Lots of pimples and whiteheads on my cheeks and forehead.,analyze,Acne,synthetic_ai,not_clinically_verified,v1
+V020,valid,en,Honey-coloured crusty sores around my daughter's nostrils.,analyze,Impetigo,synthetic_ai,not_clinically_verified,v1
+V021,valid,en,I get pounding headaches and feel dizzy; my vision sometimes blurs.,analyze,Hypertension,synthetic_ai,not_clinically_verified,v1
+V022,valid,en,"Severe joint and muscle pain, high fever and a pain behind my eyes after a mosquito bite.",analyze,Dengue,synthetic_ai,not_clinically_verified,v1
+V023,colloquial,en,my belly's been killing me and I keep throwing up,analyze,,synthetic_ai,not_clinically_verified,v1
+V024,colloquial,en,got the chills and I'm burning up,analyze,,synthetic_ai,not_clinically_verified,v1
+V025,colloquial,en,my nose is all blocked up and I can't stop sneezing,analyze,Common Cold;allergy,synthetic_ai,not_clinically_verified,v1
+V026,colloquial,en,I'm wiped out all the time and super thirsty,analyze,diabetes,synthetic_ai,not_clinically_verified,v1
+V027,colloquial,en,"eyes are puffy, red and itchy since spring started",analyze,allergy,synthetic_ai,not_clinically_verified,v1
+V028,colloquial,en,it stings when I wee and I'm going every half hour,analyze,urinary tract infection,synthetic_ai,not_clinically_verified,v1
+V029,medical_terms,en,Pyrexia and productive cough for four days.,analyze,Pneumonia;Common Cold,synthetic_ai,not_clinically_verified,v1
+V030,medical_terms,en,Pruritus and urticaria after taking amoxicillin.,analyze,drug reaction;allergy,synthetic_ai,not_clinically_verified,v1
+V031,medical_terms,en,"Polyuria, polydipsia and unexplained weight loss.",analyze,diabetes,synthetic_ai,not_clinically_verified,v1
+V032,medical_terms,en,Dysuria and increased urinary frequency.,analyze,urinary tract infection,synthetic_ai,not_clinically_verified,v1
+V033,medical_terms,en,Arthralgia with morning stiffness in both hands.,analyze,Arthritis,synthetic_ai,not_clinically_verified,v1
+V034,medical_terms,en,"Rhinorrhoea, sneezing and itchy eyes.",analyze,allergy;Common Cold,synthetic_ai,not_clinically_verified,v1
+V035,medical_terms,en,Epigastric pain with melena.,analyze,peptic ulcer disease,synthetic_ai,not_clinically_verified,v1
+V036,medical_terms,en,Severe dyspnoea and orthopnoea.,analyze,Bronchial Asthma;Pneumonia,synthetic_ai,not_clinically_verified,v1
+V037,negation,en,I have a sore throat and a blocked nose but no fever.,analyze,Common Cold;allergy,synthetic_ai,not_clinically_verified,v1
+V038,negation,en,"Itchy rash on my arms, no fever and no blisters.",analyze,Fungal infection;allergy;drug reaction;Psoriasis,synthetic_ai,not_clinically_verified,v1
+V039,negation,en,"No cough, no fever, no headache.",clarify,,synthetic_ai,not_clinically_verified,v1
+V040,negation,en,I don't have any pain at all.,clarify,,synthetic_ai,not_clinically_verified,v1
+V041,negation,en,I have no appetite and feel nauseous.,analyze,,synthetic_ai,not_clinically_verified,v1
+V042,negation,en,I am not sure whether I have a fever.,clarify,,synthetic_ai,not_clinically_verified,v1
+V043,negation,en,Burning chest after meals without vomiting.,analyze,gastroesophageal reflux disease;peptic ulcer disease,synthetic_ai,not_clinically_verified,v1
+V044,negation,en,No fever and cough.,clarify,,synthetic_ai,not_clinically_verified,v1
+V045,negation,en,I can't sleep because my joints hurt.,analyze,Arthritis,synthetic_ai,not_clinically_verified,v1
+V046,negation,en,Headache that doesn't go away and blurry vision.,analyze,Hypertension;Migraine,synthetic_ai,not_clinically_verified,v1
+V047,unrelated,en,Is the pharmacy near the bus station open late tonight?,no_disease,,synthetic_ai,not_clinically_verified,v1
+V048,unrelated,en,Please remind me to call my doctor tomorrow morning.,no_disease,,synthetic_ai,not_clinically_verified,v1
+V049,unrelated,en,My laptop got a virus and keeps crashing.,no_disease,,synthetic_ai,not_clinically_verified,v1
+V050,unrelated,en,It's really hot and humid outside today.,no_disease,,synthetic_ai,not_clinically_verified,v1
+V051,unrelated,en,How much does a blood test cost at the clinic?,no_disease,,synthetic_ai,not_clinically_verified,v1
+V052,unrelated,en,I'm tired of waiting for the bus every morning.,no_disease,,synthetic_ai,not_clinically_verified,v1
+V053,unrelated,en,Can you tell me a joke about cats?,no_disease,,synthetic_ai,not_clinically_verified,v1
+V054,unrelated,en,My sister is a nurse at the hospital in Tirana.,no_disease,,synthetic_ai,not_clinically_verified,v1
+V055,unrelated,en,I want to buy new running shoes for my knees.,no_disease,,synthetic_ai,not_clinically_verified,v1
+V056,unrelated,en,"The meeting gave me a headache, there were so many slides.",no_disease,,synthetic_ai,not_clinically_verified,v1
+V057,insufficient,en,I feel really bad today.,clarify,,synthetic_ai,not_clinically_verified,v1
+V058,insufficient,en,Something is not right with my body.,clarify,,synthetic_ai,not_clinically_verified,v1
+V059,insufficient,en,I have been sick lately.,clarify,,synthetic_ai,not_clinically_verified,v1
+V060,insufficient,en,It hurts a lot sometimes.,clarify,,synthetic_ai,not_clinically_verified,v1
+V061,insufficient,en,I think I might have diabetes.,clarify,,synthetic_ai,not_clinically_verified,v1
+V062,insufficient,en,My health is not good these days.,clarify,,synthetic_ai,not_clinically_verified,v1
+V063,out_of_scope,en,Sudden numbness on one side of my face and my speech became slurred.,out_of_scope,,synthetic_ai,not_clinically_verified,v1
+V064,out_of_scope,en,"My ear is painful and blocked, and I can hear a ringing sound.",out_of_scope,,synthetic_ai,not_clinically_verified,v1
+V065,out_of_scope,en,My heel hurts badly with the first steps in the morning.,out_of_scope,,synthetic_ai,not_clinically_verified,v1
+V066,out_of_scope,en,A painful red lump with a white head appeared on my eyelid.,out_of_scope,,synthetic_ai,not_clinically_verified,v1
+V067,out_of_scope,en,"The front of my neck is swollen, I feel nervous, my heart races and I'm losing weight.",out_of_scope,,synthetic_ai,not_clinically_verified,v1
+V068,out_of_scope,en,Toothache that gets worse with cold drinks and my gum is swollen.,out_of_scope,,synthetic_ai,not_clinically_verified,v1
+V069,out_of_scope,en,Bloody diarrhoea and cramps after eating undercooked chicken.,out_of_scope,,synthetic_ai,not_clinically_verified,v1
+V070,out_of_scope,en,Sharp pain in the lower right abdomen with fever and loss of appetite.,out_of_scope,,synthetic_ai,not_clinically_verified,v1
+V071,out_of_scope,en,"I feel sad all the time, have no interest in anything and can't sleep.",out_of_scope,,synthetic_ai,not_clinically_verified,v1
+V072,out_of_scope,en,My hands shake when I hold a cup and my movements have become slow.,out_of_scope,,synthetic_ai,not_clinically_verified,v1
+V073,albanian,sq,"Kam dhimbje fyti, rrjedhje hundësh dhe teshtitje.",analyze,Common Cold;allergy,synthetic_ai,not_clinically_verified,v1
+V074,albanian,sq,Më kruhet lëkura dhe kam skuqje në krahë.,analyze,Fungal infection;allergy;drug reaction;Psoriasis,synthetic_ai,not_clinically_verified,v1
+V075,albanian,sq,Sytë e mi janë të verdhë dhe urina është e errët.,analyze,Jaundice,synthetic_ai,not_clinically_verified,v1
+V076,albanian,sq,Kam humbur oreksin dhe kam dhimbje barku.,analyze,,synthetic_ai,not_clinically_verified,v1
+V077,albanian,sq,Kam diarre dhe shkoj shpesh në tualet.,analyze,,synthetic_ai,not_clinically_verified,v1
+V078,albanian,sq,Nuk kam kollë dhe nuk kam temperaturë.,clarify,,synthetic_ai,not_clinically_verified,v1
+V079,albanian,sq,Sa kushton një kafe në qendër të qytetit?,no_disease,,synthetic_ai,not_clinically_verified,v1
+V080,albanian,sq,"Kam temperaturë, por jo kollë.",analyze,,synthetic_ai,not_clinically_verified,v1
+V081,albanian,sq,Më dhemb gjoksi kur marr frymë thellë dhe kam kollë me gëlbazë.,analyze,Pneumonia;Bronchial Asthma,synthetic_ai,not_clinically_verified,v1
+V082,albanian,sq,Ndihem keq.,clarify,,synthetic_ai,not_clinically_verified,v1
+V083,albanian,sq,Kam dhimbje të forta në thembër në mëngjes.,out_of_scope,,synthetic_ai,not_clinically_verified,v1
+V084,albanian,sq,Nesër kam takim me mjekun në spital.,no_disease,,synthetic_ai,not_clinically_verified,v1

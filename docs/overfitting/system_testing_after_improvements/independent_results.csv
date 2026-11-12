@@ -1,0 +1,632 @@
+﻿set,case_id,language,text,expected,proposed_labels,ui_outcome,ui_title,ui_message,sent_to_api,api_status,api_reasons,predicted,text_sent_to_model,present_symptoms,negated_symptoms,medical_terms,uninterpreted_terms,coverage,recognized,supported_symptoms,unsupported_symptoms,top_words,disclaimer_shown,screenshot,ui_disease,ui_notes,translation_status,translation_preview,test_group,tester_action,disease_shown,outcome_detail,before_shown_offline,before_pred_offline,label_match,after_hidden_prediction
+independent,V001,en,"For three days I've had a runny nose, a scratchy throat and I keep sneezing.",analyze,Common Cold,disease_shown,,,"For three days I've had a runny nose, a scratchy throat and I keep sneezing.",prediction,,Common Cold,"For three days I've had a runny nose, a scratchy throat and I keep sneezing.",runny nose; scratchy throat; sneezing,,,,0.9167,11/12,nasal_symptoms; sneezing,sore_throat,"sneezing, nose, throat, runny, keep",True,screenshots/independent/V001.png,Common Cold,"The model recognised 11 of 12 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Common Cold,True,Common Cold,True,
+independent,V002,en,"My chest feels tight and I wheeze at night, especially after exercise.",analyze,Bronchial Asthma,disease_shown,,,"My chest feels tight and I wheeze at night, especially after exercise.",prediction,,gastroesophageal reflux disease,"My chest feels tight and I wheeze at night, especially after exercise.",chest feels tight; wheeze,,,,0.9091,10/11,chest_pain,wheezing,"after, chest, especially, tight, feels",True,screenshots/independent/V002.png,Gastroesophageal reflux disease,"The model recognised 10 of 11 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Gastroesophageal reflux disease,True,gastroesophageal reflux disease,False,
+independent,V003,en,There are itchy circular red patches on my inner thighs that keep spreading.,analyze,Fungal infection,disease_shown,,,There are itchy circular red patches on my inner thighs that keep spreading.,prediction,,Fungal infection,There are itchy circular red patches on my inner thighs that keep spreading.,itchy; red patches on my inner thighs; patches,,,,0.7692,10/13,itching; skin_lesions,legs_symptom,"patches, that, itchy, are, there",True,screenshots/independent/V003.png,Fungal infection,"The model recognised 10 of 13 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Fungal infection,True,Fungal infection,True,
+independent,V004,en,"I've been peeing a lot, I'm thirsty all day and I've lost weight.",analyze,diabetes,disease_shown,,,"I've been peeing a lot, I'm thirsty all day and I've lost weight.",prediction,,Jaundice,"I've been peeing a lot, I'm thirsty all day and I've lost weight.",peeing a lot; thirsty; lost weight,,,,0.9091,10/11,urinary_symptoms; weight_loss,thirst,"weight, lost, ve, been, and",True,screenshots/independent/V004.png,Jaundice,"The model recognised 10 of 11 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Jaundice,True,Jaundice,False,
+independent,V005,en,After eating I get a burning feeling behind my breastbone and sour liquid comes up.,analyze,gastroesophageal reflux disease,disease_shown,,,After eating I get a burning feeling behind my breastbone and sour liquid comes up.,prediction,,gastroesophageal reflux disease,After eating I get a burning feeling behind my breastbone and sour liquid comes up.,burning feeling behind my breastbone,,,,0.9231,12/13,chest_pain,,"eating, after, sour, get, up",True,screenshots/independent/V005.png,Gastroesophageal reflux disease,"The model recognised 12 of 13 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Gastroesophageal reflux disease,True,gastroesophageal reflux disease,True,
+independent,V006,en,My fingers are swollen and stiff every morning and it hurts to make a fist.,analyze,Arthritis,disease_shown,,,My fingers are swollen and stiff every morning and it hurts to make a fist.,prediction,,Psoriasis,My fingers are swollen and stiff every morning and it hurts to make a fist.,fingers are swollen; stiff; hurts,,,,0.9286,13/14,joint_pain,,"fingers, it, are, my, to",True,screenshots/independent/V006.png,Psoriasis,"The model recognised 13 of 14 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Psoriasis,True,Psoriasis,False,
+independent,V007,en,"Throbbing pain on the left side of my head, I feel sick and can't stand bright lights.",analyze,Migraine,withheld,No reliable match,"No reliable match
+
+The system could not identify a reliable match among the 24 supported conditions. Please consult a healthcare professional for further evaluation.
+
+None of the symptoms identified in your description is typical for the condition the model leaned towards, so no condition is shown. This check cannot recognise every condition outside the 24, and it is not a diagnosis.
+
+Symptoms identified:
+pain on the left side
+sick
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over","Throbbing pain on the left side of my head, I feel sick and can't stand bright lights.",no_reliable_match,noSupportedSymptom,,"Throbbing pain on the left side of my head, I feel sick and can't stand bright lights.",pain on the left side; sick,,,,0.75,12/16,,abdominal_pain,,True,screenshots/independent/V007.png,,,,,valid,,False,no reliable match,True,allergy,,allergy
+independent,V008,en,"I have had a high fever for ten days, a dull headache, belly pain and constipation.",analyze,Typhoid,disease_shown,,,"I have had a high fever for ten days, a dull headache, belly pain and constipation.",prediction,,Typhoid,"I have had a high fever for ten days, a dull headache, belly pain and constipation.",fever; headache; belly pain; constipation,,,,0.8462,11/13,abdominal_pain; constipation; fever; headache,,"belly, constipation, headache, pain, had",True,screenshots/independent/V008.png,Typhoid,"The model recognised 11 of 13 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Typhoid,True,Typhoid,True,
+independent,V009,en,Blood when I wipe after a bowel movement and a painful swelling around my anus.,analyze,Dimorphic Hemorrhoids,disease_shown,,,Blood when I wipe after a bowel movement and a painful swelling around my anus.,prediction,,Dimorphic Hemorrhoids,Blood when I wipe after a bowel movement and a painful swelling around my anus.,Blood when I wipe; bowel movement and a painful; swelling around my anus,,,,0.9167,11/12,anus_symptom; stool_changes,,"anus, bowel, painful, when, blood",True,screenshots/independent/V009.png,Dimorphic Hemorrhoids,"The model recognised 11 of 12 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Dimorphic Hemorrhoids,True,Dimorphic Hemorrhoids,True,
+independent,V010,en,My skin and the whites of my eyes have gone yellow and my urine is dark brown.,analyze,Jaundice,disease_shown,,,My skin and the whites of my eyes have gone yellow and my urine is dark brown.,prediction,,Jaundice,My skin and the whites of my eyes have gone yellow and my urine is dark brown.,eyes have gone yellow; urine is dark,,,,0.9412,16/17,urinary_symptoms,eyes_symptom,"yellow, urine, dark, skin, is",True,screenshots/independent/V010.png,Jaundice,"The model recognised 16 of 17 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Jaundice,True,Jaundice,True,
+independent,V011,en,"Fever with shaking chills every second day, followed by drenching sweats.",analyze,Malaria,disease_shown,,,"Fever with shaking chills every second day, followed by drenching sweats.",prediction,,Dengue,"Fever with shaking chills every second day, followed by drenching sweats.",Fever; shaking chills; sweats,,,,0.7273,8/11,chills; fever,sweating,"chills, day, followed, fever, by",True,screenshots/independent/V011.png,Dengue,"The model recognised 8 of 11 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Dengue,True,Dengue,False,
+independent,V012,en,"Itchy blisters filled with clear fluid have appeared on my face, chest and back, and I have a mild fever.",analyze,Chicken pox,disease_shown,,,"Itchy blisters filled with clear fluid have appeared on my face, chest and back, and I have a mild fever.",prediction,,Impetigo,"Itchy blisters filled with clear fluid have appeared on my face, chest and back, and I have a mild fever.",Itchy; blisters; fever,,,,1.0,18/18,blisters; fever,itching,"face, blisters, fluid, clear, appeared",True,screenshots/independent/V012.png,Impetigo,"The model recognised 18 of 18 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Impetigo,True,Impetigo,False,
+independent,V013,en,Since I started a new tablet my skin broke out in itchy red welts.,analyze,drug reaction,disease_shown,,,Since I started a new tablet my skin broke out in itchy red welts.,prediction,,allergy,Since I started a new tablet my skin broke out in itchy red welts.,skin broke out in itchy red; broke out; itchy,,,,0.6667,8/12,itching; skin_symptom,rash,"started, itchy, since, out, skin",True,screenshots/independent/V013.png,Allergy,"The model recognised 8 of 12 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Allergy,True,allergy,False,
+independent,V014,en,Sharp burning stomach pain a couple of hours after meals that eases when I eat something.,analyze,peptic ulcer disease,disease_shown,,,Sharp burning stomach pain a couple of hours after meals that eases when I eat something.,prediction,,peptic ulcer disease,Sharp burning stomach pain a couple of hours after meals that eases when I eat something.,stomach pain,,,,0.9286,13/14,abdominal_pain,,"hours, burning, stomach, after, meals",True,screenshots/independent/V014.png,Peptic ulcer disease,"The model recognised 13 of 14 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Peptic ulcer disease,True,peptic ulcer disease,True,
+independent,V015,en,The veins behind my knees are bulging and twisted and my legs ache after standing.,analyze,Varicose Veins,disease_shown,,,The veins behind my knees are bulging and twisted and my legs ache after standing.,prediction,,Varicose Veins,The veins behind my knees are bulging and twisted and my legs ache after standing.,veins behind my knees are bulging; knees are bulging and twisted; legs ache,,,,0.8667,13/15,legs_symptom; swollen_veins,joint_pain,"legs, veins, behind, standing, the",True,screenshots/independent/V015.png,Varicose Veins,"The model recognised 13 of 15 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Varicose Veins,True,Varicose Veins,True,
+independent,V016,en,Silvery flaky plaques on my scalp and elbows that sometimes crack and bleed.,analyze,Psoriasis,disease_shown,,,Silvery flaky plaques on my scalp and elbows that sometimes crack and bleed.,prediction,,Psoriasis,Silvery flaky plaques on my scalp and elbows that sometimes crack and bleed.,Silvery; flaky; plaques; bleed,,,,0.8462,11/13,bleeding; scaly_skin; skin_lesions,,"elbows, silvery, bleed, on, scalp",True,screenshots/independent/V016.png,Psoriasis,"The model recognised 11 of 13 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Psoriasis,True,Psoriasis,True,
+independent,V017,en,"Stiff neck that hurts when I turn my head, with numbness spreading down my arm.",analyze,Cervical spondylosis,disease_shown,,,"Stiff neck that hurts when I turn my head, with numbness spreading down my arm.",prediction,,gastroesophageal reflux disease,"Stiff neck that hurts when I turn my head, with numbness spreading down my arm.",Stiff neck; hurts when I turn my head; numbness,,,,1.0,14/14,numbness,headache; neck_pain,"arm, down, that, my, when",True,screenshots/independent/V017.png,Gastroesophageal reflux disease,"The model recognised 14 of 14 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Gastroesophageal reflux disease,True,gastroesophageal reflux disease,False,
+independent,V018,en,"Coughing up greenish phlegm, fever, chills and pain in my chest when I take a deep breath.",analyze,Pneumonia,disease_shown,,,"Coughing up greenish phlegm, fever, chills and pain in my chest when I take a deep breath.",prediction,,Pneumonia,"Coughing up greenish phlegm, fever, chills and pain in my chest when I take a deep breath.",Coughing; phlegm; fever; chills; pain in my chest,,,,0.8667,13/15,chest_pain; chills; cough; fever; phlegm,,"phlegm, chills, chest, coughing, breath",True,screenshots/independent/V018.png,Pneumonia,"The model recognised 13 of 15 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Pneumonia,True,Pneumonia,True,
+independent,V019,en,Lots of pimples and whiteheads on my cheeks and forehead.,analyze,Acne,disease_shown,,,Lots of pimples and whiteheads on my cheeks and forehead.,prediction,,Acne,Lots of pimples and whiteheads on my cheeks and forehead.,pimples,,,,0.9,9/10,pimples,,"pimples, lots",True,screenshots/independent/V019.png,Acne,"The model recognised 9 of 10 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Acne,True,Acne,True,
+independent,V020,en,Honey-coloured crusty sores around my daughter's nostrils.,analyze,Impetigo,disease_shown,,,Honey-coloured crusty sores around my daughter's nostrils.,prediction,,Impetigo,Honey-coloured crusty sores around my daughter's nostrils.,crusty; sores,,,,0.5,4/8,sores,,"sores, around, coloured",True,screenshots/independent/V020.png,Impetigo,"The model recognised 4 of 8 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Impetigo,True,Impetigo,True,
+independent,V021,en,I get pounding headaches and feel dizzy; my vision sometimes blurs.,analyze,Hypertension,disease_shown,,,I get pounding headaches and feel dizzy; my vision sometimes blurs.,prediction,,allergy,I get pounding headaches and feel dizzy; my vision sometimes blurs.,headaches; dizzy,,,,0.9,9/10,headache,dizziness,"sometimes, get, dizzy, headaches, feel",True,screenshots/independent/V021.png,Allergy,"The model recognised 9 of 10 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Allergy,True,allergy,False,
+independent,V022,en,"Severe joint and muscle pain, high fever and a pain behind my eyes after a mosquito bite.",analyze,Dengue,disease_shown,,,"Severe joint and muscle pain, high fever and a pain behind my eyes after a mosquito bite.",prediction,,Dengue,"Severe joint and muscle pain, high fever and a pain behind my eyes after a mosquito bite.",muscle pain; fever; pain behind my eyes,,,,0.8667,13/15,fever; headache,muscle_pain,"joint, pain, eyes, behind, fever",True,screenshots/independent/V022.png,Dengue,"The model recognised 13 of 15 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,valid,,True,Dengue,True,Dengue,True,
+independent,V023,en,my belly's been killing me and I keep throwing up,analyze,,disease_shown,,,my belly's been killing me and I keep throwing up,prediction,,Typhoid,my belly's been killing me and I keep throwing up,throwing up,,,,1.0,9/9,vomiting,,"belly, been",True,screenshots/independent/V023.png,Typhoid,"The model recognised 9 of 9 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,colloquial,,True,Typhoid,True,Typhoid,,
+independent,V024,en,got the chills and I'm burning up,analyze,,withheld,No reliable match,"No reliable match
+
+The system could not identify a reliable match among the 24 supported conditions. Please consult a healthcare professional for further evaluation.
+
+None of the symptoms identified in your description is typical for the condition the model leaned towards, so no condition is shown. This check cannot recognise every condition outside the 24, and it is not a diagnosis.
+
+Symptoms identified:
+chills
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",got the chills and I'm burning up,no_reliable_match,noSupportedSymptom,,got the chills and I'm burning up,chills,,,,1.0,6/6,,chills,,True,screenshots/independent/V024.png,,,,,colloquial,,False,no reliable match,True,peptic ulcer disease,,peptic ulcer disease
+independent,V025,en,my nose is all blocked up and I can't stop sneezing,analyze,Common Cold;allergy,disease_shown,,,my nose is all blocked up and I can't stop sneezing,prediction,,Common Cold,my nose is all blocked up and I can't stop sneezing,nose is all blocked; sneezing,,,,1.0,10/10,sneezing,nose_symptom,"sneezing, can, nose, stop, blocked",True,screenshots/independent/V025.png,Common Cold,"The model recognised 10 of 10 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,colloquial,,True,Common Cold,True,Common Cold,True,
+independent,V026,en,I'm wiped out all the time and super thirsty,analyze,diabetes,withheld,No reliable match,"No reliable match
+
+The system could not identify a reliable match among the 24 supported conditions. Please consult a healthcare professional for further evaluation.
+
+None of the symptoms identified in your description is typical for the condition the model leaned towards, so no condition is shown. This check cannot recognise every condition outside the 24, and it is not a diagnosis.
+
+Symptoms identified:
+thirsty
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",I'm wiped out all the time and super thirsty,no_reliable_match,noSupportedSymptom,,I'm wiped out all the time and super thirsty,thirsty,,,,0.625,5/8,,thirst,,True,screenshots/independent/V026.png,,,,,colloquial,,False,no reliable match,True,allergy,,allergy
+independent,V027,en,"eyes are puffy, red and itchy since spring started",analyze,allergy,disease_shown,,,"eyes are puffy, red and itchy since spring started",prediction,,allergy,"eyes are puffy, red and itchy since spring started",eyes are puffy; itchy,,,,0.8889,8/9,eyes_symptom; itching,,"eyes, started, itchy, since, puffy",True,screenshots/independent/V027.png,Allergy,"The model recognised 8 of 9 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,colloquial,,True,Allergy,True,allergy,True,
+independent,V028,en,it stings when I wee and I'm going every half hour,analyze,urinary tract infection,withheld,No reliable match,"No reliable match
+
+The system could not identify a reliable match among the 24 supported conditions. Please consult a healthcare professional for further evaluation.
+
+None of the symptoms identified in your description is typical for the condition the model leaned towards, so no condition is shown. This check cannot recognise every condition outside the 24, and it is not a diagnosis.
+
+Symptoms identified:
+stings when I wee
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",it stings when I wee and I'm going every half hour,no_reliable_match,noSupportedSymptom,,it stings when I wee and I'm going every half hour,stings when I wee,,,,0.6667,6/9,,urinary_symptoms,,True,screenshots/independent/V028.png,,,,,colloquial,,False,no reliable match,True,Dimorphic Hemorrhoids,,Dimorphic Hemorrhoids
+independent,V029,en,Pyrexia and productive cough for four days.,analyze,Pneumonia;Common Cold,disease_shown,,,Pyrexia and productive cough for four days.,prediction,,Bronchial Asthma,fever and cough with phlegm for four days.,fever; cough; phlegm,,Pyrexia->fever; productive cough->cough with phlegm,,1.0,8/8,cough; fever; phlegm,,"cough, fever, for, days, with",True,screenshots/independent/V029.png,Bronchial Asthma,"The model recognised 8 of 8 words in your description.
+This shows how much of your wording it knows, not how likely the result is. | Medical terms rewritten in plain words
+Pyrexia → fever
+productive cough → cough with phlegm
+
+This is done before the analysis so the model can read them. No symptoms are added.",,,medical_terms,,True,Bronchial Asthma,True,Bronchial Asthma,False,
+independent,V030,en,Pruritus and urticaria after taking amoxicillin.,analyze,drug reaction;allergy,disease_shown,,,Pruritus and urticaria after taking amoxicillin.,prediction,,Chicken pox,itching and hives after taking amoxicillin.,itching; hives,,Pruritus->itching; urticaria->hives,,0.6667,4/6,itching; rash,,itching,True,screenshots/independent/V030.png,Chicken pox,"The model recognised 4 of 6 words in your description.
+This shows how much of your wording it knows, not how likely the result is. | Medical terms rewritten in plain words
+Pruritus → itching
+urticaria → hives · needs professional review
+
+This is done before the analysis so the model can read them. No symptoms are added.",,,medical_terms,,True,Chicken pox,True,gastroesophageal reflux disease,False,
+independent,V031,en,"Polyuria, polydipsia and unexplained weight loss.",analyze,diabetes,disease_shown,,,"Polyuria, polydipsia and unexplained weight loss.",prediction,,peptic ulcer disease,"urinating a lot, excessive thirst and unexplained weight loss.",urinating a lot; excessive thirst; weight loss,,Polyuria->urinating a lot; polydipsia->excessive thirst,,0.875,7/8,weight_loss,thirst; urinary_symptoms,"weight, loss",True,screenshots/independent/V031.png,Peptic ulcer disease,"The model recognised 7 of 8 words in your description.
+This shows how much of your wording it knows, not how likely the result is. | Medical terms rewritten in plain words
+Polyuria → urinating a lot · needs professional review
+polydipsia → excessive thirst
+
+This is done before the analysis so the model can read them. No symptoms are added.",,,medical_terms,,True,Peptic ulcer disease,True,peptic ulcer disease,False,
+independent,V032,en,Dysuria and increased urinary frequency.,analyze,urinary tract infection,disease_shown,,,Dysuria and increased urinary frequency.,prediction,,diabetes,pain during urination and increased frequent urination.,pain during urination; frequent urination,,Dysuria->pain during urination; urinary frequency->frequent urination,,1.0,7/7,urinary_symptoms,,"urination, increased, and, frequent",True,screenshots/independent/V032.png,Diabetes,"The model recognised 7 of 7 words in your description.
+This shows how much of your wording it knows, not how likely the result is. | Medical terms rewritten in plain words
+Dysuria → pain during urination · needs professional review
+urinary frequency → frequent urination
+
+This is done before the analysis so the model can read them. No symptoms are added.",,,medical_terms,,True,Diabetes,True,diabetes,False,
+independent,V033,en,Arthralgia with morning stiffness in both hands.,analyze,Arthritis,withheld,No reliable match,"No reliable match
+
+The system could not identify a reliable match among the 24 supported conditions. Please consult a healthcare professional for further evaluation.
+
+None of the symptoms identified in your description is typical for the condition the model leaned towards, so no condition is shown. This check cannot recognise every condition outside the 24, and it is not a diagnosis.
+
+Symptoms identified:
+joint pain
+stiffness in both hands
+
+Medical terms rewritten in plain words
+Arthralgia → joint pain
+
+This is done before the analysis so the model can read them. No symptoms are added.
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",Arthralgia with morning stiffness in both hands.,no_reliable_match,noSupportedSymptom,,joint pain with morning stiffness in both hands.,joint pain; stiffness in both hands,,Arthralgia->joint pain,,1.0,8/8,,hands_symptom; joint_pain,,True,screenshots/independent/V033.png,,,,,medical_terms,,False,no reliable match,True,drug reaction,,drug reaction
+independent,V034,en,"Rhinorrhoea, sneezing and itchy eyes.",analyze,allergy;Common Cold,disease_shown,,,"Rhinorrhoea, sneezing and itchy eyes.",prediction,,allergy,"runny nose, sneezing and itchy eyes.",runny nose; sneezing; itchy,,Rhinorrhoea->runny nose,,1.0,6/6,itching; nasal_symptoms; sneezing,,"eyes, runny, nose, sneezing, itchy",True,screenshots/independent/V034.png,Allergy,"The model recognised 6 of 6 words in your description.
+This shows how much of your wording it knows, not how likely the result is. | Medical terms rewritten in plain words
+Rhinorrhoea → runny nose
+
+This is done before the analysis so the model can read them. No symptoms are added.",,,medical_terms,,True,Allergy,True,allergy,True,
+independent,V035,en,Epigastric pain with melena.,analyze,peptic ulcer disease,disease_shown,,,Epigastric pain with melena.,prediction,,peptic ulcer disease,upper stomach pain with black stools.,stomach pain; black stools,,Epigastric->upper stomach; melena->black stools,,1.0,6/6,abdominal_pain; stool_changes,,"stools, upper, stomach, black",True,screenshots/independent/V035.png,Peptic ulcer disease,"The model recognised 6 of 6 words in your description.
+This shows how much of your wording it knows, not how likely the result is. | Medical terms rewritten in plain words
+Epigastric → upper stomach · needs professional review
+melena → black stools · needs professional review
+
+This is done before the analysis so the model can read them. No symptoms are added.",,,medical_terms,,True,Peptic ulcer disease,True,Dengue,True,
+independent,V036,en,Severe dyspnoea and orthopnoea.,analyze,Bronchial Asthma;Pneumonia,withheld,No reliable match,"No reliable match
+
+The system could not identify a reliable match among the 24 supported conditions. Please consult a healthcare professional for further evaluation.
+
+None of the symptoms identified in your description is typical for the condition the model leaned towards, so no condition is shown. This check cannot recognise every condition outside the 24, and it is not a diagnosis.
+
+Symptoms identified:
+shortness of breath
+
+Terms that could not be interpreted:
+orthopnoea
+
+Medical terms rewritten in plain words
+dyspnoea → shortness of breath
+
+This is done before the analysis so the model can read them. No symptoms are added.
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",Severe dyspnoea and orthopnoea.,no_reliable_match,noSupportedSymptom,,Severe shortness of breath and orthopnoea.,shortness of breath,,dyspnoea->shortness of breath,orthopnoea,0.8333,5/6,,breathlessness,,True,screenshots/independent/V036.png,,,,,medical_terms,,False,no reliable match,True,drug reaction,,gastroesophageal reflux disease
+independent,V037,en,I have a sore throat and a blocked nose but no fever.,analyze,Common Cold;allergy,disease_shown,,,I have a sore throat and a blocked nose but no fever.,prediction,,allergy,I have a sore throat and a blocked nose.,sore throat; blocked nose,fever,,,1.0,6/6,nasal_symptoms; sore_throat,,"nose, sore, blocked, throat, have",True,screenshots/independent/V037.png,Allergy,"The model recognised 6 of 6 words in your description.
+This shows how much of your wording it knows, not how likely the result is. | Symptoms you said you don’t have are left out
+
+Found: fever. You marked these symptoms as absent. The model cannot understand negation, so they were removed from the analysed text and did not influence the result.",,,negation,,True,Allergy,True,allergy,True,
+independent,V038,en,"Itchy rash on my arms, no fever and no blisters.",analyze,Fungal infection;allergy;drug reaction;Psoriasis,disease_shown,,,"Itchy rash on my arms, no fever and no blisters.",prediction,,Psoriasis,Itchy rash on my arms.,Itchy; rash,fever; blisters,,,1.0,5/5,itching; rash,,"arms, itchy, on, my",True,screenshots/independent/V038.png,Psoriasis,"The model recognised 5 of 5 words in your description.
+This shows how much of your wording it knows, not how likely the result is. | Symptoms you said you don’t have are left out
+
+Found: fever, blisters. You marked these symptoms as absent. The model cannot understand negation, so they were removed from the analysed text and did not influence the result.",,,negation,,True,Psoriasis,True,Impetigo,True,
+independent,V039,en,"No cough, no fever, no headache.",clarify,,withheld,Please clarify your description,"Please clarify your description
+
+You only mentioned symptoms you do not have. Please describe the symptoms you are experiencing.
+
+Marked as absent:
+cough
+fever
+headache
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over","No cough, no fever, no headache.",needs_clarification,onlyNegated,,,,cough; fever; headache,,,,,,,,True,screenshots/independent/V039.png,,,,,negation,,False,clarification (onlyNegated),True,Chicken pox,,
+independent,V040,en,I don't have any pain at all.,clarify,,withheld,Please clarify your description,"Please clarify your description
+
+You only mentioned symptoms you do not have. Please describe the symptoms you are experiencing.
+
+Marked as absent:
+pain
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",I don't have any pain at all.,needs_clarification,onlyNegated,,,,pain,,,,,,,,True,screenshots/independent/V040.png,,,,,negation,,False,clarification (onlyNegated),True,diabetes,,
+independent,V041,en,I have no appetite and feel nauseous.,analyze,,disease_shown,,,I have no appetite and feel nauseous.,prediction,,peptic ulcer disease,I have no appetite and feel nauseous.,no appetite; nauseous,,,,1.0,6/6,appetite_loss,nausea,"appetite, feel, nauseous, no, have",True,screenshots/independent/V041.png,Peptic ulcer disease,"The model recognised 6 of 6 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,negation,,True,Peptic ulcer disease,True,peptic ulcer disease,,
+independent,V042,en,I am not sure whether I have a fever.,clarify,,withheld,Please clarify your description,"Please clarify your description
+
+Your description mentions symptoms you are not sure about. Please describe only the symptoms you are experiencing.
+
+Symptoms identified:
+fever
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",I am not sure whether I have a fever.,needs_clarification,uncertain,,,fever,,,,,,,,,True,screenshots/independent/V042.png,,,,,negation,,False,clarification (uncertain),True,Chicken pox,,
+independent,V043,en,Burning chest after meals without vomiting.,analyze,gastroesophageal reflux disease;peptic ulcer disease,disease_shown,,,Burning chest after meals without vomiting.,prediction,,gastroesophageal reflux disease,Burning chest after meals.,Burning chest,vomiting,,,1.0,4/4,chest_pain,,"after, chest, meals",True,screenshots/independent/V043.png,Gastroesophageal reflux disease,"The model recognised 4 of 4 words in your description.
+This shows how much of your wording it knows, not how likely the result is. | Symptoms you said you don’t have are left out
+
+Found: vomiting. You marked these symptoms as absent. The model cannot understand negation, so they were removed from the analysed text and did not influence the result.",,,negation,,True,Gastroesophageal reflux disease,True,gastroesophageal reflux disease,True,
+independent,V044,en,No fever and cough.,clarify,,withheld,Please clarify your description,"Please clarify your description
+
+It is not clear which symptoms you have and which you do not. Please write them in separate sentences, e.g. “I have a cough. I do not have a fever.”
+
+Marked as absent:
+fever
+cough
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",No fever and cough.,needs_clarification,negationUnclear,,,,fever; cough,,,,,,,,True,screenshots/independent/V044.png,,,,,negation,,False,clarification (negationUnclear),True,Bronchial Asthma,,
+independent,V045,en,I can't sleep because my joints hurt.,analyze,Arthritis,withheld,No reliable match,"No reliable match
+
+The system could not identify a reliable match among the 24 supported conditions. Please consult a healthcare professional for further evaluation.
+
+None of the symptoms identified in your description is typical for the condition the model leaned towards, so no condition is shown. This check cannot recognise every condition outside the 24, and it is not a diagnosis.
+
+Symptoms identified:
+can't sleep
+joints hurt
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",I can't sleep because my joints hurt.,no_reliable_match,noSupportedSymptom,,I can't sleep because my joints hurt.,can't sleep; joints hurt,,,,1.0,6/6,,joint_pain; trouble_sleeping,,True,screenshots/independent/V045.png,,,,,negation,,False,no reliable match,True,Chicken pox,,Chicken pox
+independent,V046,en,Headache that doesn't go away and blurry vision.,analyze,Hypertension;Migraine,disease_shown,,,Headache that doesn't go away and blurry vision.,prediction,,diabetes,Headache that doesn't go away and blurry vision.,Headache; blurry vision,,,,1.0,8/8,vision_changes,headache,"blurry, vision, away, and",True,screenshots/independent/V046.png,Diabetes,"The model recognised 8 of 8 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,negation,,True,Diabetes,True,diabetes,False,
+independent,V047,en,Is the pharmacy near the bus station open late tonight?,no_disease,,withheld,No symptoms found,"No symptoms found
+
+Your description does not appear to contain symptoms. Please describe the symptoms you are experiencing.
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",Is the pharmacy near the bus station open late tonight?,no_symptoms,,,,,,,,,,,,,True,screenshots/independent/V047.png,,,,,unrelated,,False,no symptoms,True,Impetigo,,
+independent,V048,en,Please remind me to call my doctor tomorrow morning.,no_disease,,withheld,No symptoms found,"No symptoms found
+
+Your description does not appear to contain symptoms. Please describe the symptoms you are experiencing.
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",Please remind me to call my doctor tomorrow morning.,no_symptoms,,,,,,,,,,,,,True,screenshots/independent/V048.png,,,,,unrelated,,False,no symptoms,True,Bronchial Asthma,,
+independent,V049,en,My laptop got a virus and keeps crashing.,no_disease,,withheld,No symptoms found,"No symptoms found
+
+Your description does not appear to contain symptoms. Please describe the symptoms you are experiencing.
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",My laptop got a virus and keeps crashing.,no_symptoms,,,,,,,,,,,,,True,screenshots/independent/V049.png,,,,,unrelated,,False,no symptoms,True,drug reaction,,
+independent,V050,en,It's really hot and humid outside today.,no_disease,,withheld,No symptoms found,"No symptoms found
+
+Your description does not appear to contain symptoms. Please describe the symptoms you are experiencing.
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",It's really hot and humid outside today.,no_symptoms,,,,,,,,,,,,,True,screenshots/independent/V050.png,,,,,unrelated,,False,no symptoms,True,diabetes,,
+independent,V051,en,How much does a blood test cost at the clinic?,no_disease,,withheld,No symptoms found,"No symptoms found
+
+Your description does not appear to contain symptoms. Please describe the symptoms you are experiencing.
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",How much does a blood test cost at the clinic?,no_symptoms,,,,,,,,,,,,,True,screenshots/independent/V051.png,,,,,unrelated,,False,no symptoms,True,urinary tract infection,,
+independent,V052,en,I'm tired of waiting for the bus every morning.,no_disease,,disease_shown,,,I'm tired of waiting for the bus every morning.,prediction,,Chicken pox,I'm tired of waiting for the bus every morning.,tired,,,,0.75,6/8,fatigue,,"every, tired, for, the",True,screenshots/independent/V052.png,Chicken pox,"The model recognised 6 of 8 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,unrelated,,True,Chicken pox,True,Chicken pox,,
+independent,V053,en,Can you tell me a joke about cats?,no_disease,,withheld,No symptoms found,"No symptoms found
+
+Your description does not appear to contain symptoms. Please describe the symptoms you are experiencing.
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",Can you tell me a joke about cats?,no_symptoms,,,,,,,,,,,,,True,screenshots/independent/V053.png,,,,,unrelated,,False,no symptoms,True,Chicken pox,,
+independent,V054,en,My sister is a nurse at the hospital in Tirana.,no_disease,,withheld,No symptoms found,"No symptoms found
+
+Your description does not appear to contain symptoms. Please describe the symptoms you are experiencing.
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",My sister is a nurse at the hospital in Tirana.,no_symptoms,,,,,,,,,,,,,True,screenshots/independent/V054.png,,,,,unrelated,,False,no symptoms,True,urinary tract infection,,
+independent,V055,en,I want to buy new running shoes for my knees.,no_disease,,withheld,No symptoms found,"No symptoms found
+
+Your description does not appear to contain symptoms. Please describe the symptoms you are experiencing.
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",I want to buy new running shoes for my knees.,no_symptoms,,,,,,,,,,,,,True,screenshots/independent/V055.png,,,,,unrelated,,False,no symptoms,True,diabetes,,
+independent,V056,en,"The meeting gave me a headache, there were so many slides.",no_disease,,disease_shown,,,"The meeting gave me a headache, there were so many slides.",prediction,,Chicken pox,"The meeting gave me a headache, there were so many slides.",headache,,,,0.7,7/10,headache,,"me, headache, so, the",True,screenshots/independent/V056.png,Chicken pox,"The model recognised 7 of 10 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,unrelated,,True,Chicken pox,True,Chicken pox,,
+independent,V057,en,I feel really bad today.,clarify,,withheld,No symptoms found,"No symptoms found
+
+Your description does not appear to contain symptoms. Please describe the symptoms you are experiencing.
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",I feel really bad today.,no_symptoms,,,,,,,,,,,,,True,screenshots/independent/V057.png,,,,,insufficient,,False,no symptoms,True,peptic ulcer disease,,
+independent,V058,en,Something is not right with my body.,clarify,,withheld,No symptoms found,"No symptoms found
+
+Your description does not appear to contain symptoms. Please describe the symptoms you are experiencing.
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",Something is not right with my body.,no_symptoms,,,,,,,,,,,,,True,screenshots/independent/V058.png,,,,,insufficient,,False,no symptoms,True,Dengue,,
+independent,V059,en,I have been sick lately.,clarify,,withheld,Please clarify your description,"Please clarify your description
+
+Your description is too general to compare with the supported conditions. Please describe specific symptoms, where you feel them and how they feel.
+
+Symptoms identified:
+sick
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",I have been sick lately.,needs_clarification,insufficient,,,sick,,,,,,,,,True,screenshots/independent/V059.png,,,,,insufficient,,False,clarification (insufficient),True,drug reaction,,
+independent,V060,en,It hurts a lot sometimes.,clarify,,withheld,Please clarify your description,"Please clarify your description
+
+Your description is too general to compare with the supported conditions. Please describe specific symptoms, where you feel them and how they feel.
+
+Symptoms identified:
+hurts
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",It hurts a lot sometimes.,needs_clarification,insufficient,,,hurts,,,,,,,,,True,screenshots/independent/V060.png,,,,,insufficient,,False,clarification (insufficient),True,allergy,,
+independent,V061,en,I think I might have diabetes.,clarify,,withheld,Please clarify your description,"Please clarify your description
+
+Your description names a condition but no symptoms. Please describe the symptoms you are experiencing.
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",I think I might have diabetes.,needs_clarification,conditionOnly,,,,,,,,,,,,True,screenshots/independent/V061.png,,,,,insufficient,,False,clarification (conditionOnly),True,drug reaction,,
+independent,V062,en,My health is not good these days.,clarify,,withheld,No symptoms found,"No symptoms found
+
+Your description does not appear to contain symptoms. Please describe the symptoms you are experiencing.
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",My health is not good these days.,no_symptoms,,,,,,,,,,,,,True,screenshots/independent/V062.png,,,,,insufficient,,False,no symptoms,True,Impetigo,,
+independent,V063,en,Sudden numbness on one side of my face and my speech became slurred.,out_of_scope,,withheld,No reliable match,"No reliable match
+
+The system could not identify a reliable match among the 24 supported conditions. Please consult a healthcare professional for further evaluation.
+
+None of the symptoms identified in your description is typical for the condition the model leaned towards, so no condition is shown. This check cannot recognise every condition outside the 24, and it is not a diagnosis.
+
+Symptoms identified:
+numbness
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",Sudden numbness on one side of my face and my speech became slurred.,no_reliable_match,noSupportedSymptom,,Sudden numbness on one side of my face and my speech became slurred.,numbness,,,,0.6923,9/13,,numbness,,True,screenshots/independent/V063.png,,,,,out_of_scope,,False,no reliable match,True,Impetigo,,Impetigo
+independent,V064,en,"My ear is painful and blocked, and I can hear a ringing sound.",out_of_scope,,withheld,No reliable match,"No reliable match
+
+The system could not identify a reliable match among the 24 supported conditions. Please consult a healthcare professional for further evaluation.
+
+None of the symptoms identified in your description is typical for the condition the model leaned towards, so no condition is shown. This check cannot recognise every condition outside the 24, and it is not a diagnosis.
+
+Symptoms identified:
+ear is painful
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over","My ear is painful and blocked, and I can hear a ringing sound.",no_reliable_match,noSupportedSymptom,,"My ear is painful and blocked, and I can hear a ringing sound.",ear is painful,,,,0.6364,7/11,,ears_symptom,,True,screenshots/independent/V064.png,,,,,out_of_scope,,False,no reliable match,True,Common Cold,,Common Cold
+independent,V065,en,My heel hurts badly with the first steps in the morning.,out_of_scope,,withheld,No reliable match,"No reliable match
+
+The system could not identify a reliable match among the 24 supported conditions. Please consult a healthcare professional for further evaluation.
+
+None of the symptoms identified in your description is typical for the condition the model leaned towards, so no condition is shown. This check cannot recognise every condition outside the 24, and it is not a diagnosis.
+
+Symptoms identified:
+heel hurts
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",My heel hurts badly with the first steps in the morning.,no_reliable_match,noSupportedSymptom,,My heel hurts badly with the first steps in the morning.,heel hurts,,,,0.7273,8/11,,feet_symptom,,True,screenshots/independent/V065.png,,,,,out_of_scope,,False,no reliable match,True,gastroesophageal reflux disease,,gastroesophageal reflux disease
+independent,V066,en,A painful red lump with a white head appeared on my eyelid.,out_of_scope,,withheld,No reliable match,"No reliable match
+
+The system could not identify a reliable match among the 24 supported conditions. Please consult a healthcare professional for further evaluation.
+
+None of the symptoms identified in your description is typical for the condition the model leaned towards, so no condition is shown. This check cannot recognise every condition outside the 24, and it is not a diagnosis.
+
+Symptoms identified:
+painful
+lump with a white head
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",A painful red lump with a white head appeared on my eyelid.,no_reliable_match,noSupportedSymptom,,A painful red lump with a white head appeared on my eyelid.,painful; lump with a white head,,,,0.8,8/10,,headache,,True,screenshots/independent/V066.png,,,,,out_of_scope,,False,no reliable match,True,gastroesophageal reflux disease,,gastroesophageal reflux disease
+independent,V067,en,"The front of my neck is swollen, I feel nervous, my heart races and I'm losing weight.",out_of_scope,,disease_shown,,,"The front of my neck is swollen, I feel nervous, my heart races and I'm losing weight.",prediction,,peptic ulcer disease,"The front of my neck is swollen, I feel nervous, my heart races and I'm losing weight.",neck is swollen; losing weight,,,,0.8667,13/15,weight_loss,neck_pain,"weight, feel, nervous, losing",True,screenshots/independent/V067.png,Peptic ulcer disease,"The model recognised 13 of 15 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,out_of_scope,,True,Peptic ulcer disease,True,peptic ulcer disease,,
+independent,V068,en,Toothache that gets worse with cold drinks and my gum is swollen.,out_of_scope,,withheld,No reliable match,"No reliable match
+
+The system could not identify a reliable match among the 24 supported conditions. Please consult a healthcare professional for further evaluation.
+
+None of the symptoms identified in your description is typical for the condition the model leaned towards, so no condition is shown. This check cannot recognise every condition outside the 24, and it is not a diagnosis.
+
+Symptoms identified:
+gum is swollen
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",Toothache that gets worse with cold drinks and my gum is swollen.,no_reliable_match,noSupportedSymptom,,Toothache that gets worse with cold drinks and my gum is swollen.,gum is swollen,,,,0.75,9/12,,teeth_symptom,,True,screenshots/independent/V068.png,,,,,out_of_scope,,False,no reliable match,True,Common Cold,,Common Cold
+independent,V069,en,Bloody diarrhoea and cramps after eating undercooked chicken.,out_of_scope,,withheld,No reliable match,"No reliable match
+
+The system could not identify a reliable match among the 24 supported conditions. Please consult a healthcare professional for further evaluation.
+
+None of the symptoms identified in your description is typical for the condition the model leaned towards, so no condition is shown. This check cannot recognise every condition outside the 24, and it is not a diagnosis.
+
+Symptoms identified:
+Bloody
+diarrhoea
+cramps
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",Bloody diarrhoea and cramps after eating undercooked chicken.,no_reliable_match,noSupportedSymptom,,Bloody diarrhoea and cramps after eating undercooked chicken.,Bloody; diarrhoea; cramps,,,,0.75,6/8,,bleeding; cramps; diarrhea,,True,screenshots/independent/V069.png,,,,,out_of_scope,,False,no reliable match,True,gastroesophageal reflux disease,,gastroesophageal reflux disease
+independent,V070,en,Sharp pain in the lower right abdomen with fever and loss of appetite.,out_of_scope,,disease_shown,,,Sharp pain in the lower right abdomen with fever and loss of appetite.,prediction,,peptic ulcer disease,Sharp pain in the lower right abdomen with fever and loss of appetite.,pain in the lower right abdomen; fever; loss of appetite,,,,1.0,13/13,abdominal_pain; appetite_loss,fever,"loss, abdomen, appetite, in",True,screenshots/independent/V070.png,Peptic ulcer disease,"The model recognised 13 of 13 words in your description.
+This shows how much of your wording it knows, not how likely the result is.",,,out_of_scope,,True,Peptic ulcer disease,True,peptic ulcer disease,,
+independent,V071,en,"I feel sad all the time, have no interest in anything and can't sleep.",out_of_scope,,withheld,No reliable match,"No reliable match
+
+The system could not identify a reliable match among the 24 supported conditions. Please consult a healthcare professional for further evaluation.
+
+None of the symptoms identified in your description is typical for the condition the model leaned towards, so no condition is shown. This check cannot recognise every condition outside the 24, and it is not a diagnosis.
+
+Symptoms identified:
+can't sleep
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over","I feel sad all the time, have no interest in anything and can't sleep.",no_reliable_match,noSupportedSymptom,,"I feel sad all the time, have no interest in anything and can't sleep.",can't sleep,,,,0.9231,12/13,,trouble_sleeping,,True,screenshots/independent/V071.png,,,,,out_of_scope,,False,no reliable match,True,Chicken pox,,Chicken pox
+independent,V072,en,My hands shake when I hold a cup and my movements have become slow.,out_of_scope,,withheld,No symptoms found,"No symptoms found
+
+Your description does not appear to contain symptoms. Please describe the symptoms you are experiencing.
+
+For example: “I have a fever, a sore throat and a runny nose.”
+
+Educational prediction only. Not a medical diagnosis.
+
+Edit description
+Start over",My hands shake when I hold a cup and my movements have become slow.,no_symptoms,,,,,,,,,,,,,True,screenshots/independent/V072.png,,,,,out_of_scope,,False,no symptoms,True,drug reaction,,
+independent,V073,sq,"Kam dhimbje fyti, rrjedhje hundësh dhe teshtitje.",analyze,Common Cold;allergy,disease_shown,,,"I have sore throat, runny nose and sneezing.",prediction,,allergy,"I have sore throat, runny nose and sneezing.",sore throat; runny nose; sneezing,,,,1.0,7/7,nasal_symptoms; sneezing; sore_throat,,"runny, nose, sore, throat, sneezing",True,screenshots/independent/V073.png,Alergji,"Modeli njohu 7 nga 7 fjalë të tekstit të analizuar.
+Kjo tregon sa nga fjalët i njeh modeli, jo sa i mundshëm është rezultati.",ok,"Përkthimi për modelin
+
+I have sore throat, runny nose and sneezing.
+
+dhimbje fyti
+sore throat
+rrjedhje hundësh
+runny nose
+teshtitje
+sneezing
+
+Përkthyer me një fjalor të kontrolluar simptomash. Përkthimet mjekësore kanë ende nevojë për verifikim profesional.",albanian,,True,Alergji,,,True,
+independent,V074,sq,Më kruhet lëkura dhe kam skuqje në krahë.,analyze,Fungal infection;allergy;drug reaction;Psoriasis,disease_shown,,,I have itching and skin rash.,prediction,,Chicken pox,I have itching and skin rash.,itching; rash,,,,1.0,5/5,itching; rash,,"itching, rash, skin",True,screenshots/independent/V074.png,Varicela (Lia e dhenve),"Modeli njohu 5 nga 5 fjalë të tekstit të analizuar.
+Kjo tregon sa nga fjalët i njeh modeli, jo sa i mundshëm është rezultati.",ok,"Përkthimi për modelin
+
+I have itching and skin rash.
+
+Më kruhet lëkura
+itching
+skuqje
+skin rash
+
+Përkthyer me një fjalor të kontrolluar simptomash. Përkthimet mjekësore kanë ende nevojë për verifikim profesional.",albanian,,True,Varicela (Lia e dhenve),,,False,
+independent,V075,sq,Sytë e mi janë të verdhë dhe urina është e errët.,analyze,Jaundice,blocked_in_ui,,Sqaroni përshkrimin para analizës.,,,,,,,,,,,,,,,,screenshots/independent/V075.png,,,unclear,"Nuk e kuptuam plotësisht përshkrimin
+
+Fjalë të panjohura:
+Sytë
+verdhë
+urina
+errët
+
+Nuk u gjet asnjë simptomë e njohur.
+
+Ju lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",albanian,,False,blocked in UI (Albanian translator / length),,,,
+independent,V076,sq,Kam humbur oreksin dhe kam dhimbje barku.,analyze,,blocked_in_ui,,Sqaroni përshkrimin para analizës.,,,,,,,,,,,,,,,,screenshots/independent/V076.png,,,unclear,"Nuk e kuptuam plotësisht përshkrimin
+
+Fjalë të panjohura:
+humbur
+oreksin
+
+Ju lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",albanian,,False,blocked in UI (Albanian translator / length),,,,
+independent,V077,sq,Kam diarre dhe shkoj shpesh në tualet.,analyze,,disease_shown,,,I have diarrhea and a frequent need to go to the bathroom.,prediction,,Typhoid,I have diarrhea and a frequent need to go to the bathroom.,diarrhea; need to go to the bathroom,,,,1.0,10/10,diarrhea,frequent_toilet,"diarrhea, frequent, the, to",True,screenshots/independent/V077.png,Tifo,"Modeli njohu 10 nga 10 fjalë të tekstit të analizuar.
+Kjo tregon sa nga fjalët i njeh modeli, jo sa i mundshëm është rezultati.",ok,"Përkthimi për modelin
+
+I have diarrhea and a frequent need to go to the bathroom.
+
+diarre
+diarrhea
+shkoj shpesh në tualet
+a frequent need to go to the bathroom
+
+Përkthyer me një fjalor të kontrolluar simptomash. Përkthimet mjekësore kanë ende nevojë për verifikim profesional.",albanian,,True,Tifo,,,,
+independent,V078,sq,Nuk kam kollë dhe nuk kam temperaturë.,clarify,,blocked_in_ui,,Sqaroni përshkrimin para analizës.,,,,,,,,,,,,,,,,screenshots/independent/V078.png,,,unclear,"Nuk e kuptuam plotësisht përshkrimin
+
+Përmendët vetëm simptoma që nuk i keni. Ju lutemi përshkruani simptomat që i keni.",albanian,,False,blocked in UI (Albanian translator / length),,,,
+independent,V079,sq,Sa kushton një kafe në qendër të qytetit?,no_disease,,blocked_in_ui,,Sqaroni përshkrimin para analizës.,,,,,,,,,,,,,,,,screenshots/independent/V079.png,,,unclear,"Nuk e kuptuam plotësisht përshkrimin
+
+Fjalë të panjohura:
+Sa
+kushton
+kafe
+qendër
+qytetit
+
+Nuk u gjet asnjë simptomë e njohur.
+
+Ju lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",albanian,,False,blocked in UI (Albanian translator / length),,,,
+independent,V080,sq,"Kam temperaturë, por jo kollë.",analyze,,blocked_in_ui,,Teksti i përkthyer është shumë i shkurtër për modelin (duhen të paktën 15 shkronja dhe 3 fjalë). Ju lutemi shtoni simptoma të tjera që keni.,,,,,,,,,,,,,,,,screenshots/independent/V080.png,,,ok,"Përkthimi për modelin
+
+I have fever.
+
+temperaturë
+fever
+Nuk i dërgohen modelit (të shënuara si të munguara):
+kollë
+mungon
+
+Përkthyer me një fjalor të kontrolluar simptomash. Përkthimet mjekësore kanë ende nevojë për verifikim profesional.",albanian,,False,blocked in UI (Albanian translator / length),,,,
+independent,V081,sq,Më dhemb gjoksi kur marr frymë thellë dhe kam kollë me gëlbazë.,analyze,Pneumonia;Bronchial Asthma,blocked_in_ui,,Sqaroni përshkrimin para analizës.,,,,,,,,,,,,,,,,screenshots/independent/V081.png,,,unclear,"Nuk e kuptuam plotësisht përshkrimin
+
+Fjalë të panjohura:
+marr
+frymë
+thellë
+
+Ju lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",albanian,,False,blocked in UI (Albanian translator / length),,,,
+independent,V082,sq,Ndihem keq.,clarify,,blocked_in_ui,,Teksti i përkthyer është shumë i shkurtër për modelin (duhen të paktën 15 shkronja dhe 3 fjalë). Ju lutemi shtoni simptoma të tjera që keni.,,,,,,,,,,,,,,,,screenshots/independent/V082.png,,,ok,"Përkthimi për modelin
+
+I feel unwell.
+
+Ndihem keq
+feel unwell
+
+Përkthyer me një fjalor të kontrolluar simptomash. Përkthimet mjekësore kanë ende nevojë për verifikim profesional.",albanian,,False,blocked in UI (Albanian translator / length),,,,
+independent,V083,sq,Kam dhimbje të forta në thembër në mëngjes.,out_of_scope,,blocked_in_ui,,Sqaroni përshkrimin para analizës.,,,,,,,,,,,,,,,,screenshots/independent/V083.png,,,unclear,"Nuk e kuptuam plotësisht përshkrimin
+
+Fjalë të panjohura:
+thembër
+
+Ju lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",albanian,,False,blocked in UI (Albanian translator / length),,,,
+independent,V084,sq,Nesër kam takim me mjekun në spital.,no_disease,,blocked_in_ui,,Sqaroni përshkrimin para analizës.,,,,,,,,,,,,,,,,screenshots/independent/V084.png,,,unclear,"Nuk e kuptuam plotësisht përshkrimin
+
+Fjalë të panjohura:
+Nesër
+takim
+mjekun
+spital
+
+Nuk u gjet asnjë simptomë e njohur.
+
+Ju lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",albanian,,False,blocked in UI (Albanian translator / length),,,,

@@ -1,0 +1,138 @@
+{
+  "independent_after_all": {
+    "valid_cases": 49,
+    "valid_accepted": 38,
+    "valid_falsely_rejected": 11,
+    "invalid_cases": 24,
+    "invalid_correctly_rejected": 22,
+    "invalid_still_given_disease": 2,
+    "out_of_scope_cases": 11,
+    "out_of_scope_still_predicted": 2,
+    "out_of_scope_withheld": 9
+  },
+  "independent_after_english": {
+    "valid_cases": 42,
+    "valid_accepted": 35,
+    "valid_falsely_rejected": 7,
+    "invalid_cases": 20,
+    "invalid_correctly_rejected": 18,
+    "invalid_still_given_disease": 2,
+    "out_of_scope_cases": 10,
+    "out_of_scope_still_predicted": 2,
+    "out_of_scope_withheld": 8
+  },
+  "independent_before_english_offline": {
+    "valid_cases": 42,
+    "valid_accepted": 42,
+    "valid_falsely_rejected": 0,
+    "invalid_cases": 20,
+    "invalid_correctly_rejected": 0,
+    "invalid_still_given_disease": 20,
+    "out_of_scope_cases": 10,
+    "out_of_scope_still_predicted": 10,
+    "out_of_scope_withheld": 0
+  },
+  "independent_after_albanian": {
+    "valid_cases": 7,
+    "valid_accepted": 3,
+    "valid_falsely_rejected": 4,
+    "invalid_cases": 4,
+    "invalid_correctly_rejected": 4,
+    "invalid_still_given_disease": 0,
+    "out_of_scope_cases": 1,
+    "out_of_scope_still_predicted": 0,
+    "out_of_scope_withheld": 1
+  },
+  "independent_valid_falsely_rejected_detail": [
+    {
+      "case_id": "V007",
+      "text": "Throbbing pain on the left side of my head, I feel sick and can't stand bright lights.",
+      "outcome_detail": "no reliable match"
+    },
+    {
+      "case_id": "V024",
+      "text": "got the chills and I'm burning up",
+      "outcome_detail": "no reliable match"
+    },
+    {
+      "case_id": "V026",
+      "text": "I'm wiped out all the time and super thirsty",
+      "outcome_detail": "no reliable match"
+    },
+    {
+      "case_id": "V028",
+      "text": "it stings when I wee and I'm going every half hour",
+      "outcome_detail": "no reliable match"
+    },
+    {
+      "case_id": "V033",
+      "text": "Arthralgia with morning stiffness in both hands.",
+      "outcome_detail": "no reliable match"
+    },
+    {
+      "case_id": "V036",
+      "text": "Severe dyspnoea and orthopnoea.",
+      "outcome_detail": "no reliable match"
+    },
+    {
+      "case_id": "V045",
+      "text": "I can't sleep because my joints hurt.",
+      "outcome_detail": "no reliable match"
+    },
+    {
+      "case_id": "V075",
+      "text": "Sytë e mi janë të verdhë dhe urina është e errët.",
+      "outcome_detail": "blocked in UI (Albanian translator / length)"
+    },
+    {
+      "case_id": "V076",
+      "text": "Kam humbur oreksin dhe kam dhimbje barku.",
+      "outcome_detail": "blocked in UI (Albanian translator / length)"
+    },
+    {
+      "case_id": "V080",
+      "text": "Kam temperaturë, por jo kollë.",
+      "outcome_detail": "blocked in UI (Albanian translator / length)"
+    },
+    {
+      "case_id": "V081",
+      "text": "Më dhemb gjoksi kur marr frymë thellë dhe kam kollë me gëlbazë.",
+      "outcome_detail": "blocked in UI (Albanian translator / length)"
+    }
+  ],
+  "independent_invalid_given_disease_detail": [
+    {
+      "case_id": "V052",
+      "text": "I'm tired of waiting for the bus every morning.",
+      "ui_disease": "Chicken pox"
+    },
+    {
+      "case_id": "V056",
+      "text": "The meeting gave me a headache, there were so many slides.",
+      "ui_disease": "Chicken pox"
+    }
+  ],
+  "independent_label_agreement_when_shown": {
+    "with_proposed_label": 35,
+    "agree": 21
+  },
+  "previous50": {
+    "before_disease_shown": 37,
+    "after_disease_shown": 32,
+    "no_class_inputs_before_shown": 11,
+    "no_class_inputs_after_shown": 3,
+    "with_label_before_shown": 26,
+    "with_label_after_shown": 29,
+    "outcome_changed": 24,
+    "same_text_same_prediction": 18
+  },
+  "label_agreement_information_only": {
+    "english_valid_with_label": 39,
+    "before_shown": 39,
+    "before_agree": 18,
+    "after_shown": 33,
+    "after_agree": 20,
+    "after_abstained": 6,
+    "abstained_hidden_prediction_agrees": 0
+  }
+}

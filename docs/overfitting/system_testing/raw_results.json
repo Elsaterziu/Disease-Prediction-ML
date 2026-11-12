@@ -1,0 +1,2976 @@
+[
+  {
+    "case_id": "EN-U001",
+    "test_group": "new_description",
+    "language": "en",
+    "source": "unseen_v1:U001",
+    "text": "Lots of red pimples and blackheads on my forehead and chin, and my face gets oily by midday.",
+    "proposed_labels": "Acne",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Acne",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 15 of 18 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "Lots of red pimples and blackheads on my forehead and chin, and my face gets oily by midday.",
+    "api_error": "",
+    "predicted_label": "Acne",
+    "recognized_words": 15,
+    "total_words": 18,
+    "coverage": 0.8333,
+    "unrecognized_terms": "chin, oily, midday",
+    "top_supporting_words": "blackheads (+0.505), pimples (+0.320), lots (+0.030), face (+0.024)",
+    "top_opposing_words": "and (-0.078), red (-0.047), of (-0.021), by (-0.013), on (-0.013)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0779,
+            "word": "and"
+          },
+          {
+            "contribution": -0.0469,
+            "word": "red"
+          },
+          {
+            "contribution": -0.0208,
+            "word": "of"
+          },
+          {
+            "contribution": -0.0131,
+            "word": "by"
+          },
+          {
+            "contribution": -0.0125,
+            "word": "on"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.5052,
+            "word": "blackheads"
+          },
+          {
+            "contribution": 0.3195,
+            "word": "pimples"
+          },
+          {
+            "contribution": 0.03,
+            "word": "lots"
+          },
+          {
+            "contribution": 0.0243,
+            "word": "face"
+          }
+        ]
+      },
+      "predictedDisease": "Acne",
+      "vocabularyCoverage": {
+        "coverage": 0.8333,
+        "recognizedWords": 15,
+        "totalWords": 18,
+        "unrecognizedTerms": [
+          "chin",
+          "oily",
+          "midday"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U001.png"
+  },
+  {
+    "case_id": "EN-U013",
+    "test_group": "new_description",
+    "language": "en",
+    "source": "unseen_v1:U013",
+    "text": "Sudden very high fever, a pounding headache, pain behind my eyes and my bones and joints ache terribly.",
+    "proposed_labels": "Dengue",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Dengue",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 16 of 17 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "Sudden very high fever, a pounding headache, pain behind my eyes and my bones and joints ache terribly.",
+    "api_error": "",
+    "predicted_label": "Dengue",
+    "recognized_words": 16,
+    "total_words": 17,
+    "coverage": 0.9412,
+    "unrecognized_terms": "bones",
+    "top_supporting_words": "eyes (+0.333), behind (+0.215), joints (+0.194), pain (+0.183), ache (+0.168)",
+    "top_opposing_words": "headache (-0.152), and (-0.069), high (-0.044), pounding (-0.012), sudden (-0.005)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.1525,
+            "word": "headache"
+          },
+          {
+            "contribution": -0.0693,
+            "word": "and"
+          },
+          {
+            "contribution": -0.0444,
+            "word": "high"
+          },
+          {
+            "contribution": -0.0117,
+            "word": "pounding"
+          },
+          {
+            "contribution": -0.0049,
+            "word": "sudden"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.3328,
+            "word": "eyes"
+          },
+          {
+            "contribution": 0.215,
+            "word": "behind"
+          },
+          {
+            "contribution": 0.1944,
+            "word": "joints"
+          },
+          {
+            "contribution": 0.1833,
+            "word": "pain"
+          },
+          {
+            "contribution": 0.1683,
+            "word": "ache"
+          }
+        ]
+      },
+      "predictedDisease": "Dengue",
+      "vocabularyCoverage": {
+        "coverage": 0.9412,
+        "recognizedWords": 16,
+        "totalWords": 17,
+        "unrecognizedTerms": [
+          "bones"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U013.png"
+  },
+  {
+    "case_id": "EN-U029",
+    "test_group": "new_description",
+    "language": "en",
+    "source": "unseen_v1:U029",
+    "text": "I am coughing up thick yellow mucus, I have fever and chills and it hurts in my chest when I breathe in.",
+    "proposed_labels": "Pneumonia",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Pneumonia",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 19 of 19 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "I am coughing up thick yellow mucus, I have fever and chills and it hurts in my chest when I breathe in.",
+    "api_error": "",
+    "predicted_label": "Pneumonia",
+    "recognized_words": 19,
+    "total_words": 19,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "mucus (+0.308), chills (+0.257), breathe (+0.229), chest (+0.192), coughing (+0.160)",
+    "top_opposing_words": "fever (-0.080), am (-0.077), have (-0.032), my (-0.011), yellow (-0.006)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0795,
+            "word": "fever"
+          },
+          {
+            "contribution": -0.0769,
+            "word": "am"
+          },
+          {
+            "contribution": -0.0322,
+            "word": "have"
+          },
+          {
+            "contribution": -0.0112,
+            "word": "my"
+          },
+          {
+            "contribution": -0.0062,
+            "word": "yellow"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.3081,
+            "word": "mucus"
+          },
+          {
+            "contribution": 0.2573,
+            "word": "chills"
+          },
+          {
+            "contribution": 0.2287,
+            "word": "breathe"
+          },
+          {
+            "contribution": 0.1923,
+            "word": "chest"
+          },
+          {
+            "contribution": 0.1598,
+            "word": "coughing"
+          }
+        ]
+      },
+      "predictedDisease": "Pneumonia",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 19,
+        "totalWords": 19,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/EN-U029.png"
+  },
+  {
+    "case_id": "EN-U037",
+    "test_group": "new_description",
+    "language": "en",
+    "source": "unseen_v1:U037",
+    "text": "Whenever I am near cats my eyes get red, itchy and watery and I start sneezing over and over.",
+    "proposed_labels": "allergy",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Allergy",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 16 of 17 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "Whenever I am near cats my eyes get red, itchy and watery and I start sneezing over and over.",
+    "api_error": "",
+    "predicted_label": "allergy",
+    "recognized_words": 16,
+    "total_words": 17,
+    "coverage": 0.9412,
+    "unrecognized_terms": "cats",
+    "top_supporting_words": "eyes (+0.463), get (+0.155), watery (+0.111), sneezing (+0.108), itchy (+0.107)",
+    "top_opposing_words": "over (-0.124), red (-0.122), near (-0.030), am (-0.027), my (-0.016)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.1242,
+            "word": "over"
+          },
+          {
+            "contribution": -0.1221,
+            "word": "red"
+          },
+          {
+            "contribution": -0.0298,
+            "word": "near"
+          },
+          {
+            "contribution": -0.027,
+            "word": "am"
+          },
+          {
+            "contribution": -0.0158,
+            "word": "my"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.4632,
+            "word": "eyes"
+          },
+          {
+            "contribution": 0.1552,
+            "word": "get"
+          },
+          {
+            "contribution": 0.1105,
+            "word": "watery"
+          },
+          {
+            "contribution": 0.1085,
+            "word": "sneezing"
+          },
+          {
+            "contribution": 0.107,
+            "word": "itchy"
+          }
+        ]
+      },
+      "predictedDisease": "allergy",
+      "vocabularyCoverage": {
+        "coverage": 0.9412,
+        "recognizedWords": 16,
+        "totalWords": 17,
+        "unrecognizedTerms": [
+          "cats"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U037.png"
+  },
+  {
+    "case_id": "EN-U005",
+    "test_group": "new_description",
+    "language": "en",
+    "source": "unseen_v1:U005",
+    "text": "I get tightness in my chest and a whistling sound when I breathe out, especially at night or after running.",
+    "proposed_labels": "Bronchial Asthma",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Allergy",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 15 of 17 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "I get tightness in my chest and a whistling sound when I breathe out, especially at night or after running.",
+    "api_error": "",
+    "predicted_label": "allergy",
+    "recognized_words": 15,
+    "total_words": 17,
+    "coverage": 0.8824,
+    "unrecognized_terms": "whistling, sound",
+    "top_supporting_words": "running (+0.386), night (+0.299), breathe (+0.185), get (+0.162), chest (+0.104)",
+    "top_opposing_words": "in (-0.155), or (-0.137), after (-0.099), especially (-0.049), at (-0.033)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.1548,
+            "word": "in"
+          },
+          {
+            "contribution": -0.137,
+            "word": "or"
+          },
+          {
+            "contribution": -0.0986,
+            "word": "after"
+          },
+          {
+            "contribution": -0.0494,
+            "word": "especially"
+          },
+          {
+            "contribution": -0.033,
+            "word": "at"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.3858,
+            "word": "running"
+          },
+          {
+            "contribution": 0.2994,
+            "word": "night"
+          },
+          {
+            "contribution": 0.1852,
+            "word": "breathe"
+          },
+          {
+            "contribution": 0.1622,
+            "word": "get"
+          },
+          {
+            "contribution": 0.104,
+            "word": "chest"
+          }
+        ]
+      },
+      "predictedDisease": "allergy",
+      "vocabularyCoverage": {
+        "coverage": 0.8824,
+        "recognizedWords": 15,
+        "totalWords": 17,
+        "unrecognizedTerms": [
+          "whistling",
+          "sound"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U005.png"
+  },
+  {
+    "case_id": "EN-U041",
+    "test_group": "new_description",
+    "language": "en",
+    "source": "unseen_v1:U041",
+    "text": "Two days after starting new antibiotics I got an itchy red rash all over my body and my lips are swollen.",
+    "proposed_labels": "drug reaction",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Chicken pox",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 18 of 20 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "Two days after starting new antibiotics I got an itchy red rash all over my body and my lips are swollen.",
+    "api_error": "",
+    "predicted_label": "Chicken pox",
+    "recognized_words": 18,
+    "total_words": 20,
+    "coverage": 0.9,
+    "unrecognized_terms": "new, antibiotics",
+    "top_supporting_words": "over (+0.246), red (+0.190), rash (+0.159), starting (+0.157), days (+0.134)",
+    "top_opposing_words": "my (-0.090), two (-0.070), are (-0.067), an (-0.040), after (-0.020)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0896,
+            "word": "my"
+          },
+          {
+            "contribution": -0.0702,
+            "word": "two"
+          },
+          {
+            "contribution": -0.0668,
+            "word": "are"
+          },
+          {
+            "contribution": -0.0397,
+            "word": "an"
+          },
+          {
+            "contribution": -0.0204,
+            "word": "after"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.2458,
+            "word": "over"
+          },
+          {
+            "contribution": 0.1901,
+            "word": "red"
+          },
+          {
+            "contribution": 0.1588,
+            "word": "rash"
+          },
+          {
+            "contribution": 0.1574,
+            "word": "starting"
+          },
+          {
+            "contribution": 0.1344,
+            "word": "days"
+          }
+        ]
+      },
+      "predictedDisease": "Chicken pox",
+      "vocabularyCoverage": {
+        "coverage": 0.9,
+        "recognizedWords": 18,
+        "totalWords": 20,
+        "unrecognizedTerms": [
+          "new",
+          "antibiotics"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U041.png"
+  },
+  {
+    "case_id": "EN-U054",
+    "test_group": "rephrased_known_vocab",
+    "language": "en",
+    "source": "unseen_v1:U054",
+    "text": "got the sniffles, sneezing all day and my throat is scratchy",
+    "proposed_labels": "Common Cold",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Common Cold",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 10 of 11 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "got the sniffles, sneezing all day and my throat is scratchy",
+    "api_error": "",
+    "predicted_label": "Common Cold",
+    "recognized_words": 10,
+    "total_words": 11,
+    "coverage": 0.9091,
+    "unrecognized_terms": "sniffles",
+    "top_supporting_words": "sneezing (+0.465), throat (+0.341), is (+0.109), my (+0.087), scratchy (+0.081)",
+    "top_opposing_words": "the (-0.108), all (-0.101), day (-0.038)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.108,
+            "word": "the"
+          },
+          {
+            "contribution": -0.1007,
+            "word": "all"
+          },
+          {
+            "contribution": -0.0377,
+            "word": "day"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.4648,
+            "word": "sneezing"
+          },
+          {
+            "contribution": 0.3413,
+            "word": "throat"
+          },
+          {
+            "contribution": 0.1091,
+            "word": "is"
+          },
+          {
+            "contribution": 0.0868,
+            "word": "my"
+          },
+          {
+            "contribution": 0.0813,
+            "word": "scratchy"
+          }
+        ]
+      },
+      "predictedDisease": "Common Cold",
+      "vocabularyCoverage": {
+        "coverage": 0.9091,
+        "recognizedWords": 10,
+        "totalWords": 11,
+        "unrecognizedTerms": [
+          "sniffles"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U054.png"
+  },
+  {
+    "case_id": "EN-U060",
+    "test_group": "rephrased_known_vocab",
+    "language": "en",
+    "source": "unseen_v1:U060",
+    "text": "my eyes look yellow and my pee is dark like tea",
+    "proposed_labels": "Jaundice",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Jaundice",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 10 of 11 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "my eyes look yellow and my pee is dark like tea",
+    "api_error": "",
+    "predicted_label": "Jaundice",
+    "recognized_words": 10,
+    "total_words": 11,
+    "coverage": 0.9091,
+    "unrecognized_terms": "tea",
+    "top_supporting_words": "yellow (+0.643), dark (+0.259), pee (+0.253), is (+0.072), my (+0.040)",
+    "top_opposing_words": "eyes (-0.048), like (-0.034)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0483,
+            "word": "eyes"
+          },
+          {
+            "contribution": -0.0343,
+            "word": "like"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.6435,
+            "word": "yellow"
+          },
+          {
+            "contribution": 0.2594,
+            "word": "dark"
+          },
+          {
+            "contribution": 0.2534,
+            "word": "pee"
+          },
+          {
+            "contribution": 0.0722,
+            "word": "is"
+          },
+          {
+            "contribution": 0.0397,
+            "word": "my"
+          }
+        ]
+      },
+      "predictedDisease": "Jaundice",
+      "vocabularyCoverage": {
+        "coverage": 0.9091,
+        "recognizedWords": 10,
+        "totalWords": 11,
+        "unrecognizedTerms": [
+          "tea"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U060.png"
+  },
+  {
+    "case_id": "EN-U065",
+    "test_group": "rephrased_known_vocab",
+    "language": "en",
+    "source": "unseen_v1:U065",
+    "text": "fever won't go away for days, tummy hurts and I'm weak",
+    "proposed_labels": "Typhoid",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Chicken pox",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 9 of 10 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "fever won't go away for days, tummy hurts and I'm weak",
+    "api_error": "",
+    "predicted_label": "Chicken pox",
+    "recognized_words": 9,
+    "total_words": 10,
+    "coverage": 0.9,
+    "unrecognized_terms": "tummy",
+    "top_supporting_words": "fever (+0.253), days (+0.206), weak (+0.116), for (+0.100)",
+    "top_opposing_words": "go (-0.052), won (-0.040), away (-0.037), hurts (-0.029), and (-0.016)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0519,
+            "word": "go"
+          },
+          {
+            "contribution": -0.0398,
+            "word": "won"
+          },
+          {
+            "contribution": -0.0369,
+            "word": "away"
+          },
+          {
+            "contribution": -0.0292,
+            "word": "hurts"
+          },
+          {
+            "contribution": -0.0164,
+            "word": "and"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.2534,
+            "word": "fever"
+          },
+          {
+            "contribution": 0.2058,
+            "word": "days"
+          },
+          {
+            "contribution": 0.1156,
+            "word": "weak"
+          },
+          {
+            "contribution": 0.1003,
+            "word": "for"
+          }
+        ]
+      },
+      "predictedDisease": "Chicken pox",
+      "vocabularyCoverage": {
+        "coverage": 0.9,
+        "recognizedWords": 9,
+        "totalWords": 10,
+        "unrecognizedTerms": [
+          "tummy"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U065.png"
+  },
+  {
+    "case_id": "EN-U072",
+    "test_group": "rephrased_known_vocab",
+    "language": "en",
+    "source": "unseen_v1:U072",
+    "text": "burns when I pee and I have to go every ten minutes",
+    "proposed_labels": "urinary tract infection",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Urinary tract infection",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 7 of 10 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "burns when I pee and I have to go every ten minutes",
+    "api_error": "",
+    "predicted_label": "urinary tract infection",
+    "recognized_words": 7,
+    "total_words": 10,
+    "coverage": 0.7,
+    "unrecognized_terms": "burns, ten, minutes",
+    "top_supporting_words": "pee (+1.040), to (+0.107), go (+0.078), when (+0.033), have (+0.026)",
+    "top_opposing_words": "every (-0.113), and (-0.101)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.1126,
+            "word": "every"
+          },
+          {
+            "contribution": -0.1009,
+            "word": "and"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 1.0401,
+            "word": "pee"
+          },
+          {
+            "contribution": 0.1071,
+            "word": "to"
+          },
+          {
+            "contribution": 0.0782,
+            "word": "go"
+          },
+          {
+            "contribution": 0.0328,
+            "word": "when"
+          },
+          {
+            "contribution": 0.0259,
+            "word": "have"
+          }
+        ]
+      },
+      "predictedDisease": "urinary tract infection",
+      "vocabularyCoverage": {
+        "coverage": 0.7,
+        "recognizedWords": 7,
+        "totalWords": 10,
+        "unrecognizedTerms": [
+          "burns",
+          "ten",
+          "minutes"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U072.png"
+  },
+  {
+    "case_id": "EN-U069",
+    "test_group": "low_vocab_coverage",
+    "language": "en",
+    "source": "unseen_v1:U069",
+    "text": "broke out in an itchy rash after the new pills",
+    "proposed_labels": "drug reaction",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Impetigo",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 7 of 10 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "broke out in an itchy rash after the new pills",
+    "api_error": "",
+    "predicted_label": "Impetigo",
+    "recognized_words": 7,
+    "total_words": 10,
+    "coverage": 0.7,
+    "unrecognized_terms": "broke, new, pills",
+    "top_supporting_words": "rash (+0.531), the (+0.117), an (+0.053)",
+    "top_opposing_words": "in (-0.087), after (-0.058), itchy (-0.016), out (-0.006)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0874,
+            "word": "in"
+          },
+          {
+            "contribution": -0.0575,
+            "word": "after"
+          },
+          {
+            "contribution": -0.0162,
+            "word": "itchy"
+          },
+          {
+            "contribution": -0.0063,
+            "word": "out"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.5308,
+            "word": "rash"
+          },
+          {
+            "contribution": 0.1167,
+            "word": "the"
+          },
+          {
+            "contribution": 0.0533,
+            "word": "an"
+          }
+        ]
+      },
+      "predictedDisease": "Impetigo",
+      "vocabularyCoverage": {
+        "coverage": 0.7,
+        "recognizedWords": 7,
+        "totalWords": 10,
+        "unrecognizedTerms": [
+          "broke",
+          "new",
+          "pills"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U069.png"
+  },
+  {
+    "case_id": "EN-U056",
+    "test_group": "low_vocab_coverage",
+    "language": "en",
+    "source": "unseen_v1:U056",
+    "text": "it hurts to poop and there's blood when I wipe",
+    "proposed_labels": "Dimorphic Hemorrhoids",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Urinary tract infection",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 7 of 9 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "it hurts to poop and there's blood when I wipe",
+    "api_error": "",
+    "predicted_label": "urinary tract infection",
+    "recognized_words": 7,
+    "total_words": 9,
+    "coverage": 0.7778,
+    "unrecognized_terms": "poop, wipe",
+    "top_supporting_words": "blood (+0.629), to (+0.120), hurts (+0.087), when (+0.037), there (+0.001)",
+    "top_opposing_words": "and (-0.113), it (-0.082)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.1132,
+            "word": "and"
+          },
+          {
+            "contribution": -0.0824,
+            "word": "it"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.6287,
+            "word": "blood"
+          },
+          {
+            "contribution": 0.1201,
+            "word": "to"
+          },
+          {
+            "contribution": 0.0874,
+            "word": "hurts"
+          },
+          {
+            "contribution": 0.0368,
+            "word": "when"
+          },
+          {
+            "contribution": 0.0006,
+            "word": "there"
+          }
+        ]
+      },
+      "predictedDisease": "urinary tract infection",
+      "vocabularyCoverage": {
+        "coverage": 0.7778,
+        "recognizedWords": 7,
+        "totalWords": 9,
+        "unrecognizedTerms": [
+          "poop",
+          "wipe"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U056.png"
+  },
+  {
+    "case_id": "EN-U028",
+    "test_group": "low_vocab_coverage",
+    "language": "en",
+    "source": "unseen_v1:U028",
+    "text": "Before the headache starts I see flashing zigzag lines, then the pain is pulsing and I need a dark room.",
+    "proposed_labels": "Migraine",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Hypertension",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 12 of 17 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "Before the headache starts I see flashing zigzag lines, then the pain is pulsing and I need a dark room.",
+    "api_error": "",
+    "predicted_label": "Hypertension",
+    "recognized_words": 12,
+    "total_words": 17,
+    "coverage": 0.7059,
+    "unrecognized_terms": "flashing, zigzag, lines, pulsing, room",
+    "top_supporting_words": "headache (+0.307), then (+0.244), pain (+0.060)",
+    "top_opposing_words": "is (-0.065), the (-0.030), and (-0.024), dark (-0.023), need (-0.018)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0653,
+            "word": "is"
+          },
+          {
+            "contribution": -0.0303,
+            "word": "the"
+          },
+          {
+            "contribution": -0.0238,
+            "word": "and"
+          },
+          {
+            "contribution": -0.023,
+            "word": "dark"
+          },
+          {
+            "contribution": -0.0185,
+            "word": "need"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.3071,
+            "word": "headache"
+          },
+          {
+            "contribution": 0.2438,
+            "word": "then"
+          },
+          {
+            "contribution": 0.0605,
+            "word": "pain"
+          }
+        ]
+      },
+      "predictedDisease": "Hypertension",
+      "vocabularyCoverage": {
+        "coverage": 0.7059,
+        "recognizedWords": 12,
+        "totalWords": 17,
+        "unrecognizedTerms": [
+          "flashing",
+          "zigzag",
+          "lines",
+          "pulsing",
+          "room"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U028.png"
+  },
+  {
+    "case_id": "EN-U091",
+    "test_group": "ambiguous",
+    "language": "en",
+    "source": "unseen_v1:U091",
+    "text": "I just don't feel well lately.",
+    "proposed_labels": "",
+    "translation_status": "",
+    "composer_notes": "Your description mentions symptoms you may not have\n\nFound: don't feel well lately. The model can’t tell “no fever” from “fever”. Your text is sent exactly as written.",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Diabetes",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 5 of 5 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "Your description mentions symptoms you may not have\n\nFound: don't feel well lately. The model does not understand words like “no” or “without”: it reads “no fever” as if fever were mentioned. Your text was analysed exactly as written. If you listed symptoms you don’t have, you may want to remove them and analyse again.",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "I just don't feel well lately.",
+    "api_error": "",
+    "predicted_label": "diabetes",
+    "recognized_words": 5,
+    "total_words": 5,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "feel (+0.271), well (+0.085), don (+0.014)",
+    "top_opposing_words": "just (-0.098), lately (-0.010)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0984,
+            "word": "just"
+          },
+          {
+            "contribution": -0.0098,
+            "word": "lately"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.271,
+            "word": "feel"
+          },
+          {
+            "contribution": 0.0849,
+            "word": "well"
+          },
+          {
+            "contribution": 0.0137,
+            "word": "don"
+          }
+        ]
+      },
+      "predictedDisease": "diabetes",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 5,
+        "totalWords": 5,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/EN-U091.png"
+  },
+  {
+    "case_id": "EN-U093",
+    "test_group": "ambiguous",
+    "language": "en",
+    "source": "unseen_v1:U093",
+    "text": "Something is wrong with my stomach.",
+    "proposed_labels": "",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Dengue",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 6 of 6 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "Something is wrong with my stomach.",
+    "api_error": "",
+    "predicted_label": "Dengue",
+    "recognized_words": 6,
+    "total_words": 6,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "is (+0.297), something (+0.243), with (+0.218), my (+0.086), wrong (+0.051)",
+    "top_opposing_words": "stomach (-0.009)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0086,
+            "word": "stomach"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.2968,
+            "word": "is"
+          },
+          {
+            "contribution": 0.2427,
+            "word": "something"
+          },
+          {
+            "contribution": 0.2177,
+            "word": "with"
+          },
+          {
+            "contribution": 0.0855,
+            "word": "my"
+          },
+          {
+            "contribution": 0.0512,
+            "word": "wrong"
+          }
+        ]
+      },
+      "predictedDisease": "Dengue",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 6,
+        "totalWords": 6,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/EN-U093.png"
+  },
+  {
+    "case_id": "EN-U096",
+    "test_group": "ambiguous",
+    "language": "en",
+    "source": "unseen_v1:U096",
+    "text": "I have pain sometimes, it comes and goes.",
+    "proposed_labels": "",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Allergy",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 7 of 7 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "I have pain sometimes, it comes and goes.",
+    "api_error": "",
+    "predicted_label": "allergy",
+    "recognized_words": 7,
+    "total_words": 7,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "sometimes (+0.446), have (+0.096), and (+0.022)",
+    "top_opposing_words": "it (-0.067), pain (-0.033), comes (-0.015)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0666,
+            "word": "it"
+          },
+          {
+            "contribution": -0.0333,
+            "word": "pain"
+          },
+          {
+            "contribution": -0.0147,
+            "word": "comes"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.4462,
+            "word": "sometimes"
+          },
+          {
+            "contribution": 0.0956,
+            "word": "have"
+          },
+          {
+            "contribution": 0.0223,
+            "word": "and"
+          }
+        ]
+      },
+      "predictedDisease": "allergy",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 7,
+        "totalWords": 7,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/EN-U096.png"
+  },
+  {
+    "case_id": "EN-U081",
+    "test_group": "overlapping",
+    "language": "en",
+    "source": "unseen_v1:U081",
+    "text": "I have a high fever, a bad headache and my whole body aches.",
+    "proposed_labels": "Dengue;Malaria;Typhoid",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Dengue",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 10 of 10 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "I have a high fever, a bad headache and my whole body aches.",
+    "api_error": "",
+    "predicted_label": "Dengue",
+    "recognized_words": 10,
+    "total_words": 10,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "whole (+0.590), body (+0.316), fever (+0.212), have (+0.075), my (+0.075)",
+    "top_opposing_words": "headache (-0.215), high (-0.063), and (-0.049), aches (-0.034)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.2152,
+            "word": "headache"
+          },
+          {
+            "contribution": -0.0626,
+            "word": "high"
+          },
+          {
+            "contribution": -0.0489,
+            "word": "and"
+          },
+          {
+            "contribution": -0.034,
+            "word": "aches"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.5901,
+            "word": "whole"
+          },
+          {
+            "contribution": 0.3164,
+            "word": "body"
+          },
+          {
+            "contribution": 0.2117,
+            "word": "fever"
+          },
+          {
+            "contribution": 0.0748,
+            "word": "have"
+          },
+          {
+            "contribution": 0.0748,
+            "word": "my"
+          }
+        ]
+      },
+      "predictedDisease": "Dengue",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 10,
+        "totalWords": 10,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/EN-U081.png"
+  },
+  {
+    "case_id": "EN-U083",
+    "test_group": "overlapping",
+    "language": "en",
+    "source": "unseen_v1:U083",
+    "text": "I have an itchy rash on my arms.",
+    "proposed_labels": "Fungal infection;drug reaction;allergy;Psoriasis;Chicken pox",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Psoriasis",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 7 of 7 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "I have an itchy rash on my arms.",
+    "api_error": "",
+    "predicted_label": "Psoriasis",
+    "recognized_words": 7,
+    "total_words": 7,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "arms (+0.325), itchy (+0.282), on (+0.240), my (+0.012)",
+    "top_opposing_words": "an (-0.129), rash (-0.094), have (-0.005)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.1288,
+            "word": "an"
+          },
+          {
+            "contribution": -0.094,
+            "word": "rash"
+          },
+          {
+            "contribution": -0.0055,
+            "word": "have"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.3248,
+            "word": "arms"
+          },
+          {
+            "contribution": 0.2821,
+            "word": "itchy"
+          },
+          {
+            "contribution": 0.2401,
+            "word": "on"
+          },
+          {
+            "contribution": 0.0121,
+            "word": "my"
+          }
+        ]
+      },
+      "predictedDisease": "Psoriasis",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 7,
+        "totalWords": 7,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/EN-U083.png"
+  },
+  {
+    "case_id": "EN-U086",
+    "test_group": "overlapping",
+    "language": "en",
+    "source": "unseen_v1:U086",
+    "text": "I get headaches and feel dizzy.",
+    "proposed_labels": "Hypertension;Migraine;Cervical spondylosis",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Allergy",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 5 of 5 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "I get headaches and feel dizzy.",
+    "api_error": "",
+    "predicted_label": "allergy",
+    "recognized_words": 5,
+    "total_words": 5,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "get (+0.341), dizzy (+0.293), headaches (+0.290), feel (+0.123), and (+0.033)",
+    "top_opposing_words": "",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [],
+        "positiveWords": [
+          {
+            "contribution": 0.3411,
+            "word": "get"
+          },
+          {
+            "contribution": 0.2935,
+            "word": "dizzy"
+          },
+          {
+            "contribution": 0.29,
+            "word": "headaches"
+          },
+          {
+            "contribution": 0.1233,
+            "word": "feel"
+          },
+          {
+            "contribution": 0.033,
+            "word": "and"
+          }
+        ]
+      },
+      "predictedDisease": "allergy",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 5,
+        "totalWords": 5,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/EN-U086.png"
+  },
+  {
+    "case_id": "EN-U099",
+    "test_group": "out_of_scope",
+    "language": "en",
+    "source": "unseen_v1:U099",
+    "text": "Sudden severe pain in my lower back that moves to my groin, and there is blood in my urine.",
+    "proposed_labels": "",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Urinary tract infection",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 17 of 19 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "Sudden severe pain in my lower back that moves to my groin, and there is blood in my urine.",
+    "api_error": "",
+    "predicted_label": "urinary tract infection",
+    "recognized_words": 17,
+    "total_words": 19,
+    "coverage": 0.8947,
+    "unrecognized_terms": "moves, groin",
+    "top_supporting_words": "urine (+0.524), blood (+0.349), lower (+0.309), in (+0.172), sudden (+0.140)",
+    "top_opposing_words": "and (-0.063), that (-0.056), my (-0.024)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0628,
+            "word": "and"
+          },
+          {
+            "contribution": -0.0559,
+            "word": "that"
+          },
+          {
+            "contribution": -0.0236,
+            "word": "my"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.5245,
+            "word": "urine"
+          },
+          {
+            "contribution": 0.3487,
+            "word": "blood"
+          },
+          {
+            "contribution": 0.3088,
+            "word": "lower"
+          },
+          {
+            "contribution": 0.1717,
+            "word": "in"
+          },
+          {
+            "contribution": 0.1401,
+            "word": "sudden"
+          }
+        ]
+      },
+      "predictedDisease": "urinary tract infection",
+      "vocabularyCoverage": {
+        "coverage": 0.8947,
+        "recognizedWords": 17,
+        "totalWords": 19,
+        "unrecognizedTerms": [
+          "moves",
+          "groin"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U099.png"
+  },
+  {
+    "case_id": "EN-U100",
+    "test_group": "out_of_scope",
+    "language": "en",
+    "source": "unseen_v1:U100",
+    "text": "Pain started around my belly button and moved to the lower right side, it gets worse when I walk or cough.",
+    "proposed_labels": "",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Varicose Veins",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 17 of 20 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "Pain started around my belly button and moved to the lower right side, it gets worse when I walk or cough.",
+    "api_error": "",
+    "predicted_label": "Varicose Veins",
+    "recognized_words": 17,
+    "total_words": 20,
+    "coverage": 0.85,
+    "unrecognized_terms": "button, moved, side",
+    "top_supporting_words": "walk (+0.164), right (+0.101), started (+0.067), when (+0.057), worse (+0.057)",
+    "top_opposing_words": "pain (-0.043), belly (-0.040), to (-0.039), and (-0.028), my (-0.012)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0427,
+            "word": "pain"
+          },
+          {
+            "contribution": -0.0402,
+            "word": "belly"
+          },
+          {
+            "contribution": -0.0386,
+            "word": "to"
+          },
+          {
+            "contribution": -0.0282,
+            "word": "and"
+          },
+          {
+            "contribution": -0.0122,
+            "word": "my"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.1644,
+            "word": "walk"
+          },
+          {
+            "contribution": 0.1006,
+            "word": "right"
+          },
+          {
+            "contribution": 0.0669,
+            "word": "started"
+          },
+          {
+            "contribution": 0.0567,
+            "word": "when"
+          },
+          {
+            "contribution": 0.0566,
+            "word": "worse"
+          }
+        ]
+      },
+      "predictedDisease": "Varicose Veins",
+      "vocabularyCoverage": {
+        "coverage": 0.85,
+        "recognizedWords": 17,
+        "totalWords": 20,
+        "unrecognizedTerms": [
+          "button",
+          "moved",
+          "side"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U100.png"
+  },
+  {
+    "case_id": "EN-U103",
+    "test_group": "out_of_scope",
+    "language": "en",
+    "source": "unseen_v1:U103",
+    "text": "My big toe joint suddenly became red, hot and extremely painful overnight.",
+    "proposed_labels": "",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Drug reaction",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 9 of 12 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "My big toe joint suddenly became red, hot and extremely painful overnight.",
+    "api_error": "",
+    "predicted_label": "drug reaction",
+    "recognized_words": 9,
+    "total_words": 12,
+    "coverage": 0.75,
+    "unrecognized_terms": "big, toe, overnight",
+    "top_supporting_words": "joint (+0.285), and (+0.004)",
+    "top_opposing_words": "red (-0.098), hot (-0.072), painful (-0.068), extremely (-0.028), my (-0.006)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0977,
+            "word": "red"
+          },
+          {
+            "contribution": -0.0721,
+            "word": "hot"
+          },
+          {
+            "contribution": -0.0677,
+            "word": "painful"
+          },
+          {
+            "contribution": -0.0276,
+            "word": "extremely"
+          },
+          {
+            "contribution": -0.006,
+            "word": "my"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.2847,
+            "word": "joint"
+          },
+          {
+            "contribution": 0.0041,
+            "word": "and"
+          }
+        ]
+      },
+      "predictedDisease": "drug reaction",
+      "vocabularyCoverage": {
+        "coverage": 0.75,
+        "recognizedWords": 9,
+        "totalWords": 12,
+        "unrecognizedTerms": [
+          "big",
+          "toe",
+          "overnight"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U103.png"
+  },
+  {
+    "case_id": "EN-U110",
+    "test_group": "out_of_scope",
+    "language": "en",
+    "source": "unseen_v1:U110",
+    "text": "I suddenly lost my sense of smell and taste, with a mild cough and tiredness.",
+    "proposed_labels": "",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Diabetes",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 12 of 13 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "I suddenly lost my sense of smell and taste, with a mild cough and tiredness.",
+    "api_error": "",
+    "predicted_label": "diabetes",
+    "recognized_words": 12,
+    "total_words": 13,
+    "coverage": 0.9231,
+    "unrecognized_terms": "tiredness",
+    "top_supporting_words": "smell (+0.166), sense (+0.116), lost (+0.075), of (+0.052), taste (+0.051)",
+    "top_opposing_words": "with (-0.117), my (-0.048), cough (-0.025), mild (-0.020), suddenly (-0.006)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.1173,
+            "word": "with"
+          },
+          {
+            "contribution": -0.0482,
+            "word": "my"
+          },
+          {
+            "contribution": -0.0254,
+            "word": "cough"
+          },
+          {
+            "contribution": -0.0199,
+            "word": "mild"
+          },
+          {
+            "contribution": -0.0062,
+            "word": "suddenly"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.1659,
+            "word": "smell"
+          },
+          {
+            "contribution": 0.1159,
+            "word": "sense"
+          },
+          {
+            "contribution": 0.0748,
+            "word": "lost"
+          },
+          {
+            "contribution": 0.0519,
+            "word": "of"
+          },
+          {
+            "contribution": 0.0507,
+            "word": "taste"
+          }
+        ]
+      },
+      "predictedDisease": "diabetes",
+      "vocabularyCoverage": {
+        "coverage": 0.9231,
+        "recognizedWords": 12,
+        "totalWords": 13,
+        "unrecognizedTerms": [
+          "tiredness"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U110.png"
+  },
+  {
+    "case_id": "EN-U113",
+    "test_group": "unrelated",
+    "language": "en",
+    "source": "unseen_v1:U113",
+    "text": "What time does the pharmacy close on Sundays?",
+    "proposed_labels": "",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Chicken pox",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 5 of 8 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "What time does the pharmacy close on Sundays?",
+    "api_error": "",
+    "predicted_label": "Chicken pox",
+    "recognized_words": 5,
+    "total_words": 8,
+    "coverage": 0.625,
+    "unrecognized_terms": "pharmacy, close, sundays",
+    "top_supporting_words": "what (+0.475), time (+0.050), the (+0.033)",
+    "top_opposing_words": "on (-0.058)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0584,
+            "word": "on"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.4749,
+            "word": "what"
+          },
+          {
+            "contribution": 0.0501,
+            "word": "time"
+          },
+          {
+            "contribution": 0.0326,
+            "word": "the"
+          }
+        ]
+      },
+      "predictedDisease": "Chicken pox",
+      "vocabularyCoverage": {
+        "coverage": 0.625,
+        "recognizedWords": 5,
+        "totalWords": 8,
+        "unrecognizedTerms": [
+          "pharmacy",
+          "close",
+          "sundays"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U113.png"
+  },
+  {
+    "case_id": "EN-U114",
+    "test_group": "unrelated",
+    "language": "en",
+    "source": "unseen_v1:U114",
+    "text": "I need to book a flight to Prishtina next month.",
+    "proposed_labels": "",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Diabetes",
+    "ui_original_label": "",
+    "ui_coverage_line": "",
+    "ui_warnings": "The model recognised only a few of your words\n\n3 of 8 words are in its vocabulary. This result may not reflect what you described. Try plain English symptom words such as “fever”, “cough” or “rash”. This is about vocabulary only, not a confidence score.\n\nNot recognised:\nbook\nflight\nprishtina\nnext\nmonth",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "I need to book a flight to Prishtina next month.",
+    "api_error": "",
+    "predicted_label": "diabetes",
+    "recognized_words": 3,
+    "total_words": 8,
+    "coverage": 0.375,
+    "unrecognized_terms": "book, flight, prishtina, next, month",
+    "top_supporting_words": "need (+0.457)",
+    "top_opposing_words": "to (-0.089)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0893,
+            "word": "to"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.4568,
+            "word": "need"
+          }
+        ]
+      },
+      "predictedDisease": "diabetes",
+      "vocabularyCoverage": {
+        "coverage": 0.375,
+        "recognizedWords": 3,
+        "totalWords": 8,
+        "unrecognizedTerms": [
+          "book",
+          "flight",
+          "prishtina",
+          "next",
+          "month"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U114.png"
+  },
+  {
+    "case_id": "EN-U115",
+    "test_group": "unrelated",
+    "language": "en",
+    "source": "unseen_v1:U115",
+    "text": "My car makes a strange noise when I brake.",
+    "proposed_labels": "",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Psoriasis",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 4 of 7 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "My car makes a strange noise when I brake.",
+    "api_error": "",
+    "predicted_label": "Psoriasis",
+    "recognized_words": 4,
+    "total_words": 7,
+    "coverage": 0.5714,
+    "unrecognized_terms": "car, noise, brake",
+    "top_supporting_words": "strange (+0.448), when (+0.154), my (+0.013)",
+    "top_opposing_words": "makes (-0.052)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0523,
+            "word": "makes"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.4483,
+            "word": "strange"
+          },
+          {
+            "contribution": 0.154,
+            "word": "when"
+          },
+          {
+            "contribution": 0.0129,
+            "word": "my"
+          }
+        ]
+      },
+      "predictedDisease": "Psoriasis",
+      "vocabularyCoverage": {
+        "coverage": 0.5714,
+        "recognizedWords": 4,
+        "totalWords": 7,
+        "unrecognizedTerms": [
+          "car",
+          "noise",
+          "brake"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U115.png"
+  },
+  {
+    "case_id": "EN-U118",
+    "test_group": "unrelated",
+    "language": "en",
+    "source": "unseen_v1:U118",
+    "text": "I forgot my password and cannot log in to my account.",
+    "proposed_labels": "",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Gastroesophageal reflux disease",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 6 of 10 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "I forgot my password and cannot log in to my account.",
+    "api_error": "",
+    "predicted_label": "gastroesophageal reflux disease",
+    "recognized_words": 6,
+    "total_words": 10,
+    "coverage": 0.6,
+    "unrecognized_terms": "forgot, password, log, account",
+    "top_supporting_words": "in (+0.289), my (+0.135), to (+0.044)",
+    "top_opposing_words": "and (-0.053)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0526,
+            "word": "and"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.2888,
+            "word": "in"
+          },
+          {
+            "contribution": 0.135,
+            "word": "my"
+          },
+          {
+            "contribution": 0.0444,
+            "word": "to"
+          }
+        ]
+      },
+      "predictedDisease": "gastroesophageal reflux disease",
+      "vocabularyCoverage": {
+        "coverage": 0.6,
+        "recognizedWords": 6,
+        "totalWords": 10,
+        "unrecognizedTerms": [
+          "forgot",
+          "password",
+          "log",
+          "account"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U118.png"
+  },
+  {
+    "case_id": "EN-U073",
+    "test_group": "negation",
+    "language": "en",
+    "source": "unseen_v1:U073",
+    "text": "Burning when I urinate and I need to go very often. No fever and no back pain.",
+    "proposed_labels": "urinary tract infection",
+    "translation_status": "",
+    "composer_notes": "Your description mentions symptoms you may not have\n\nFound: No fever. The model can’t tell “no fever” from “fever”. Your text is sent exactly as written.",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Urinary tract infection",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 15 of 15 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "Your description mentions symptoms you may not have\n\nFound: No fever. The model does not understand words like “no” or “without”: it reads “no fever” as if fever were mentioned. Your text was analysed exactly as written. If you listed symptoms you don’t have, you may want to remove them and analyse again.",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "Burning when I urinate and I need to go very often. No fever and no back pain.",
+    "api_error": "",
+    "predicted_label": "urinary tract infection",
+    "recognized_words": 15,
+    "total_words": 15,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "urinate (+0.397), often (+0.106), very (+0.062), to (+0.054), go (+0.040)",
+    "top_opposing_words": "no (-0.118), and (-0.102), need (-0.100), burning (-0.079), fever (-0.020)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.1179,
+            "word": "no"
+          },
+          {
+            "contribution": -0.1019,
+            "word": "and"
+          },
+          {
+            "contribution": -0.1003,
+            "word": "need"
+          },
+          {
+            "contribution": -0.0791,
+            "word": "burning"
+          },
+          {
+            "contribution": -0.02,
+            "word": "fever"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.3973,
+            "word": "urinate"
+          },
+          {
+            "contribution": 0.1057,
+            "word": "often"
+          },
+          {
+            "contribution": 0.0619,
+            "word": "very"
+          },
+          {
+            "contribution": 0.0541,
+            "word": "to"
+          },
+          {
+            "contribution": 0.0395,
+            "word": "go"
+          }
+        ]
+      },
+      "predictedDisease": "urinary tract infection",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 15,
+        "totalWords": 15,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/EN-U073.png"
+  },
+  {
+    "case_id": "EN-U074",
+    "test_group": "negation",
+    "language": "en",
+    "source": "unseen_v1:U074",
+    "text": "Runny nose, sneezing and a sore throat, but I do not have a fever or any chest pain.",
+    "proposed_labels": "Common Cold",
+    "translation_status": "",
+    "composer_notes": "Your description mentions symptoms you may not have\n\nFound: do not have a fever. The model can’t tell “no fever” from “fever”. Your text is sent exactly as written.",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Allergy",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 15 of 15 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "Your description mentions symptoms you may not have\n\nFound: do not have a fever. The model does not understand words like “no” or “without”: it reads “no fever” as if fever were mentioned. Your text was analysed exactly as written. If you listed symptoms you don’t have, you may want to remove them and analyse again.",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "Runny nose, sneezing and a sore throat, but I do not have a fever or any chest pain.",
+    "api_error": "",
+    "predicted_label": "allergy",
+    "recognized_words": 15,
+    "total_words": 15,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "runny (+0.408), nose (+0.348), sore (+0.324), throat (+0.215), sneezing (+0.116)",
+    "top_opposing_words": "or (-0.141), but (-0.096), do (-0.067), pain (-0.024), fever (-0.019)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.1407,
+            "word": "or"
+          },
+          {
+            "contribution": -0.0961,
+            "word": "but"
+          },
+          {
+            "contribution": -0.0674,
+            "word": "do"
+          },
+          {
+            "contribution": -0.0241,
+            "word": "pain"
+          },
+          {
+            "contribution": -0.0194,
+            "word": "fever"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.4079,
+            "word": "runny"
+          },
+          {
+            "contribution": 0.3478,
+            "word": "nose"
+          },
+          {
+            "contribution": 0.3242,
+            "word": "sore"
+          },
+          {
+            "contribution": 0.215,
+            "word": "throat"
+          },
+          {
+            "contribution": 0.1164,
+            "word": "sneezing"
+          }
+        ]
+      },
+      "predictedDisease": "allergy",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 15,
+        "totalWords": 15,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/EN-U074.png"
+  },
+  {
+    "case_id": "EN-U080",
+    "test_group": "negation",
+    "language": "en",
+    "source": "unseen_v1:U080",
+    "text": "Very thirsty and urinating often, but no burning when I pee and no fever.",
+    "proposed_labels": "diabetes",
+    "translation_status": "",
+    "composer_notes": "Your description mentions symptoms you may not have\n\nFound: no burning when I, no fever. The model can’t tell “no fever” from “fever”. Your text is sent exactly as written.",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Urinary tract infection",
+    "ui_original_label": "",
+    "ui_coverage_line": "The model recognised 12 of 13 words in your description.\nThis shows how much of your wording it knows, not how likely the result is.",
+    "ui_warnings": "Your description mentions symptoms you may not have\n\nFound: no burning when I, no fever. The model does not understand words like “no” or “without”: it reads “no fever” as if fever were mentioned. Your text was analysed exactly as written. If you listed symptoms you don’t have, you may want to remove them and analyse again.",
+    "ui_disclaimer": "Educational prediction only. Not a medical diagnosis.",
+    "http_status": 200,
+    "sent_to_model": "Very thirsty and urinating often, but no burning when I pee and no fever.",
+    "api_error": "",
+    "predicted_label": "urinary tract infection",
+    "recognized_words": 12,
+    "total_words": 13,
+    "coverage": 0.9231,
+    "unrecognized_terms": "thirsty",
+    "top_supporting_words": "urinating (+0.560), pee (+0.548), but (+0.114), often (+0.110), very (+0.065)",
+    "top_opposing_words": "no (-0.123), and (-0.106), burning (-0.083), fever (-0.021)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.1232,
+            "word": "no"
+          },
+          {
+            "contribution": -0.1064,
+            "word": "and"
+          },
+          {
+            "contribution": -0.0827,
+            "word": "burning"
+          },
+          {
+            "contribution": -0.0209,
+            "word": "fever"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.5597,
+            "word": "urinating"
+          },
+          {
+            "contribution": 0.5485,
+            "word": "pee"
+          },
+          {
+            "contribution": 0.114,
+            "word": "but"
+          },
+          {
+            "contribution": 0.1104,
+            "word": "often"
+          },
+          {
+            "contribution": 0.0646,
+            "word": "very"
+          }
+        ]
+      },
+      "predictedDisease": "urinary tract infection",
+      "vocabularyCoverage": {
+        "coverage": 0.9231,
+        "recognizedWords": 12,
+        "totalWords": 13,
+        "unrecognizedTerms": [
+          "thirsty"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-U080.png"
+  },
+  {
+    "case_id": "EN-X01",
+    "test_group": "unknown_words",
+    "language": "en",
+    "source": "system_test_extra",
+    "text": "Dysuria haematuria pyrexia nocturia",
+    "proposed_labels": "",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "sent_result_withheld",
+    "ui_message": "We couldn’t analyze this description\n\nPlease describe your symptoms using clear English. None of the words you used are known to the model, so it cannot match them to a condition.\n\nNot recognised:\ndysuria\nhaematuria\npyrexia\nnocturia\n\nFor example: “I have a fever, a sore throat and a runny nose.”\n\nEdit description\nStart over",
+    "http_status": 200,
+    "sent_to_model": "Dysuria haematuria pyrexia nocturia",
+    "api_error": "",
+    "predicted_label": "drug reaction",
+    "recognized_words": 0,
+    "total_words": 4,
+    "coverage": 0.0,
+    "unrecognized_terms": "dysuria, haematuria, pyrexia, nocturia",
+    "top_supporting_words": "",
+    "top_opposing_words": "",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [],
+        "positiveWords": []
+      },
+      "predictedDisease": "drug reaction",
+      "vocabularyCoverage": {
+        "coverage": 0.0,
+        "recognizedWords": 0,
+        "totalWords": 4,
+        "unrecognizedTerms": [
+          "dysuria",
+          "haematuria",
+          "pyrexia",
+          "nocturia"
+        ]
+      }
+    },
+    "screenshot": "screenshots/EN-X01.png"
+  },
+  {
+    "case_id": "EN-X02",
+    "test_group": "input_validation",
+    "language": "en",
+    "source": "system_test_extra",
+    "text": "I feel sick",
+    "proposed_labels": "",
+    "translation_status": "",
+    "composer_notes": "",
+    "accepted": "blocked_in_ui",
+    "block_reason": "Please describe your symptoms in more detail.",
+    "sent_to_model": "",
+    "screenshot": "screenshots/EN-X02.png"
+  },
+  {
+    "case_id": "SQ-01",
+    "test_group": "albanian_typical",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Kam temperaturë të lartë, dhimbje koke të fortë dhe dhimbje pas syve.",
+    "proposed_labels": "Dengue",
+    "translation_status": "ok",
+    "translation_preview": "Përkthimi për modelin\n\nI have high fever, headache and severe pain behind my eyes.\n\ntemperaturë të lartë\nhigh fever\ndhimbje koke\nheadache\ndhimbje pas syve\npain behind my eyes\n\nPërkthyer me një fjalor të kontrolluar simptomash. Përkthimet mjekësore kanë ende nevojë për verifikim profesional.",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Ethet dengue",
+    "ui_original_label": "Etiketa e modelit: Dengue",
+    "ui_coverage_line": "Modeli njohu 10 nga 10 fjalë të tekstit të analizuar.\nKjo tregon sa nga fjalët i njeh modeli, jo sa i mundshëm është rezultati.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Parashikim vetëm për qëllime edukative. Nuk është diagnozë mjekësore.",
+    "http_status": 200,
+    "sent_to_model": "I have high fever, headache and severe pain behind my eyes.",
+    "api_error": "",
+    "predicted_label": "Dengue",
+    "recognized_words": 10,
+    "total_words": 10,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "eyes (+0.540), behind (+0.349), pain (+0.297), fever (+0.243), severe (+0.237)",
+    "top_opposing_words": "headache (-0.247), high (-0.072), and (-0.056)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.2474,
+            "word": "headache"
+          },
+          {
+            "contribution": -0.072,
+            "word": "high"
+          },
+          {
+            "contribution": -0.0562,
+            "word": "and"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.5399,
+            "word": "eyes"
+          },
+          {
+            "contribution": 0.3489,
+            "word": "behind"
+          },
+          {
+            "contribution": 0.2974,
+            "word": "pain"
+          },
+          {
+            "contribution": 0.2433,
+            "word": "fever"
+          },
+          {
+            "contribution": 0.2374,
+            "word": "severe"
+          }
+        ]
+      },
+      "predictedDisease": "Dengue",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 10,
+        "totalWords": 10,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/SQ-01.png"
+  },
+  {
+    "case_id": "SQ-02",
+    "test_group": "albanian_typical",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Më djeg kur urinoj dhe më duhet të shkoj shpesh në tualet.",
+    "proposed_labels": "urinary tract infection",
+    "translation_status": "unclear",
+    "translation_preview": "Nuk e kuptuam plotësisht përshkrimin\n\nFjalë të panjohura:\nduhet\nshkoj\ntualet\n\nJu lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",
+    "composer_notes": "",
+    "accepted": "blocked_in_ui",
+    "block_reason": "Sqaroni përshkrimin para analizës.",
+    "sent_to_model": "",
+    "screenshot": "screenshots/SQ-02.png"
+  },
+  {
+    "case_id": "SQ-03",
+    "test_group": "albanian_typical",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Kam kollë me gëlbazë të verdhë, temperaturë dhe dhimbje gjoksi.",
+    "proposed_labels": "Pneumonia",
+    "translation_status": "unclear",
+    "translation_preview": "Nuk e kuptuam plotësisht përshkrimin\n\nFjalë të panjohura:\nverdhë\n\nJu lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",
+    "composer_notes": "",
+    "accepted": "blocked_in_ui",
+    "block_reason": "Sqaroni përshkrimin para analizës.",
+    "sent_to_model": "",
+    "screenshot": "screenshots/SQ-03.png"
+  },
+  {
+    "case_id": "SQ-04",
+    "test_group": "albanian_negation",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Kam skuqje që më kruhet në krahë, por nuk kam temperaturë.",
+    "proposed_labels": "Fungal infection;allergy;drug reaction;Psoriasis",
+    "translation_status": "unclear",
+    "translation_preview": "Nuk e kuptuam plotësisht përshkrimin\n\nFjalë të panjohura:\nkruhet\nkrahë\n\nJu lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",
+    "composer_notes": "Simptomat që thatë se nuk i keni u lanë jashtë\n\nU gjet: temperaturë. Këto nuk i dërgohen modelit, prandaj nuk mund të llogariten si të pranishme.",
+    "accepted": "blocked_in_ui",
+    "block_reason": "Sqaroni përshkrimin para analizës.",
+    "sent_to_model": "",
+    "screenshot": "screenshots/SQ-04.png"
+  },
+  {
+    "case_id": "SQ-05",
+    "test_group": "albanian_overlapping",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Kam dhimbje barku dhe më është prerë oreksi.",
+    "proposed_labels": "Jaundice;peptic ulcer disease;Typhoid",
+    "translation_status": "unclear",
+    "translation_preview": "Nuk e kuptuam plotësisht përshkrimin\n\nFjalë të panjohura:\nprerë\noreksi\n\nJu lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",
+    "composer_notes": "",
+    "accepted": "blocked_in_ui",
+    "block_reason": "Sqaroni përshkrimin para analizës.",
+    "sent_to_model": "",
+    "screenshot": "screenshots/SQ-05.png"
+  },
+  {
+    "case_id": "SQ-06",
+    "test_group": "albanian_unknown_words",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Më kërcet qafa dhe më mpihen gishtat e duarve.",
+    "proposed_labels": "Cervical spondylosis",
+    "translation_status": "unclear",
+    "translation_preview": "Nuk e kuptuam plotësisht përshkrimin\n\nFjalë të panjohura:\nkërcet\nqafa\nmpihen\ngishtat\nduarve\n\nNuk u gjet asnjë simptomë e njohur.\n\nJu lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",
+    "composer_notes": "",
+    "accepted": "blocked_in_ui",
+    "block_reason": "Sqaroni përshkrimin para analizës.",
+    "sent_to_model": "",
+    "screenshot": "screenshots/SQ-06.png"
+  },
+  {
+    "case_id": "SQ-07",
+    "test_group": "albanian_out_of_scope",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Më dhemb veshi dhe më del lëng prej tij.",
+    "proposed_labels": "",
+    "translation_status": "unclear",
+    "translation_preview": "Nuk e kuptuam plotësisht përshkrimin\n\nFjalë të panjohura:\nveshi\ndel\nlëng\ntij\n\nJu lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",
+    "composer_notes": "",
+    "accepted": "blocked_in_ui",
+    "block_reason": "Sqaroni përshkrimin para analizës.",
+    "sent_to_model": "",
+    "screenshot": "screenshots/SQ-07.png"
+  },
+  {
+    "case_id": "SQ-08",
+    "test_group": "albanian_unrelated",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Ku mund ta blej një biletë avioni për muajin tjetër?",
+    "proposed_labels": "",
+    "translation_status": "unclear",
+    "translation_preview": "Nuk e kuptuam plotësisht përshkrimin\n\nFjalë të panjohura:\nKu\nmund\nta\nblej\nbiletë\navioni\nmuajin\ntjetër\n\nNuk u gjet asnjë simptomë e njohur.\n\nJu lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",
+    "composer_notes": "",
+    "accepted": "blocked_in_ui",
+    "block_reason": "Sqaroni përshkrimin para analizës.",
+    "sent_to_model": "",
+    "screenshot": "screenshots/SQ-08.png"
+  },
+  {
+    "case_id": "SQ-09",
+    "test_group": "albanian_uncertain",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Ndoshta kam grip, nuk jam i sigurt.",
+    "proposed_labels": "",
+    "translation_status": "unclear",
+    "translation_preview": "Nuk e kuptuam plotësisht përshkrimin\n\nFjalë të panjohura:\ngrip\nsigurt\n\nNuk u gjet asnjë simptomë e njohur.\n\nNuk është e qartë cila simptomë mohohet. Shkruajeni p.sh. “nuk kam temperaturë” ose hiqeni mohimin.\n\nPërshkrimi përmban fjalë pasigurie (Ndoshta). Ju lutemi përshkruani vetëm simptomat që i keni me siguri.\n\nJu lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",
+    "composer_notes": "",
+    "accepted": "blocked_in_ui",
+    "block_reason": "Sqaroni përshkrimin para analizës.",
+    "sent_to_model": "",
+    "screenshot": "screenshots/SQ-09.png"
+  },
+  {
+    "case_id": "SQ-10",
+    "test_group": "albanian_typo",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Kam temperatur te larte dhe kolle te forte.",
+    "proposed_labels": "Common Cold;Pneumonia",
+    "translation_status": "confirm",
+    "translation_preview": "Përkthimi për modelin\n\nI have high fever and cough.\n\ntemperatur te larte\nhigh fever\nkolle\ncough\n\nKorrigjuam gabime të mundshme drejtshkrimore. Ju lutemi kontrollojini:\ntemperatur → temperatura\n\nE kontrollova përkthimin dhe është i saktë\n\nPërkthyer me një fjalor të kontrolluar simptomash. Përkthimet mjekësore kanë ende nevojë për verifikim profesional.",
+    "tester_action": "confirmed typo correction",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Astmë bronkiale",
+    "ui_original_label": "Etiketa e modelit: Bronchial Asthma",
+    "ui_coverage_line": "Modeli njohu 5 nga 5 fjalë të tekstit të analizuar.\nKjo tregon sa nga fjalët i njeh modeli, jo sa i mundshëm është rezultati.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Parashikim vetëm për qëllime edukative. Nuk është diagnozë mjekësore.",
+    "http_status": 200,
+    "sent_to_model": "I have high fever and cough.",
+    "api_error": "",
+    "predicted_label": "Bronchial Asthma",
+    "recognized_words": 5,
+    "total_words": 5,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "cough (+1.148), fever (+0.511), high (+0.398)",
+    "top_opposing_words": "have (-0.209), and (-0.141)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.2087,
+            "word": "have"
+          },
+          {
+            "contribution": -0.141,
+            "word": "and"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 1.148,
+            "word": "cough"
+          },
+          {
+            "contribution": 0.5115,
+            "word": "fever"
+          },
+          {
+            "contribution": 0.3977,
+            "word": "high"
+          }
+        ]
+      },
+      "predictedDisease": "Bronchial Asthma",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 5,
+        "totalWords": 5,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/SQ-10.png"
+  },
+  {
+    "case_id": "SQ-11",
+    "test_group": "albanian_english_text",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "My eyes look yellow and my urine is very dark.",
+    "proposed_labels": "Jaundice",
+    "translation_status": "english",
+    "translation_preview": "Ky tekst duket në anglisht, prandaj dërgohet pa përkthim.",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Verdhëz",
+    "ui_original_label": "Etiketa e modelit: Jaundice",
+    "ui_coverage_line": "Modeli njohu 10 nga 10 fjalë të tekstit të analizuar.\nKjo tregon sa nga fjalët i njeh modeli, jo sa i mundshëm është rezultati.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Parashikim vetëm për qëllime edukative. Nuk është diagnozë mjekësore.",
+    "http_status": 200,
+    "sent_to_model": "My eyes look yellow and my urine is very dark.",
+    "api_error": "",
+    "predicted_label": "Jaundice",
+    "recognized_words": 10,
+    "total_words": 10,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "yellow (+0.646), urine (+0.288), dark (+0.260), is (+0.072), my (+0.040)",
+    "top_opposing_words": "eyes (-0.049), very (-0.028)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.0485,
+            "word": "eyes"
+          },
+          {
+            "contribution": -0.0284,
+            "word": "very"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.646,
+            "word": "yellow"
+          },
+          {
+            "contribution": 0.2879,
+            "word": "urine"
+          },
+          {
+            "contribution": 0.2604,
+            "word": "dark"
+          },
+          {
+            "contribution": 0.0725,
+            "word": "is"
+          },
+          {
+            "contribution": 0.0398,
+            "word": "my"
+          }
+        ]
+      },
+      "predictedDisease": "Jaundice",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 10,
+        "totalWords": 10,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/SQ-11.png"
+  },
+  {
+    "case_id": "SQ-02b",
+    "test_group": "albanian_rephrased",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Më djeg kur urinoj dhe urinoj shpesh.",
+    "proposed_labels": "urinary tract infection",
+    "translation_status": "ok",
+    "translation_preview": "Përkthimi për modelin\n\nI have burning when urinating and frequent urination.\n\nMë djeg kur urinoj\nburning when urinating\nurinoj shpesh\nfrequent urination\n\nPërkthyer me një fjalor të kontrolluar simptomash. Përkthimet mjekësore kanë ende nevojë për verifikim profesional.",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Infeksion i rrugëve urinare",
+    "ui_original_label": "Etiketa e modelit: urinary tract infection",
+    "ui_coverage_line": "Modeli njohu 7 nga 7 fjalë të tekstit të analizuar.\nKjo tregon sa nga fjalët i njeh modeli, jo sa i mundshëm është rezultati.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Parashikim vetëm për qëllime edukative. Nuk është diagnozë mjekësore.",
+    "http_status": 200,
+    "sent_to_model": "I have burning when urinating and frequent urination.",
+    "api_error": "",
+    "predicted_label": "urinary tract infection",
+    "recognized_words": 7,
+    "total_words": 7,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "urinating (+0.802), urination (+0.210), frequent (+0.080), when (+0.025), have (+0.020)",
+    "top_opposing_words": "burning (-0.118), and (-0.076)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.1185,
+            "word": "burning"
+          },
+          {
+            "contribution": -0.0763,
+            "word": "and"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.8024,
+            "word": "urinating"
+          },
+          {
+            "contribution": 0.2099,
+            "word": "urination"
+          },
+          {
+            "contribution": 0.08,
+            "word": "frequent"
+          },
+          {
+            "contribution": 0.0248,
+            "word": "when"
+          },
+          {
+            "contribution": 0.0196,
+            "word": "have"
+          }
+        ]
+      },
+      "predictedDisease": "urinary tract infection",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 7,
+        "totalWords": 7,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/SQ-02b.png"
+  },
+  {
+    "case_id": "SQ-03b",
+    "test_group": "albanian_rephrased",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Kam kollë me gëlbazë, temperaturë dhe dhimbje gjoksi.",
+    "proposed_labels": "Pneumonia",
+    "translation_status": "ok",
+    "translation_preview": "Përkthimi për modelin\n\nI have cough, phlegm, fever and chest pain.\n\nkollë\ncough\ngëlbazë\nphlegm\ntemperaturë\nfever\ndhimbje gjoksi\nchest pain\n\nPërkthyer me një fjalor të kontrolluar simptomash. Përkthimet mjekësore kanë ende nevojë për verifikim profesional.",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Pneumoni",
+    "ui_original_label": "Etiketa e modelit: Pneumonia",
+    "ui_coverage_line": "Modeli njohu 7 nga 7 fjalë të tekstit të analizuar.\nKjo tregon sa nga fjalët i njeh modeli, jo sa i mundshëm është rezultati.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Parashikim vetëm për qëllime edukative. Nuk është diagnozë mjekësore.",
+    "http_status": 200,
+    "sent_to_model": "I have cough, phlegm, fever and chest pain.",
+    "api_error": "",
+    "predicted_label": "Pneumonia",
+    "recognized_words": 7,
+    "total_words": 7,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "phlegm (+0.795), chest (+0.369), and (+0.070)",
+    "top_opposing_words": "fever (-0.153), pain (-0.111), have (-0.062), cough (-0.021)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.1527,
+            "word": "fever"
+          },
+          {
+            "contribution": -0.1109,
+            "word": "pain"
+          },
+          {
+            "contribution": -0.0618,
+            "word": "have"
+          },
+          {
+            "contribution": -0.0207,
+            "word": "cough"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.795,
+            "word": "phlegm"
+          },
+          {
+            "contribution": 0.3694,
+            "word": "chest"
+          },
+          {
+            "contribution": 0.0704,
+            "word": "and"
+          }
+        ]
+      },
+      "predictedDisease": "Pneumonia",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 7,
+        "totalWords": 7,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/SQ-03b.png"
+  },
+  {
+    "case_id": "SQ-04b",
+    "test_group": "albanian_negation",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Kam skuqje dhe kruajtje në lëkurë, por nuk kam temperaturë.",
+    "proposed_labels": "Fungal infection;allergy;drug reaction;Psoriasis",
+    "translation_status": "unclear",
+    "translation_preview": "Nuk e kuptuam plotësisht përshkrimin\n\nFjalë të panjohura:\nlëkurë\n\nJu lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",
+    "composer_notes": "Simptomat që thatë se nuk i keni u lanë jashtë\n\nU gjet: temperaturë. Këto nuk i dërgohen modelit, prandaj nuk mund të llogariten si të pranishme.",
+    "accepted": "blocked_in_ui",
+    "block_reason": "Sqaroni përshkrimin para analizës.",
+    "sent_to_model": "",
+    "screenshot": "screenshots/SQ-04b.png"
+  },
+  {
+    "case_id": "SQ-05b",
+    "test_group": "albanian_overlapping",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Kam dhimbje barku dhe dobësi.",
+    "proposed_labels": "Jaundice;peptic ulcer disease;Typhoid",
+    "translation_status": "ok",
+    "translation_preview": "Përkthimi për modelin\n\nI have stomach pain and weakness.\n\ndhimbje barku\nstomach pain\ndobësi\nweakness\n\nPërkthyer me një fjalor të kontrolluar simptomash. Përkthimet mjekësore kanë ende nevojë për verifikim profesional.",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Spondilozë cervikale",
+    "ui_original_label": "Etiketa e modelit: Cervical spondylosis",
+    "ui_coverage_line": "Modeli njohu 5 nga 5 fjalë të tekstit të analizuar.\nKjo tregon sa nga fjalët i njeh modeli, jo sa i mundshëm është rezultati.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Parashikim vetëm për qëllime edukative. Nuk është diagnozë mjekësore.",
+    "http_status": 200,
+    "sent_to_model": "I have stomach pain and weakness.",
+    "api_error": "",
+    "predicted_label": "Cervical spondylosis",
+    "recognized_words": 5,
+    "total_words": 5,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "weakness (+0.850), pain (+0.376), and (+0.090), have (+0.018)",
+    "top_opposing_words": "stomach (-0.103)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.1028,
+            "word": "stomach"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 0.85,
+            "word": "weakness"
+          },
+          {
+            "contribution": 0.3764,
+            "word": "pain"
+          },
+          {
+            "contribution": 0.0897,
+            "word": "and"
+          },
+          {
+            "contribution": 0.0184,
+            "word": "have"
+          }
+        ]
+      },
+      "predictedDisease": "Cervical spondylosis",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 5,
+        "totalWords": 5,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/SQ-05b.png"
+  },
+  {
+    "case_id": "SQ-12",
+    "test_group": "albanian_overlapping",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Kam dhimbje koke dhe marramendje.",
+    "proposed_labels": "Hypertension;Migraine;Cervical spondylosis",
+    "translation_status": "ok",
+    "translation_preview": "Përkthimi për modelin\n\nI have headache and dizziness.\n\ndhimbje koke\nheadache\nmarramendje\ndizziness\n\nPërkthyer me një fjalor të kontrolluar simptomash. Përkthimet mjekësore kanë ende nevojë për verifikim profesional.",
+    "composer_notes": "",
+    "accepted": "sent_result_shown",
+    "ui_disease": "Hipertension",
+    "ui_original_label": "Etiketa e modelit: Hypertension",
+    "ui_coverage_line": "Modeli njohu 4 nga 4 fjalë të tekstit të analizuar.\nKjo tregon sa nga fjalët i njeh modeli, jo sa i mundshëm është rezultati.",
+    "ui_warnings": "",
+    "ui_disclaimer": "Parashikim vetëm për qëllime edukative. Nuk është diagnozë mjekësore.",
+    "http_status": 200,
+    "sent_to_model": "I have headache and dizziness.",
+    "api_error": "",
+    "predicted_label": "Hypertension",
+    "recognized_words": 4,
+    "total_words": 4,
+    "coverage": 1.0,
+    "unrecognized_terms": "",
+    "top_supporting_words": "dizziness (+1.162), headache (+0.908)",
+    "top_opposing_words": "have (-0.174), and (-0.070)",
+    "raw_response": {
+      "disclaimer": "Educational prediction only. Not a medical diagnosis.",
+      "explanation": {
+        "negativeWords": [
+          {
+            "contribution": -0.1742,
+            "word": "have"
+          },
+          {
+            "contribution": -0.0705,
+            "word": "and"
+          }
+        ],
+        "positiveWords": [
+          {
+            "contribution": 1.1621,
+            "word": "dizziness"
+          },
+          {
+            "contribution": 0.9082,
+            "word": "headache"
+          }
+        ]
+      },
+      "predictedDisease": "Hypertension",
+      "vocabularyCoverage": {
+        "coverage": 1.0,
+        "recognizedWords": 4,
+        "totalWords": 4,
+        "unrecognizedTerms": []
+      }
+    },
+    "screenshot": "screenshots/SQ-12.png"
+  },
+  {
+    "case_id": "SQ-13",
+    "test_group": "albanian_negation",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Nuk kam temperaturë dhe nuk kam kollë.",
+    "proposed_labels": "",
+    "translation_status": "unclear",
+    "translation_preview": "Nuk e kuptuam plotësisht përshkrimin\n\nPërmendët vetëm simptoma që nuk i keni. Ju lutemi përshkruani simptomat që i keni.",
+    "composer_notes": "Simptomat që thatë se nuk i keni u lanë jashtë\n\nU gjet: temperaturë, kollë. Këto nuk i dërgohen modelit, prandaj nuk mund të llogariten si të pranishme.",
+    "accepted": "blocked_in_ui",
+    "block_reason": "Sqaroni përshkrimin para analizës.",
+    "sent_to_model": "",
+    "screenshot": "screenshots/SQ-13.png"
+  },
+  {
+    "case_id": "SQ-14",
+    "test_group": "albanian_ambiguous",
+    "language": "sq",
+    "source": "system_test_extra",
+    "text": "Nuk ndihem mirë këto ditë.",
+    "proposed_labels": "",
+    "translation_status": "unclear",
+    "translation_preview": "Nuk e kuptuam plotësisht përshkrimin\n\nFjalë të panjohura:\nkëto\n\nJu lutemi riformulojeni me fjalë të thjeshta (p.sh. “kam temperaturë, kollë dhe dhimbje fyti”), përdorni “Zgjidh simptomat” ose shkruajeni në anglisht.",
+    "composer_notes": "",
+    "accepted": "blocked_in_ui",
+    "block_reason": "Sqaroni përshkrimin para analizës.",
+    "sent_to_model": "",
+    "screenshot": "screenshots/SQ-14.png"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "cases": 50,
+  "by_status": {
+    "Pranohet, shfaqet rezultati": 37,
+    "Bllokohet në ndërfaqe": 12,
+    "Dërgohet, por rezultati nuk shfaqet": 1
+  },
+  "app_matches_offline_model": "38/38",
+  "app_matches_notebook_11_for_english_unseen": "30/30",
+  "no_class_inputs_that_still_got_a_disease_shown": 11,
+  "outcome_counts": {
+    "përputhet": 15,
+    "nuk ka parashikim": 12,
+    "nuk përputhet": 11,
+    "jep sëmundje pa pasur klasë të saktë": 11,
+    "API jep sëmundje, ndërfaqja nuk e shfaq": 1
+  }
+}

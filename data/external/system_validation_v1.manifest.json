@@ -1,0 +1,19 @@
+{
+  "file": "system_validation_v1.csv",
+  "sha256": "9f2a14ac0ec9e6f4d45d74dc85c2124ba44361cd78ae65a73d514ab0b2070d92",
+  "rows": 84,
+  "frozen_on": "2026-11-12",
+  "rows_by_group": {
+    "valid": 22,
+    "albanian": 12,
+    "negation": 10,
+    "unrelated": 10,
+    "out_of_scope": 10,
+    "medical_terms": 8,
+    "colloquial": 6,
+    "insufficient": 6
+  },
+  "purpose": "Independent evaluation of the input validation, negation handling, medical-term normalisation and abstention added to the application. Written and frozen BEFORE those rules were implemented; never used to develop or tune them.",
+  "source": "Synthetic, written by an AI assistant (the same author as the validation rules - see limitations).",
+  "verification": "Expected behaviours and labels are proposed, not clinically verified."
+}
