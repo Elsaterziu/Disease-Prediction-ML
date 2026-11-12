@@ -1,0 +1,22 @@
+{
+  "svm": {
+    "train_accuracy": 1.0,
+    "validation_accuracy": 0.9943820224719101,
+    "test_accuracy": 0.9883720930232558,
+    "gap_train_test": 0.011627906976744207,
+    "test_wilson_95": [
+      0.958600691496456,
+      0.9968053949106748
+    ],
+    "group_cv_heldout_accuracy_mean": 0.9804308272502616,
+    "group_cv_heldout_accuracy_std": 0.008771771692596686,
+    "group_cv_heldout_accuracy_range": [
+      0.9540816326530612,
+      0.98989898989899
+    ],
+    "best_C_by_cv": 10.0,
+    "test_strict_accuracy_lt_0_70": 0.9863945578231292,
+    "test_nearest_neighbour_accuracy": 0.9418604651162791
+  },
+  "reproducibility_all_match": true
+}

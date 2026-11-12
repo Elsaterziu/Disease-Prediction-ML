@@ -1,0 +1,6 @@
+Model,Val Accuracy (tani),Val Accuracy (dokumentuar),Val Macro F1 (tani),Val Macro F1 (dokumentuar),Përputhet
+SVM (LinearSVC),0.9944,0.9944,0.9952,0.9952,True
+Logistic Regression,0.9775,0.9775,0.9787,0.9787,True
+KNN,0.9775,0.9775,0.9777,0.9777,True
+Random Forest,0.9382,0.9382,0.9386,0.9386,True
+Neural Network (MLP),0.9775,0.9775,0.979,0.979,True
