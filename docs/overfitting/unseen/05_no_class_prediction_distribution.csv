@@ -1,0 +1,24 @@
+category,predicted,raste
+ambiguous,diabetes,2
+ambiguous,Common Cold,1
+ambiguous,Dengue,1
+ambiguous,Fungal infection,1
+ambiguous,allergy,1
+ambiguous,Chicken pox,1
+ambiguous,drug reaction,1
+out_of_scope,peptic ulcer disease,2
+out_of_scope,diabetes,2
+out_of_scope,drug reaction,2
+out_of_scope,Impetigo,2
+out_of_scope,Pneumonia,1
+out_of_scope,Psoriasis,1
+out_of_scope,gastroesophageal reflux disease,1
+out_of_scope,Common Cold,1
+out_of_scope,Varicose Veins,1
+out_of_scope,urinary tract infection,1
+unrelated,Chicken pox,1
+unrelated,diabetes,1
+unrelated,Psoriasis,1
+unrelated,drug reaction,1
+unrelated,Bronchial Asthma,1
+unrelated,gastroesophageal reflux disease,1

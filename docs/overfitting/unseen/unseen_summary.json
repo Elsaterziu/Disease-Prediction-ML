@@ -1,0 +1,63 @@
+{
+  "dataset": {
+    "file": "unseen_v1.csv",
+    "sha256": "f738b1508733747a99ccdc401f78f18de9008d0addc3261e2a78548454511cc7",
+    "rows": 118,
+    "source": "synthetic_ai",
+    "verification": "not_clinically_verified"
+  },
+  "model": "models/svm_tuned_validation.joblib (unchanged)",
+  "labelled_agreement": {
+    "typical": {
+      "n": 48,
+      "correct": 28,
+      "agreement_pct": 58.33,
+      "wilson95_pct": "44.3 – 71.2"
+    },
+    "everyday": {
+      "n": 24,
+      "correct": 12,
+      "agreement_pct": 50.0,
+      "wilson95_pct": "31.4 – 68.6"
+    },
+    "negation": {
+      "n": 8,
+      "correct": 5,
+      "agreement_pct": 62.5,
+      "wilson95_pct": "30.6 – 86.3"
+    },
+    "të gjitha": {
+      "n": 80,
+      "correct": 45,
+      "agreement_pct": 56.25,
+      "wilson95_pct": "45.3 – 66.6"
+    }
+  },
+  "validation_accuracy_reference_pct": 99.44,
+  "overlapping_in_plausible_set": "9/10",
+  "no_class_cases": 28,
+  "no_class_note": "The model always returns one of the 24 classes; it has no 'unknown' option.",
+  "auroc_labelled_vs_no_class": {
+    "margin": 0.668,
+    "top_score": 0.772,
+    "vocab_coverage": 0.671
+  },
+  "median_margin": {
+    "Validation": 1.458,
+    "Unseen me etiketë": 0.396,
+    "Overlapping": 0.138,
+    "Ambiguous": 0.145,
+    "Out of scope": 0.308,
+    "Unrelated": 0.14
+  },
+  "median_vocab_coverage_pct": {
+    "Validation": 100.0,
+    "Unseen me etiketë": 90.9,
+    "Overlapping": 100.0,
+    "Ambiguous": 100.0,
+    "Out of scope": 83.5,
+    "Unrelated": 61.3
+  },
+  "labelled_errors": 35,
+  "disclaimer": "Synthetic, AI-written cases with proposed labels; not evidence of clinical accuracy."
+}

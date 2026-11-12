@@ -1,0 +1,23 @@
+{
+  "file": "unseen_v1.csv",
+  "version": "v1",
+  "frozen_on": "2026-11-12",
+  "sha256": "f738b1508733747a99ccdc401f78f18de9008d0addc3261e2a78548454511cc7",
+  "rows": 118,
+  "rows_by_category": {
+    "typical": 48,
+    "everyday": 24,
+    "out_of_scope": 14,
+    "overlapping": 10,
+    "negation": 8,
+    "ambiguous": 8,
+    "unrelated": 6
+  },
+  "source": "Synthetic descriptions written by an AI assistant for this project; not copied or paraphrased from Symptom2Disease (max cosine similarity 0.432, checked before freezing).",
+  "verification": "Labels are proposed, NOT clinically verified. This file is not evidence of clinical accuracy.",
+  "rules": [
+    "Frozen before any model evaluation; texts and labels must not be changed based on predictions.",
+    "Never used for training, tuning or model selection.",
+    "Additions (e.g. human-written texts) go into a new version file."
+  ]
+}

@@ -1,0 +1,7 @@
+Grupi,Raste,Margin (mediana),Top score (mediana),Mbulimi i fjalorit (%),Margin < P5 e Validation (%)
+Validation,178,1.458,0.698,100.0,5.1
+Unseen me etiketë,80,0.396,-0.169,90.9,45.0
+Overlapping,10,0.138,-0.158,100.0,100.0
+Ambiguous,8,0.145,-0.516,100.0,87.5
+Out of scope,14,0.308,-0.386,83.5,64.3
+Unrelated,6,0.14,-0.417,61.3,100.0
