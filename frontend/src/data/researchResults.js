@@ -219,7 +219,19 @@ export const LIME_EXAMPLES = [
   },
 ];
 
+// Overfitting and generalization analysis (notebooks 10 and 11, docs/overfitting/).
+// The model is the final SVM; unseen texts are synthetic with proposed labels.
+export const OVERFITTING = {
+  svm: { train: 1.0, validation: 0.9943820224719101, test: 0.9883720930232558 },
+  groupCv: { mean: 0.9804308272502616, std: 0.008771771692596686, runs: "5 × 5" },
+  unseen: { cases: 118, labelled: 80, agree: 45 },
+};
+
 export const SOURCES = {
+  overfitting: "docs/overfitting/01_train_val_test.csv",
+  groupCv: "docs/overfitting/04_group_cv_summary.csv",
+  unseen: "docs/overfitting/unseen/unseen_summary.json",
+  systemTesting: "docs/overfitting/system_testing_after_improvements/README.md",
   baseline: "models/baseline_results.csv",
   tuned: "models/tuned_results.csv",
   svmTuning: "models/svm_tuning_results.json",

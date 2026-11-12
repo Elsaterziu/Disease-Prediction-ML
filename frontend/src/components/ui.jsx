@@ -1,25 +1,28 @@
 import { ChevronDown, Maximize2 } from "lucide-react";
 import { useId, useRef } from "react";
 import { SPLITS } from "../data/researchResults";
+import { useLanguage } from "../i18n/languageContext";
 
 export function SplitBadge({ split }) {
+  const { t } = useLanguage();
   if (split === "cv") {
-    return <span className="split-badge cv">Cross-validation · training data</span>;
+    return <span className="split-badge cv">{t("split.cv")}</span>;
   }
 
   const info = SPLITS[split];
 
   return (
     <span className={`split-badge ${split}`}>
-      {info.label} set · {info.samples} texts
+      {t(`split.${split}`, { n: info.samples })}
     </span>
   );
 }
 
 export function SourceNote({ children }) {
+  const { t } = useLanguage();
   return (
     <p className="source-note">
-      Source <code>{children}</code>
+      {t("common.source")} <code>{children}</code>
     </p>
   );
 }
@@ -133,12 +136,13 @@ export function Disclosure({ title, subtitle, icon: Icon, children, className = 
 }
 
 export function Figure({ src, alt, caption, source }) {
+  const { t } = useLanguage();
   return (
     <figure className="figure">
       <a href={src} target="_blank" rel="noreferrer" className="figure-frame">
         <img src={src} alt={alt} loading="lazy" />
         <span className="figure-zoom" aria-hidden="true">
-          <Maximize2 size={14} /> Open full size
+          <Maximize2 size={14} /> {t("common.openFull")}
         </span>
       </a>
       <figcaption>

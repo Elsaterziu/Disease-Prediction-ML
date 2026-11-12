@@ -5,11 +5,14 @@ import '@fontsource-variable/inter'
 import '@fontsource-variable/plus-jakarta-sans'
 import './index.css'
 import App from './App.jsx'
+import LanguageProvider from './i18n/LanguageProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </LanguageProvider>
   </StrictMode>,
 )

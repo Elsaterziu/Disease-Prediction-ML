@@ -1,16 +1,30 @@
 import { BookA, MessageSquareOff, TriangleAlert } from "lucide-react";
+import { Fragment } from "react";
+import { useLanguage } from "../i18n/languageContext";
 import { coverageLevel } from "../utils/reliability";
 
-export function NegationNote({ phrases, compact = false }) {
+// Words shown as code chips. A real space separates them, so copied text and
+// screen readers do not run the words together ("duhetshkojtualet").
+export function TermList({ terms }) {
+  return terms.map((term, i) => (
+    <Fragment key={term}>
+      {i > 0 && " "}
+      <code>{term}</code>
+    </Fragment>
+  ));
+}
+
+export function NegationNote({ phrases, compact = false, excluded = false }) {
+  const { t } = useLanguage();
   if (!phrases.length) return null;
 
   return (
     <div className={compact ? "reliability-note warn compact" : "reliability-note warn"} role="note">
       <MessageSquareOff size={18} aria-hidden="true" />
       <div>
-        <strong>Your description mentions symptoms you may not have</strong>
+        <strong>{excluded ? t("note.excl.title") : t("note.neg.title")}</strong>
         <p>
-          Found:{" "}
+          {t("note.neg.found")}{" "}
           {phrases.map((p, i) => (
             <span key={p}>
               <q>{p}</q>
@@ -18,9 +32,9 @@ export function NegationNote({ phrases, compact = false }) {
             </span>
           ))}
           .{" "}
-          {compact
-            ? "The model can’t tell “no fever” from “fever”. Your text is sent exactly as written."
-            : "The model does not understand words like “no” or “without”: it reads “no fever” as if fever were mentioned. Your text was analysed exactly as written. If you listed symptoms you don’t have, you may want to remove them and analyse again."}
+          {excluded
+            ? compact ? t("note.excl.short") : t("note.excl.long")
+            : compact ? t("note.neg.short") : t("note.neg.long")}
         </p>
       </div>
     </div>
@@ -28,22 +42,19 @@ export function NegationNote({ phrases, compact = false }) {
 }
 
 export function CoverageNote({ coverage }) {
+  const { t } = useLanguage();
   const level = coverageLevel(coverage);
   if (!level) return null;
 
-  const { recognizedWords, totalWords, unrecognizedTerms = [] } = coverage;
+  const { recognizedWords: r, totalWords: total, unrecognizedTerms = [] } = coverage;
   const examples = unrecognizedTerms.slice(0, 8);
 
   if (level === "ok") {
     return (
       <p className="coverage-line">
         <BookA size={15} aria-hidden="true" />
-        The model recognised {recognizedWords} of {totalWords} words in your
-        description.
-        <span className="coverage-hint">
-          {" "}This shows how much of your wording it knows, not how likely the
-          result is.
-        </span>
+        {t("note.cov.ok", { r, t: total })}
+        <span className="coverage-hint">{t("note.cov.okHint")}</span>
       </p>
     );
   }
@@ -52,25 +63,14 @@ export function CoverageNote({ coverage }) {
     <div className={level === "none" ? "reliability-note danger" : "reliability-note warn"} role="alert">
       <TriangleAlert size={18} aria-hidden="true" />
       <div>
-        <strong>
-          {level === "none"
-            ? "None of your words are known to the model"
-            : "The model recognised only a few of your words"}
-        </strong>
+        <strong>{level === "none" ? t("note.cov.noneTitle") : t("note.cov.lowTitle")}</strong>
         <p>
-          {recognizedWords} of {totalWords} words are in its vocabulary.{" "}
-          {level === "none"
-            ? "This result is not based on anything in your description."
-            : "This result may not reflect what you described."}{" "}
-          Try plain English symptom words such as “fever”, “cough” or “rash”.
-          This is about vocabulary only, not a confidence score.
+          {t("note.cov.count", { r, t: total })}{" "}
+          {level === "none" ? t("note.cov.noneText") : t("note.cov.lowText")} {t("note.cov.tip")}
         </p>
         {examples.length > 0 && (
           <p className="unknown-terms">
-            Not recognised:{" "}
-            {examples.map((term) => (
-              <code key={term}>{term}</code>
-            ))}
+            {t("an.notRecognised")} <TermList terms={examples} />
           </p>
         )}
       </div>

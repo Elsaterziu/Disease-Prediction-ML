@@ -2,6 +2,7 @@ import {
   AlertCircle,
   ArrowRight,
   Check,
+  CircleHelp,
   Lightbulb,
   ListChecks,
   PenLine,
@@ -10,23 +11,28 @@ import {
   SearchX,
   ShieldAlert,
   SlidersHorizontal,
+  SpellCheck,
   SquarePen,
+  Stethoscope,
   WifiOff,
 } from "lucide-react";
 import { useRef, useState } from "react";
 import ContributionList from "../components/ContributionList";
 import HighlightedText from "../components/HighlightedText";
 import { LogoMark } from "../components/Logo";
-import { CoverageNote, NegationNote } from "../components/ReliabilityNotes";
+import { CoverageNote, NegationNote, TermList } from "../components/ReliabilityNotes";
 import SymptomSelector from "../components/SymptomSelector";
+import TranslationPreview from "../components/TranslationPreview";
 import { Disclosure, SegmentedControl } from "../components/ui";
+import { diseaseName, hasAlbanianName } from "../i18n/diseaseNames";
+import { useLanguage } from "../i18n/languageContext";
 import {
   MAX_LENGTH,
   predictDisease,
   validateSymptoms,
 } from "../services/predictionApi";
-import { conditionName } from "../utils/format";
-import { coverageLevel, detectNegations } from "../utils/reliability";
+import { translateSymptoms } from "../translation/sqToEn";
+import { coverageLevel } from "../utils/reliability";
 import {
   appendSymptoms,
   buildSymptomDescription,
@@ -35,26 +41,30 @@ import {
 } from "../utils/symptomText";
 import "./SymptomAnalysis.css";
 
-const INPUT_MODES = [
-  { value: "write", label: "Write symptoms", icon: PenLine },
-  { value: "select", label: "Select symptoms", icon: ListChecks },
-];
-
 // Free-form demonstration inputs written for this page (not taken from the
 // dataset). Selecting one only fills the text box; the prediction always
 // comes from the live API.
-const EXAMPLES = [
-  "I have severe headaches, blurred vision and nausea that get worse in bright light.",
-  "My skin has red, itchy patches with dry silvery scales on my elbows and knees.",
-  "I have a high fever with chills, strong pain behind my eyes and aching joints.",
-];
+const EXAMPLES = {
+  en: [
+    "I have severe headaches, blurred vision and nausea that get worse in bright light.",
+    "My skin has red, itchy patches with dry silvery scales on my elbows and knees.",
+    "I have a high fever with chills, strong pain behind my eyes and aching joints.",
+  ],
+  sq: [
+    "Kam dhimbje të forta koke, shikim të turbullt dhe të përziera.",
+    "Kam skuqje të lëkurës, kruajtje dhe lëkurë të thatë me luspa.",
+    "Kam temperaturë të lartë, të dridhura, dhimbje pas syve dhe dhimbje nyjesh.",
+  ],
+};
 
-const STEPS = ["Describe", "Review", "Result"];
+const API_DISCLAIMER = "Educational prediction only. Not a medical diagnosis.";
 
 function Stepper({ current }) {
+  const { t } = useLanguage();
+  const steps = [t("an.step.describe"), t("an.step.review"), t("an.step.result")];
   return (
-    <ol className="stepper" aria-label="Progress">
-      {STEPS.map((label, i) => {
+    <ol className="stepper" aria-label={t("an.progress")}>
+      {steps.map((label, i) => {
         const state = i < current ? "done" : i === current ? "current" : "todo";
         return (
           <li key={label} className={state} aria-current={state === "current" ? "step" : undefined}>
@@ -70,6 +80,7 @@ function Stepper({ current }) {
 }
 
 function EmptyResult() {
+  const { t } = useLanguage();
   return (
     <div className="result-empty">
       <div className="empty-art" aria-hidden="true">
@@ -78,17 +89,14 @@ function EmptyResult() {
         <span className="line w60 lit" />
         <span className="line w70" />
       </div>
-      <h2>Your result will appear here</h2>
-      <p>
-        Symptom2Disease compares your description with 24 conditions and shows
-        the closest match.
-      </p>
+      <h2>{t("an.empty.title")}</h2>
+      <p>{t("an.empty.text")}</p>
       <div className="writing-tips">
-        <span>Descriptions work best when they mention</span>
+        <span>{t("an.empty.tipsTitle")}</span>
         <ul>
-          <li>what you feel</li>
-          <li>where it is</li>
-          <li>how long it has lasted</li>
+          <li>{t("an.empty.tip1")}</li>
+          <li>{t("an.empty.tip2")}</li>
+          <li>{t("an.empty.tip3")}</li>
         </ul>
       </div>
     </div>
@@ -96,11 +104,12 @@ function EmptyResult() {
 }
 
 function LoadingResult({ text }) {
+  const { t } = useLanguage();
   return (
     <div className="result-loading" role="status">
       <div className="loading-head">
         <span className="loading-orb" aria-hidden="true" />
-        <span>Reading your description…</span>
+        <span>{t("an.loading")}</span>
       </div>
       <p className="loading-text" aria-hidden="true">
         {text}
@@ -115,15 +124,16 @@ function LoadingResult({ text }) {
 }
 
 function RequestError({ message, onRetry }) {
+  const { t } = useLanguage();
   return (
     <div className="result-error" role="alert">
       <span className="error-icon" aria-hidden="true">
         <WifiOff size={22} />
       </span>
-      <h2>We couldn’t get a result</h2>
+      <h2>{t("an.error.title")}</h2>
       <p>{message}</p>
       <button type="button" className="btn btn-primary btn-sm" onClick={onRetry}>
-        <RotateCcw size={16} aria-hidden="true" /> Try again
+        <RotateCcw size={16} aria-hidden="true" /> {t("an.retry")}
       </button>
     </div>
   );
@@ -132,6 +142,7 @@ function RequestError({ message, onRetry }) {
 // Shown instead of a result when the model recognised none of the words:
 // the API still returns a class, but it is not based on the description.
 function UnanalyzableResult({ coverage, onEdit, onReset }) {
+  const { t } = useLanguage();
   const terms = coverage.unrecognizedTerms?.slice(0, 8) ?? [];
 
   return (
@@ -139,121 +150,197 @@ function UnanalyzableResult({ coverage, onEdit, onReset }) {
       <span className="error-icon" aria-hidden="true">
         <SearchX size={22} />
       </span>
-      <h2>We couldn’t analyze this description</h2>
-      <p>
-        Please describe your symptoms using clear English. None of the words
-        you used are known to the model, so it cannot match them to a
-        condition.
-      </p>
+      <h2>{t("an.unan.title")}</h2>
+      <p>{t("an.unan.text")}</p>
       {terms.length > 0 && (
         <p className="unknown-terms">
-          Not recognised:{" "}
-          {terms.map((term) => (
-            <code key={term}>{term}</code>
-          ))}
+          {t("an.notRecognised")} <TermList terms={terms} />
         </p>
       )}
-      <p className="unanalyzable-tip">
-        For example: “I have a fever, a sore throat and a runny nose.”
-      </p>
+      <p className="unanalyzable-tip">{t("an.unan.example")}</p>
       <div className="result-actions">
         <button type="button" className="btn btn-primary btn-sm" onClick={onEdit}>
-          <SquarePen size={16} aria-hidden="true" /> Edit description
+          <SquarePen size={16} aria-hidden="true" /> {t("an.edit")}
         </button>
         <button type="button" className="btn btn-ghost btn-sm" onClick={onReset}>
-          <RotateCcw size={16} aria-hidden="true" /> Start over
+          <RotateCcw size={16} aria-hidden="true" /> {t("an.startOver")}
         </button>
       </div>
     </div>
   );
 }
 
-function ResultCard({ result, text, onEdit, onReset }) {
+// Medical terms the API rewrote in plain words before the analysis.
+function MedicalTermsNote({ terms }) {
+  const { t } = useLanguage();
+  if (!terms?.length) return null;
+  return (
+    <div className="reliability-note info" role="note">
+      <SpellCheck size={18} aria-hidden="true" />
+      <div>
+        <strong>{t("res.terms.title")}</strong>
+        <ul className="term-list">
+          {terms.map((m) => (
+            <li key={m.term}>
+              <code>{m.term}</code> → <span lang="en">{m.replacement}</span>
+              {m.needsReview && <em> · {t("res.terms.review")}</em>}
+            </li>
+          ))}
+        </ul>
+        <p>{t("res.terms.note")}</p>
+      </div>
+    </div>
+  );
+}
+
+// Shown instead of a disease when the API found no symptoms, needs a
+// clarification, or abstained because no supported condition matched.
+function WithheldResult({ result, onEdit, onReset }) {
+  const { t } = useLanguage();
+  const analysis = result.inputAnalysis ?? {};
+  const reason = result.reasons?.[0];
+  const view = {
+    no_symptoms: { icon: SearchX, title: t("res.noSym.title"), text: t("res.noSym.text") },
+    needs_clarification: {
+      icon: CircleHelp,
+      title: t("res.clar.title"),
+      text: t(`res.clar.${reason}`) === `res.clar.${reason}` ? result.message : t(`res.clar.${reason}`),
+    },
+    no_reliable_match: { icon: Stethoscope, title: t("res.noMatch.title"), text: t("res.noMatch.text") },
+  }[result.status] ?? { icon: CircleHelp, title: t("res.clar.title"), text: result.message };
+  const Icon = view.icon;
+  const found = result.status === "needs_clarification" && reason === "onlyNegated" ? [] : analysis.presentSymptoms ?? [];
+
+  return (
+    <div className={`result-unanalyzable withheld ${result.status}`} role="alert">
+      <span className="error-icon" aria-hidden="true">
+        <Icon size={22} />
+      </span>
+      <h2>{view.title}</h2>
+      <p>{view.text}</p>
+      {result.status === "no_reliable_match" && <p className="withheld-why">{t("res.noMatch.why")}</p>}
+      {found.length > 0 && (
+        <p className="unknown-terms">
+          {t("res.found")} <TermList terms={found} />
+        </p>
+      )}
+      {analysis.negatedSymptoms?.length > 0 && (
+        <p className="unknown-terms">
+          {t("res.negated")} <TermList terms={analysis.negatedSymptoms} />
+        </p>
+      )}
+      {analysis.uninterpretedTerms?.length > 0 && (
+        <p className="unknown-terms">
+          {t("res.unknownTerms")} <TermList terms={analysis.uninterpretedTerms} />
+        </p>
+      )}
+      <MedicalTermsNote terms={analysis.medicalTerms} />
+      {result.status !== "no_reliable_match" && <p className="unanalyzable-tip">{t("an.unan.example")}</p>}
+      <p className="result-disclaimer">
+        <ShieldAlert size={16} aria-hidden="true" />
+        {t("an.disclaimer")}
+      </p>
+      <div className="result-actions">
+        <button type="button" className="btn btn-primary btn-sm" onClick={onEdit}>
+          <SquarePen size={16} aria-hidden="true" /> {t("an.edit")}
+        </button>
+        <button type="button" className="btn btn-ghost btn-sm" onClick={onReset}>
+          <RotateCcw size={16} aria-hidden="true" /> {t("an.startOver")}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function ResultCard({ result, text, source, negations, negationsExcluded, onEdit, onReset }) {
+  const { lang, t } = useLanguage();
   const positiveWords = result.explanation?.positiveWords ?? [];
   const negativeWords = result.explanation?.negativeWords ?? [];
   const hasExplanation = positiveWords.length > 0 || negativeWords.length > 0;
-  const name = conditionName(result.predictedDisease);
-  const negations = detectNegations(text);
+  const label = result.predictedDisease;
+  const name = diseaseName(label, lang);
+  const showOriginal = lang === "sq" && hasAlbanianName(label);
+  // The API may rewrite medical terms and leave out negated symptoms; the
+  // explanation refers to the text it actually analysed.
+  const analysis = result.inputAnalysis ?? {};
+  const modelText = analysis.textSentToModel || text;
+  const typed = source || (modelText !== text ? text : "");
+  const excluded = negations.length ? negations : analysis.negatedSymptoms ?? [];
 
   return (
     <article className="result-card" aria-labelledby="result-title">
       <header className="result-head">
         <span className="result-kicker">
-          <LogoMark size={20} /> Closest match among 24 conditions
+          <LogoMark size={20} /> {t("an.res.kicker")}
         </span>
         <h2 id="result-title" className="result-name">
           {name}
         </h2>
-        <p>
-          The condition whose descriptions best match the words you used. It
-          is not a diagnosis.
-        </p>
+        {showOriginal && (
+          <p className="result-original" lang="en">
+            {t("an.res.original", { label })}
+          </p>
+        )}
+        <p>{t("an.res.text")}</p>
       </header>
 
       <div className="result-body">
         <CoverageNote coverage={result.vocabularyCoverage} />
-        <NegationNote phrases={negations} />
+        <NegationNote phrases={excluded} excluded={negationsExcluded || excluded.length > 0} />
+        <MedicalTermsNote terms={analysis.medicalTerms} />
 
-        <Disclosure
-          icon={Lightbulb}
-          title="Why this result?"
-          subtitle="Optional · see which of your words shaped it"
-          className="why"
-        >
+        {typed && (
+          <div className="analyzed-pair">
+            <span>{t("an.res.yourText")}</span>
+            <p>{typed}</p>
+          </div>
+        )}
+
+        <Disclosure icon={Lightbulb} title={t("an.why.title")} subtitle={t("an.why.subtitle")} className="why">
           {hasExplanation ? (
             <>
-              <HighlightedText
-                text={text}
-                positiveWords={positiveWords}
-                negativeWords={negativeWords}
-              />
+              {typed && <span className="analyzed-label">{source ? t("an.res.sentText") : t("an.res.analysedText")}</span>}
+              <HighlightedText text={modelText} positiveWords={positiveWords} negativeWords={negativeWords} />
               <div className="hl-legend">
                 <span>
-                  <mark className="hl pos">word</mark> pushed towards {name}
+                  <mark className="hl pos">{t("an.why.word")}</mark> {t("an.why.towards", { name })}
                 </span>
                 <span>
-                  <mark className="hl neg">word</mark> pushed away from it
+                  <mark className="hl neg">{t("an.why.word")}</mark> {t("an.why.away")}
                 </span>
               </div>
 
               <Disclosure
                 icon={SlidersHorizontal}
-                title="Technical details"
-                subtitle="SVM decision-score contributions"
+                title={t("an.tech.title")}
+                subtitle={t("an.tech.subtitle")}
                 className="subtle"
               >
-                <p className="tech-note">
-                  Each value is the word’s TF-IDF weight multiplied by the
-                  LinearSVC coefficient for {name}. They are contributions to a
-                  decision score, not probabilities or clinical importance.
-                </p>
+                <p className="tech-note">{t("an.tech.text", { name })}</p>
                 <div className="contribution-grid">
-                  <ContributionList title="Supporting words" words={positiveWords} positive />
-                  <ContributionList title="Opposing words" words={negativeWords} positive={false} />
+                  <ContributionList title={t("an.tech.supporting")} words={positiveWords} positive />
+                  <ContributionList title={t("an.tech.opposing")} words={negativeWords} positive={false} />
                 </div>
               </Disclosure>
             </>
           ) : (
-            <p className="muted small">
-              None of your words are in the model’s vocabulary, so there is
-              nothing to highlight.
-            </p>
+            <p className="muted small">{t("an.why.none")}</p>
           )}
         </Disclosure>
 
         {result.disclaimer && (
           <p className="result-disclaimer">
             <ShieldAlert size={16} aria-hidden="true" />
-            {result.disclaimer}
+            {result.disclaimer === API_DISCLAIMER ? t("an.disclaimer") : result.disclaimer}
           </p>
         )}
 
         <div className="result-actions">
           <button type="button" className="btn btn-ghost btn-sm" onClick={onEdit}>
-            <SquarePen size={16} aria-hidden="true" /> Edit description
+            <SquarePen size={16} aria-hidden="true" /> {t("an.edit")}
           </button>
           <button type="button" className="btn btn-ghost btn-sm" onClick={onReset}>
-            <RotateCcw size={16} aria-hidden="true" /> New check
+            <RotateCcw size={16} aria-hidden="true" /> {t("an.newCheck")}
           </button>
         </div>
       </div>
@@ -262,6 +349,8 @@ function ResultCard({ result, text, onEdit, onReset }) {
 }
 
 function SymptomAnalysis() {
+  const { lang, t } = useLanguage();
+  const isSq = lang === "sq";
   const composerRef = useRef(null);
   // Identifies the latest request; responses to older ones are discarded.
   const latestRequest = useRef(0);
@@ -272,18 +361,43 @@ function SymptomAnalysis() {
   const [reviewDraft, setReviewDraft] = useState("");
   const [reviewEdited, setReviewEdited] = useState(false);
   const [result, setResult] = useState(null);
-  const [analyzedText, setAnalyzedText] = useState("");
+  const [analyzed, setAnalyzed] = useState({ text: "", source: "", negations: [] });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [requestError, setRequestError] = useState("");
+  const [confirmedFor, setConfirmedFor] = useState("");
 
   // In select mode the review text follows the selection until the user
   // edits it by hand; after that their wording is kept.
-  const generatedText = buildSymptomDescription(selectedIds, extraDetails);
+  const generatedText = buildSymptomDescription(selectedIds, extraDetails, lang);
   const reviewText = reviewEdited ? reviewDraft : generatedText;
   const inputText = mode === "write" ? symptoms : reviewText;
-  // Shown while typing; the text itself is never altered.
-  const inputNegations = detectNegations(inputText);
+
+  // Albanian input is translated to English before it reaches the model.
+  // English input (and English typed in Albanian mode) is sent unchanged.
+  const translation = isSq ? translateSymptoms(inputText) : null;
+  let textToSend = inputText;
+  let blockReason = "";
+  if (isSq) {
+    textToSend = translation.english;
+    if (translation.status === "unclear") blockReason = "tr.blocked";
+    if (translation.status === "confirm" && confirmedFor !== translation.english) blockReason = "tr.confirmFirst";
+  }
+
+  // Albanian: negated symptoms are left out of the text sent to the model.
+  // English: the text is sent as written and the user is warned instead.
+  // English: the API finds negated symptoms, leaves them out and reports them
+  // with the result, so nothing is shown before sending.
+  const negationsExcluded = isSq && translation.status !== "english";
+  const inputNegations = negationsExcluded ? translation.negatedPhrases : [];
+
+  // Messages from validation or the API are English; show Albanian when known.
+  const localize = (message) => {
+    if (message.startsWith("tr.")) return t(message);
+    const key = `err.${message}`;
+    const text = t(key);
+    return text === key ? message : text;
+  };
 
   // A request in flight no longer matches the text once the input changes.
   const cancelPendingRequest = () => {
@@ -329,9 +443,9 @@ function SymptomAnalysis() {
   // Adds selected symptoms and the note that are missing from the edited text
   // as new sentences at the end; the user's own wording is left untouched.
   const appendMissingSymptoms = () => {
-    const missing = symptomsMissingFromText(selectedIds, reviewText);
+    const missing = symptomsMissingFromText(selectedIds, reviewText, lang);
     const note = detailsMissingFromText(extraDetails, reviewText) ? extraDetails : "";
-    updateReviewText(appendSymptoms(reviewText, missing, note));
+    updateReviewText(appendSymptoms(reviewText, missing, note, lang));
   };
 
   const clearInput = () => {
@@ -372,10 +486,17 @@ function SymptomAnalysis() {
     setRequestError("");
     setResult(null);
 
-    const validationError = validateSymptoms(inputText);
+    if (blockReason) {
+      setError(blockReason);
+      return;
+    }
+
+    const validationError = validateSymptoms(textToSend);
 
     if (validationError) {
-      setError(validationError);
+      // A translated text can be shorter than what was typed (articles are
+      // dropped and negated symptoms removed), so explain that case.
+      setError(negationsExcluded && textToSend.trim() ? "tr.tooShort" : validationError);
       return;
     }
 
@@ -383,10 +504,15 @@ function SymptomAnalysis() {
     const requestId = latestRequest.current;
 
     setLoading(true);
-    setAnalyzedText(inputText.trim());
+    setAnalyzed({
+      text: textToSend.trim(),
+      source: isSq && translation.status !== "english" ? inputText.trim() : "",
+      negations: inputNegations,
+      negationsExcluded,
+    });
 
     try {
-      const data = await predictDisease(inputText);
+      const data = await predictDisease(textToSend);
       if (requestId === latestRequest.current) setResult(data);
     } catch (err) {
       if (requestId === latestRequest.current) {
@@ -405,40 +531,57 @@ function SymptomAnalysis() {
   const step = result || loading || requestError ? 2 : inputText.trim() ? 1 : 0;
 
   let resultView = <EmptyResult />;
-  if (loading) resultView = <LoadingResult text={analyzedText} />;
-  else if (requestError) resultView = <RequestError message={requestError} onRetry={runPrediction} />;
+  if (loading) resultView = <LoadingResult text={analyzed.text} />;
+  else if (requestError) resultView = <RequestError message={localize(requestError)} onRetry={runPrediction} />;
+  else if (result && result.status && result.status !== "prediction")
+    resultView = <WithheldResult result={result} onEdit={focusComposer} onReset={startOver} />;
   else if (result && coverageLevel(result.vocabularyCoverage) === "none")
     resultView = (
-      <UnanalyzableResult
-        coverage={result.vocabularyCoverage}
+      <UnanalyzableResult coverage={result.vocabularyCoverage} onEdit={focusComposer} onReset={startOver} />
+    );
+  else if (result)
+    resultView = (
+      <ResultCard
+        result={result}
+        text={analyzed.text}
+        source={analyzed.source}
+        negations={analyzed.negations}
+        negationsExcluded={analyzed.negationsExcluded}
         onEdit={focusComposer}
         onReset={startOver}
       />
     );
-  else if (result)
-    resultView = (
-      <ResultCard result={result} text={analyzedText} onEdit={focusComposer} onReset={startOver} />
-    );
+
+  // Shown right under the text box being sent, so it is visible while typing.
+  const preview = isSq ? (
+    <TranslationPreview
+      translation={translation}
+      confirmed={confirmedFor === translation.english}
+      onConfirmChange={(checked) => setConfirmedFor(checked ? translation.english : "")}
+    />
+  ) : null;
+
+  const inputModes = [
+    { value: "write", label: t("an.mode.write"), icon: PenLine },
+    { value: "select", label: t("an.mode.select"), icon: ListChecks },
+  ];
 
   return (
     <div className="container analysis-page">
       <header className="page-head analysis-head">
         <div>
-          <span className="eyebrow">Symptom check</span>
-          <h1>What do your symptoms point to?</h1>
-          <p>
-            Describe them in your own words or pick them from a list. Your text
-            is matched against 24 conditions.
-          </p>
+          <span className="eyebrow">{t("an.eyebrow")}</span>
+          <h1>{t("an.title")}</h1>
+          <p>{t("an.lead")}</p>
         </div>
         <Stepper current={step} />
       </header>
 
       <div className="analysis-grid">
-        <section className="composer" ref={composerRef} aria-label="Describe your symptoms">
+        <section className="composer" ref={composerRef} aria-label={t("an.composerAria")}>
           <SegmentedControl
-            label="Input method"
-            options={INPUT_MODES}
+            label={t("an.inputMethod")}
+            options={inputModes}
             value={mode}
             onChange={changeMode}
             size="lg"
@@ -448,24 +591,26 @@ function SymptomAnalysis() {
             {mode === "write" ? (
               <div className="write-mode">
                 <label htmlFor="symptoms" className="composer-label">
-                  Describe your symptoms
+                  {t("an.label")}
                 </label>
                 <textarea
                   id="symptoms"
                   className="composer-textarea"
                   value={symptoms}
                   onChange={(event) => updateSymptoms(event.target.value)}
-                  placeholder="For example: I’ve had a sore throat and a runny nose for two days, and I keep sneezing."
+                  placeholder={t("an.placeholder")}
                   rows={7}
                   maxLength={MAX_LENGTH}
                   aria-describedby="symptoms-help"
                   required
                 />
 
+                {preview}
+
                 <div className="examples">
-                  <span className="examples-label">Or start from an example</span>
+                  <span className="examples-label">{t("an.examples")}</span>
                   <div className="example-list">
-                    {EXAMPLES.map((example) => (
+                    {EXAMPLES[lang].map((example) => (
                       <button
                         key={example}
                         type="button"
@@ -497,12 +642,14 @@ function SymptomAnalysis() {
               />
             )}
 
-            <NegationNote phrases={inputNegations} compact />
+            {mode === "select" && preview}
+
+            <NegationNote phrases={inputNegations} excluded={negationsExcluded} compact />
 
             {error && (
               <p className="inline-error" role="alert">
                 <AlertCircle size={16} aria-hidden="true" />
-                {error}
+                {localize(error)}
               </p>
             )}
 
@@ -510,30 +657,30 @@ function SymptomAnalysis() {
               <span className="action-meta" id="symptoms-help">
                 {mode === "select" && inputText.trim() && (
                   <span className="sends-label">
-                    Sends: {reviewEdited ? "your edited text" : "the drafted text"} ·{" "}
+                    {reviewEdited ? t("an.meta.sendsEdited") : t("an.meta.sendsDrafted")}
                   </span>
                 )}
-                {inputText.length.toLocaleString()} / {MAX_LENGTH.toLocaleString()} ·
-                at least 3 words, in English
+                {inputText.length.toLocaleString()} / {MAX_LENGTH.toLocaleString()} · {t("an.meta.limits")}
+                {blockReason && inputText.trim() && <span className="block-reason">{t(blockReason)}</span>}
               </span>
               <div className="action-buttons">
                 {inputText && !loading && (
                   <button type="button" className="btn btn-ghost" onClick={clearInput}>
-                    Clear
+                    {t("an.clear")}
                   </button>
                 )}
                 <button
                   type="submit"
                   className="btn btn-primary"
-                  disabled={loading || !inputText.trim()}
+                  disabled={loading || !inputText.trim() || Boolean(blockReason)}
                 >
                   {loading ? (
                     <>
-                      <span className="spinner" aria-hidden="true" /> Analyzing
+                      <span className="spinner" aria-hidden="true" /> {t("an.analyzing")}
                     </>
                   ) : (
                     <>
-                      Analyze <ArrowRight size={17} aria-hidden="true" />
+                      {t("an.analyze")} <ArrowRight size={17} aria-hidden="true" />
                     </>
                   )}
                 </button>

@@ -37,9 +37,6 @@
   overflow: hidden;
   margin-top: calc(var(--header-h) * -1);
   padding-top: var(--header-h);
-  background-color: var(--sand-50);
-  background-image: radial-gradient(rgba(29, 37, 35, 0.07) 1px, transparent 1px);
-  background-size: 22px 22px;
   border-bottom: 1px solid var(--sand-200);
   color: var(--ink-2);
 }

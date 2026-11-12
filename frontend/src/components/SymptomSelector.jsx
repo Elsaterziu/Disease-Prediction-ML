@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { useId, useState } from "react";
 import { SYMPTOM_CATEGORIES, SYMPTOMS_BY_ID } from "../data/symptomCatalog";
+import { useLanguage } from "../i18n/languageContext";
 import { MAX_LENGTH } from "../services/predictionApi";
 import { detailsMissingFromText, symptomsMissingFromText } from "../utils/symptomText";
 
@@ -32,11 +33,14 @@ const CATEGORY_ICONS = {
   musculoskeletal: Bone,
 };
 
+// Search ignores ë/ç so "kolle" finds "Kollë".
+const fold = (s) => s.toLowerCase().replace(/ë/g, "e").replace(/ç/g, "c");
+
 function matches(symptom, query) {
   if (!query) return true;
-  return [symptom.label, symptom.phrase, ...symptom.aliases].some((text) =>
-    text.toLowerCase().includes(query)
-  );
+  const q = fold(query);
+  return [symptom.label, symptom.phrase, ...symptom.aliases, symptom.sq.label, symptom.sq.phrase, ...symptom.sq.aliases]
+    .some((text) => fold(text).includes(q));
 }
 
 function SymptomSelector({
@@ -51,17 +55,21 @@ function SymptomSelector({
   onRegenerate,
   onAppendMissing,
 }) {
+  const { lang, t } = useLanguage();
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("all");
   const [confirmRegen, setConfirmRegen] = useState(false);
   const ids = useId();
   const query = search.trim().toLowerCase();
   const selected = new Set(selectedIds);
-  const missingIds = reviewEdited ? symptomsMissingFromText(selectedIds, reviewText) : [];
+  const labelOf = (symptom) => (lang === "sq" ? symptom.sq.label : symptom.label);
+  const categoryLabel = (c) => (lang === "sq" ? c.labelSq : c.label);
+
+  const missingIds = reviewEdited ? symptomsMissingFromText(selectedIds, reviewText, lang) : [];
   const noteMissing = reviewEdited && detailsMissingFromText(extraDetails, reviewText);
   const hasMismatch = missingIds.length > 0 || noteMissing;
   const missingSymptomsTitle =
-    missingIds.length === 1 ? "1 selected symptom" : `${missingIds.length} selected symptoms`;
+    missingIds.length === 1 ? t("sel.missing.one") : t("sel.missing.many", { n: missingIds.length });
 
   // A search always looks across every category.
   const activeCategory = query ? "all" : category;
@@ -76,29 +84,26 @@ function SymptomSelector({
     <div className="symptom-selector">
       <p className="selector-notice">
         <Info size={16} aria-hidden="true" />
-        <span>
-          A writing aid, not a clinical checklist. The model only reads the
-          sentence in step 2, never your selections.
-        </span>
+        <span>{t("sel.notice")}</span>
       </p>
 
       <div className="selector-step">
         <div className="selector-step-head">
           <span className="step-badge">1</span>
-          <h3>Pick what you’re experiencing</h3>
+          <h3>{t("sel.pick")}</h3>
         </div>
 
         <div className="search-field">
           <Search size={18} aria-hidden="true" />
           <label htmlFor={`${ids}-search`} className="sr-only">
-            Search symptoms
+            {t("sel.searchLabel")}
           </label>
           <input
             id={`${ids}-search`}
             type="search"
             value={search}
             onChange={(event) => setSearch(event.target.value)}
-            placeholder="Search 52 symptoms: cough, rash, dizzy…"
+            placeholder={t("sel.searchPlaceholder")}
             autoComplete="off"
           />
           {search && (
@@ -106,14 +111,14 @@ function SymptomSelector({
               type="button"
               className="search-clear"
               onClick={() => setSearch("")}
-              aria-label="Clear search"
+              aria-label={t("sel.clearSearch")}
             >
               <X size={16} />
             </button>
           )}
         </div>
 
-        <div className="category-pills" role="group" aria-label="Filter by category">
+        <div className="category-pills" role="group" aria-label={t("sel.filter")}>
           <button
             type="button"
             className={activeCategory === "all" ? "cat-pill active" : "cat-pill"}
@@ -121,7 +126,7 @@ function SymptomSelector({
             onClick={() => setCategory("all")}
             disabled={Boolean(query)}
           >
-            <LayoutGrid size={15} aria-hidden="true" /> All
+            <LayoutGrid size={15} aria-hidden="true" /> {t("sel.all")}
           </button>
           {SYMPTOM_CATEGORIES.map((c) => {
             const Icon = CATEGORY_ICONS[c.id];
@@ -137,9 +142,9 @@ function SymptomSelector({
                 disabled={Boolean(query)}
               >
                 <Icon size={15} aria-hidden="true" />
-                {c.label}
+                {categoryLabel(c)}
                 {count > 0 && (
-                  <span className="cat-count" aria-label={`${count} selected`}>
+                  <span className="cat-count" aria-label={t("sel.countSelected", { n: count })}>
                     {count}
                   </span>
                 )}
@@ -150,15 +155,12 @@ function SymptomSelector({
 
         <div className="symptom-groups">
           {visibleCategories.length === 0 && (
-            <p className="no-match">
-              No symptoms match “{search.trim()}”. Add it in your own words under
-              “Anything else?” below.
-            </p>
+            <p className="no-match">{t("sel.noMatch", { q: search.trim() })}</p>
           )}
 
           {visibleCategories.map((c) => (
             <fieldset key={c.id} className="symptom-group">
-              <legend>{c.label}</legend>
+              <legend>{categoryLabel(c)}</legend>
               <div className="chip-list">
                 {c.visible.map((symptom) => {
                   const on = selected.has(symptom.id);
@@ -171,7 +173,7 @@ function SymptomSelector({
                       onClick={() => onToggle(symptom.id)}
                     >
                       {on ? <Check size={15} aria-hidden="true" /> : <Plus size={15} aria-hidden="true" />}
-                      {symptom.label}
+                      {labelOf(symptom)}
                     </button>
                   );
                 })}
@@ -183,11 +185,11 @@ function SymptomSelector({
         <div className="selected-tray" aria-live="polite">
           <div className="tray-head">
             <span>
-              <strong>{selectedIds.length}</strong> selected
+              <strong>{selectedIds.length}</strong> {t("sel.selected")}
             </span>
             {selectedIds.length > 0 && (
               <button type="button" className="link-button" onClick={onClear}>
-                Clear all
+                {t("sel.clearAll")}
               </button>
             )}
           </div>
@@ -195,11 +197,11 @@ function SymptomSelector({
             <ul className="selected-list">
               {selectedIds.map((id) => (
                 <li key={id}>
-                  {SYMPTOMS_BY_ID[id].label}
+                  {labelOf(SYMPTOMS_BY_ID[id])}
                   <button
                     type="button"
                     onClick={() => onToggle(id)}
-                    aria-label={`Remove ${SYMPTOMS_BY_ID[id].label}`}
+                    aria-label={t("sel.remove", { name: labelOf(SYMPTOMS_BY_ID[id]) })}
                   >
                     <X size={13} />
                   </button>
@@ -210,14 +212,14 @@ function SymptomSelector({
         </div>
 
         <label htmlFor={`${ids}-extra`} className="composer-label small-label">
-          Anything else? <span className="optional">Optional</span>
+          {t("sel.extra")} <span className="optional">{t("sel.optional")}</span>
         </label>
         <textarea
           id={`${ids}-extra`}
           className="composer-textarea short"
           value={extraDetails}
           onChange={(event) => onExtraDetailsChange(event.target.value)}
-          placeholder="For example: It started three days ago and is worse at night."
+          placeholder={t("sel.extraPlaceholder")}
           rows={2}
           maxLength={1000}
         />
@@ -227,24 +229,22 @@ function SymptomSelector({
         <div className="selector-step-head">
           <span className="step-badge">2</span>
           <h3>
-            <label htmlFor={`${ids}-review`}>Review the text that will be analysed</label>
+            <label htmlFor={`${ids}-review`}>{t("sel.review")}</label>
           </h3>
           <span className={reviewEdited ? "review-status edited" : "review-status"}>
             {reviewEdited ? (
               <>
-                <PencilLine size={13} aria-hidden="true" /> Edited by you
+                <PencilLine size={13} aria-hidden="true" /> {t("sel.status.edited")}
               </>
             ) : (
               <>
-                <Wand2 size={13} aria-hidden="true" /> Drafted from selection
+                <Wand2 size={13} aria-hidden="true" /> {t("sel.status.drafted")}
               </>
             )}
           </span>
         </div>
         <p className="review-help" id={`${ids}-review-help`}>
-          {reviewEdited
-            ? "You edited this text, so selecting symptoms or adding notes no longer changes it. Only this text is sent."
-            : "Updates as you pick symptoms. Edit freely; only this exact text is sent."}
+          {reviewEdited ? t("sel.help.edited") : t("sel.help.drafted")}
         </p>
 
         {hasMismatch && (
@@ -253,27 +253,22 @@ function SymptomSelector({
             <div>
               <strong>
                 {missingIds.length > 0 && noteMissing
-                  ? `${missingSymptomsTitle} and your “Anything else?” note may not be in your text`
+                  ? t("sel.missing.both", { symptoms: missingSymptomsTitle })
                   : noteMissing
-                    ? "Your “Anything else?” note is not in your text"
-                    : `${missingSymptomsTitle} may not be in your text`}
+                    ? t("sel.missing.note")
+                    : t("sel.missing.symptoms", { symptoms: missingSymptomsTitle })}
               </strong>
               <p>
-                {missingIds.length > 0 &&
-                  `${missingIds.map((id) => SYMPTOMS_BY_ID[id].label).join(", ")}. `}
-                Only the text below is analysed, not your selections or notes.
+                {missingIds.length > 0 && `${missingIds.map((id) => labelOf(SYMPTOMS_BY_ID[id])).join(", ")}. `}
+                {t("sel.missing.body")}
               </p>
               <div className="sync-actions">
                 <button type="button" className="btn btn-primary btn-sm" onClick={onAppendMissing}>
-                  <Plus size={15} aria-hidden="true" /> Add to my text
+                  <Plus size={15} aria-hidden="true" /> {t("sel.addToText")}
                 </button>
                 {!confirmRegen && (
-                  <button
-                    type="button"
-                    className="btn btn-ghost btn-sm"
-                    onClick={() => setConfirmRegen(true)}
-                  >
-                    <RefreshCw size={15} aria-hidden="true" /> Regenerate from selection
+                  <button type="button" className="btn btn-ghost btn-sm" onClick={() => setConfirmRegen(true)}>
+                    <RefreshCw size={15} aria-hidden="true" /> {t("sel.regenerate")}
                   </button>
                 )}
               </div>
@@ -287,16 +282,13 @@ function SymptomSelector({
             className="btn btn-ghost btn-sm regen-button"
             onClick={() => setConfirmRegen(true)}
           >
-            <RefreshCw size={15} aria-hidden="true" /> Regenerate from selection
+            <RefreshCw size={15} aria-hidden="true" /> {t("sel.regenerate")}
           </button>
         )}
 
         {confirmRegen && (
           <div className="regen-confirm" role="alertdialog" aria-labelledby={`${ids}-regen`}>
-            <p id={`${ids}-regen`}>
-              Replace your edited text with a new draft from your selections? Your
-              edits will be lost.
-            </p>
+            <p id={`${ids}-regen`}>{t("sel.confirmRegen")}</p>
             <div className="sync-actions">
               <button
                 type="button"
@@ -306,10 +298,10 @@ function SymptomSelector({
                   onRegenerate();
                 }}
               >
-                Replace text
+                {t("sel.replace")}
               </button>
               <button type="button" className="btn btn-ghost btn-sm" onClick={() => setConfirmRegen(false)}>
-                Keep my text
+                {t("sel.keep")}
               </button>
             </div>
           </div>
@@ -320,7 +312,7 @@ function SymptomSelector({
           className="composer-textarea review-text"
           value={reviewText}
           onChange={(event) => onReviewTextChange(event.target.value)}
-          placeholder="Your description will be drafted here as you pick symptoms."
+          placeholder={t("sel.reviewPlaceholder")}
           rows={4}
           maxLength={MAX_LENGTH}
           aria-describedby={`${ids}-review-help`}

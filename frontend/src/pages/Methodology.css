@@ -240,8 +240,8 @@
   color: var(--accent-600);
 }
 
-.model-list li:first-child h3::after {
-  content: "Final model";
+.model-list h3[data-final-label]::after {
+  content: attr(data-final-label);
   margin-left: 10px;
   padding: 2px 9px;
   border-radius: var(--r-pill);
@@ -415,4 +415,63 @@
     min-width: 0;
     padding: 12px;
   }
+}
+
+/* Overfitting and generalization section */
+
+.fact-row.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.fact-row.cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.fact-row.cols-4 strong {
+  font-size: 1.5rem;
+}
+
+.examples-list div {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2px;
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  background: var(--tint-50);
+  border: 1px solid var(--tint-200);
+}
+
+.examples-list dt {
+  font-weight: 500;
+}
+
+@media (max-width: 860px) {
+  .fact-row.cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fact-row.cols-4 > div:nth-child(3) {
+    border-left: 0;
+  }
+
+  .fact-row.cols-4 > div:nth-child(n + 3) {
+    border-top: 1px solid var(--tint-200);
+  }
+}
+
+@media (max-width: 560px) {
+  .fact-row.cols-4,
+  .fact-row.cols-2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fact-row.cols-4 > div:nth-child(3) {
+    border-top: 1px solid var(--tint-200);
+  }
+}
+
+.fact-row strong small {
+  font-size: 0.62em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }

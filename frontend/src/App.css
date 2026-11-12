@@ -103,6 +103,7 @@
 
 .top-nav a {
   position: relative;
+  white-space: nowrap;
   padding: 8px 14px;
   border-radius: var(--r-pill);
   font-size: 0.92rem;
@@ -926,4 +927,48 @@
   border-top-color: #fff;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
+}
+
+/* ---------- Language switch ---------- */
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: auto;
+  padding: 3px 4px 3px 10px;
+  border-radius: var(--r-pill);
+  background: var(--sand-100);
+  color: var(--ink-3);
+}
+
+.top-nav + .lang-switch {
+  margin-left: 0;
+}
+
+.lang-switch svg {
+  margin-right: 4px;
+}
+
+.lang-switch button {
+  min-width: 34px;
+  padding: 5px 8px;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: transparent;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: background var(--dur), color var(--dur);
+}
+
+.lang-switch button:hover {
+  color: var(--ink);
+}
+
+.lang-switch button.active {
+  background: var(--sand-0);
+  color: var(--accent-700);
+  box-shadow: var(--shadow-sm), 0 0 0 1px var(--sand-200);
 }

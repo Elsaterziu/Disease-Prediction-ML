@@ -1,9 +1,12 @@
+import { useLanguage } from "../i18n/languageContext";
+
 function ContributionList({ title, words, positive }) {
+  const { t } = useLanguage();
   if (!words?.length) {
     return (
       <div className="contribution-section">
         <h4>{title}</h4>
-        <p className="muted small">No words in this direction.</p>
+        <p className="muted small">{t("an.tech.noWords")}</p>
       </div>
     );
   }

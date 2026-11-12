@@ -1261,3 +1261,242 @@
     margin-left: 34px;
   }
 }
+
+/* ---------- Albanian translation preview ---------- */
+
+.translation-preview {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--tint-200);
+  background: var(--tint-50);
+  font-size: 0.88rem;
+  animation: fade-up 240ms var(--ease-out);
+}
+
+.translation-preview.english {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-2);
+}
+
+.translation-preview.unclear {
+  display: flex;
+  gap: 12px;
+  border-color: #f0d9a8;
+  background: var(--amber-100);
+}
+
+.translation-preview.unclear > svg {
+  flex: none;
+  margin-top: 2px;
+  color: var(--amber-700);
+}
+
+.translation-preview.unclear strong {
+  color: var(--ink);
+}
+
+.translation-preview.unclear p {
+  margin-top: 4px;
+  color: var(--ink-2);
+}
+
+.translation-preview.confirm {
+  border-color: #f0d9a8;
+}
+
+.tp-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-700);
+}
+
+.tp-head strong {
+  color: var(--ink);
+}
+
+.tp-english {
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: var(--r-sm);
+  background: var(--sand-0);
+  border: 1px solid var(--tint-200);
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.tp-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tp-items li {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: var(--r-pill);
+  background: var(--sand-0);
+  border: 1px solid var(--tint-200);
+  font-size: 0.78rem;
+  color: var(--ink-2);
+}
+
+.tp-items li.negated {
+  border-style: dashed;
+  color: var(--ink-3);
+}
+
+.tp-items em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--amber-700);
+}
+
+.tp-confirm {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #f0d9a8;
+}
+
+.tp-confirm p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-2);
+}
+
+.tp-fix {
+  padding: 1px 8px;
+  border-radius: var(--r-pill);
+  background: var(--amber-100);
+  font-weight: 600;
+}
+
+.tp-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.tp-check input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent-600);
+}
+
+.tp-note {
+  margin-top: 10px;
+  font-size: 0.74rem;
+  color: var(--ink-3);
+}
+
+.block-reason {
+  display: block;
+  margin-top: 2px;
+  font-weight: 600;
+  color: var(--amber-700);
+}
+
+.result-original {
+  margin-top: 4px;
+  font-size: 0.82rem;
+  color: var(--accent-300);
+}
+
+.analyzed-pair {
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  background: var(--sand-50);
+  font-size: 0.9rem;
+}
+
+.analyzed-pair span,
+.analyzed-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.analyzed-pair p {
+  margin-top: 4px;
+  color: var(--ink);
+}
+
+@media (max-width: 760px) {
+  .lang-switch {
+    margin-left: auto;
+  }
+}
+
+.tp-excluded {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: var(--ink-3);
+}
+
+.tp-excluded .tp-items {
+  margin-top: 6px;
+}
+
+/* ---------- Input checks: rewritten terms, withheld results ---------- */
+
+.reliability-note.info {
+  background: var(--tint-50);
+  border-color: var(--tint-300);
+}
+
+.reliability-note.info > svg {
+  color: var(--accent-700);
+}
+
+.term-list {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  font-size: 0.86rem;
+}
+
+.term-list em {
+  color: var(--ink-3);
+}
+
+.result-unanalyzable.withheld .reliability-note,
+.result-unanalyzable.withheld .unknown-terms {
+  margin-top: 14px;
+}
+
+.result-unanalyzable.withheld .unanalyzable-tip,
+.result-unanalyzable.withheld .result-disclaimer {
+  margin-top: 16px;
+}
+
+.result-unanalyzable.no_reliable_match {
+  border-color: var(--tint-300);
+  background: var(--sand-0);
+}
+
+.result-unanalyzable.no_reliable_match .error-icon {
+  background: var(--tint-50);
+  color: var(--accent-700);
+}
+
+.withheld-why {
+  margin-top: 12px;
+  font-size: 0.88rem;
+  color: var(--ink-3);
+}

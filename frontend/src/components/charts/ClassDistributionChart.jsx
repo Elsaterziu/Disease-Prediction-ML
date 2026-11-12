@@ -7,9 +7,11 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { useLanguage } from "../../i18n/languageContext";
 import { CHART, axisTick } from "../../utils/chartTheme";
 
 function DistributionTooltip({ active, payload }) {
+  const { t } = useLanguage();
   if (!active || !payload?.length) return null;
   const row = payload[0].payload;
 
@@ -18,28 +20,29 @@ function DistributionTooltip({ active, payload }) {
       <strong>{row.label}</strong>
       <span>
         <i style={{ background: CHART.series1 }} />
-        Original: {row.original}
+        {t("chart.tipOriginal")}: {row.original}
       </span>
       <span>
         <i style={{ background: CHART.series2 }} />
-        Added by augmentation: {row.added}
+        {t("chart.tipAdded")}: {row.added}
       </span>
-      <span className="muted">Total: {row.original + row.added}</span>
+      <span className="muted">{t("chart.tipTotal")}: {row.original + row.added}</span>
     </div>
   );
 }
 
 function ClassDistributionChart({ data }) {
+  const { t } = useLanguage();
   return (
     <div className="chart-block">
       <div className="chart-legend" aria-hidden="true">
         <span>
           <i className="swatch" style={{ background: CHART.series1 }} />
-          Original training samples
+          {t("chart.original")}
         </span>
         <span>
           <i className="swatch" style={{ background: CHART.series2 }} />
-          Added by augmentation
+          {t("chart.added")}
         </span>
       </div>
 
