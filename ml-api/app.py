@@ -3,6 +3,9 @@ from pathlib import Path
 import joblib
 import numpy as np
 
+from input_checks import analyze_input
+from match_check import check_match
+
 app = Flask(__name__)
 
 # Load the trained SVM model
@@ -134,23 +137,108 @@ def predict():
             "error": "Please describe your symptoms in more detail."
         }), 400
 
-    # Predict disease
-    prediction = str(model.predict([symptoms])[0])
+    # Input checks (input_checks.py): medical terms rewritten in plain
+    # words, negated symptoms removed, and no prediction at all when the
+    # description has no identifiable symptoms or is unclear.
+    analysis = analyze_input(symptoms, tfidf.vocabulary_)
 
-    # Explain the prediction
-    explanation = explain_prediction(
-        symptoms, prediction
-    )
+    response = {
+        "inputAnalysis": public_analysis(analysis),
+        "disclaimer": DISCLAIMER,
+    }
 
-    return jsonify({
+    if analysis["status"] != "valid":
+        reason = analysis["reasons"][0] if analysis["reasons"] else ""
+        response.update({
+            "status": analysis["status"],
+            "reasons": analysis["reasons"],
+            "message": (
+                NO_SYMPTOMS_MESSAGE
+                if analysis["status"] == "no_symptoms"
+                else CLARIFICATION_MESSAGES.get(reason, NO_SYMPTOMS_MESSAGE)
+            ),
+        })
+        return jsonify(response)
+
+    # Only the checked text reaches the unchanged TF-IDF + SVM pipeline.
+    text = analysis["textForModel"]
+    prediction = str(model.predict([text])[0])
+
+    # Abstention (match_check.py): is any identified symptom typical
+    # for the predicted class in the training data?
+    match = check_match(prediction, analysis["concepts"])
+    response["vocabularyCoverage"] = vocabulary_coverage(text)
+    response["matchEvidence"] = {
+        "supportedSymptoms": match["supportedSymptoms"],
+        "unsupportedSymptoms": match["unsupportedSymptoms"],
+    }
+
+    if not match["reliable"]:
+        response.update({
+            "status": "no_reliable_match",
+            "reasons": ["noSupportedSymptom"],
+            "message": NO_MATCH_MESSAGE,
+        })
+        return jsonify(response)
+
+    response.update({
+        "status": "prediction",
         "predictedDisease": prediction,
-        "explanation": explanation,
-        "vocabularyCoverage": vocabulary_coverage(symptoms),
-        "disclaimer": (
-            "Educational prediction only. "
-            "Not a medical diagnosis."
-        )
+        "explanation": explain_prediction(text, prediction),
     })
+    return jsonify(response)
+
+
+DISCLAIMER = "Educational prediction only. Not a medical diagnosis."
+
+NO_SYMPTOMS_MESSAGE = (
+    "Your description does not appear to contain symptoms. "
+    "Please describe the symptoms you are experiencing."
+)
+
+NO_MATCH_MESSAGE = (
+    "The system could not identify a reliable match among the 24 supported "
+    "conditions. Please consult a healthcare professional for further evaluation."
+)
+
+CLARIFICATION_MESSAGES = {
+    "negationUnclear": (
+        "It is not clear which symptoms you have and which you do not. "
+        "Please write them in separate sentences, e.g. \"I have a cough. I do not have a fever.\""
+    ),
+    "uncertain": (
+        "Your description mentions symptoms you are not sure about. "
+        "Please describe only the symptoms you are experiencing."
+    ),
+    "onlyNegated": (
+        "You only mentioned symptoms you do not have. "
+        "Please describe the symptoms you are experiencing."
+    ),
+    "insufficient": (
+        "Your description is too general to compare with the supported conditions. "
+        "Please describe specific symptoms, where you feel them and how they feel."
+    ),
+    "conditionOnly": (
+        "Your description names a condition but no symptoms. "
+        "Please describe the symptoms you are experiencing."
+    ),
+    "unknownTerms": (
+        "Some medical terms in your description could not be interpreted safely. "
+        "Please describe the symptoms in plain words."
+    ),
+}
+
+
+def public_analysis(analysis):
+    # What the user is shown about how the description was read.
+    return {
+        "textSentToModel": analysis["textForModel"],
+        "medicalTerms": analysis["medicalTerms"],
+        "presentSymptoms": analysis["presentSymptoms"],
+        "negatedSymptoms": analysis["negatedSymptoms"],
+        "excludedText": analysis["excludedText"],
+        "uninterpretedTerms": analysis["uninterpretedTerms"],
+    }
 
 
 if __name__ == "__main__":
